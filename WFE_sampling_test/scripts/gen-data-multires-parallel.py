@@ -5,7 +5,7 @@ from tqdm import tqdm
 from joblib import Parallel, delayed, cpu_count, parallel_backend
 
 import sys
-
+import time
 
 # Paths
 
@@ -17,14 +17,19 @@ SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'
 output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/'
 #output_folder = './../../../output/'
 
+# Save output prints to logfile
+old_stdout = sys.stdout
+log_file = open(output_folder + 'output.log','w')
+sys.stdout = log_file
+print('Starting the log file.')
+
 # Dataset ID
 dataset_id = 1
 dataset_id_str = '%03d'%(dataset_id)
 
-
 # This list must be in order from bigger to smaller
-n_star_list = [2000]
-n_test_stars = 500  # 20% of the max test stars
+n_star_list = [1]
+n_test_stars = 1  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -50,8 +55,9 @@ euclid_obsc = True
 
 # Desired WFE resolutions
 #WFE_resolutions = [256, 1024, 4096]
-WFE_resolutions = [4096, 256]
+WFE_resolutions = [512, 256]
 
+print('\nInit dataset generation')
 
 zernikes_multires = []
 sim_PSF_toolkit_multires = []
@@ -115,7 +121,7 @@ pos_np[:,1] = pos_np[:,1]*(y_lims[1] - y_lims[0]) + y_lims[0]
 # # Plot star positions
 # plt.scatter(pos_np[:,0],pos_np[:,1])
 # plt.title('Samples - Star positions')
-print('Star positions selected')
+print('\nStar positions selected')
 
 #######################################
 #            PARALELLIZED             #
@@ -150,14 +156,16 @@ def simulate_star(star_id, gen_poly_fieldPSF_multires):
     _psf, _zernike, _ = gen_poly_fieldPSF_multires[i][j].get_poly_PSF(xv_flat=pos_np[j, 0],
                                                            yv_flat=pos_np[j, 1],
                                                            SED=SED_list[j])
-    print('Star ' +str(star_id)+ ' done!' + '   index=('+str(i)+','+str(j)+')')
+    print('\nStar ' +str(star_id)+ ' done!' + '   index=('+str(i)+','+str(j)+')')
     return (star_id, _psf, _zernike)
 
+# Measure time
+start_time = time.time()
 with parallel_backend("loky", inner_max_num_threads=1):
     results = Parallel(n_jobs=n_cpus)(delayed(simulate_star)(_star_id, gen_poly_fieldPSF_multires)
                                         for _star_id in star_id_list)
-
-print('All stars generated')
+end_time = time.time()
+print('\nAll stars generated in '+ str(end_time-start_time) +' seconds')
 
 #######################################
 #            END PARALLEL             #
@@ -296,3 +304,10 @@ plt.imshow(np.abs(dataset_256['noisy_stars'][star_to_show,:,:] - dataset_4096['n
 plt.title('Absolute difference', fontsize=20)
 
 plt.savefig(output_folder + 'multiple_WFE_resolution_dataset_psf_comparison.pdf')
+
+print('\nFigure saved at: ' + output_folder)
+print('\nDone!')
+
+# Close log file
+sys.stdout = old_stdout
+log_file.close()
