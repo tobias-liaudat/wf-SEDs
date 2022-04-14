@@ -55,7 +55,7 @@ euclid_obsc = True
 
 # Desired WFE resolutions
 #WFE_resolutions = [256, 1024, 4096]
-WFE_resolutions = [512, 256]
+WFE_resolutions = [4096, 256]
 
 print('\nInit dataset generation')
 
