@@ -10,12 +10,12 @@ import sys
 # Paths
 
 # SED folder path
-#SED_path = '~/wf-psf/data/SEDs/save_SEDs/'
-SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'
+SED_path = '~/wf-psf/data/SEDs/save_SEDs/'
+#SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'
 
 # Output saving path (in node05 of candide)
-#output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/'
-output_folder = './../../../output/'
+output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/'
+#output_folder = './../../../output/'
 
 # Dataset ID
 dataset_id = 1
