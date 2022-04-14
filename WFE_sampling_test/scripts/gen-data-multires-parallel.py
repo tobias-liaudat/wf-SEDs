@@ -18,13 +18,13 @@ output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/'
 #output_folder = './../../../output/'
 
 # Dataset ID
-dataset_id = 2
+dataset_id = 1
 dataset_id_str = '%03d'%(dataset_id)
 
 
 # This list must be in order from bigger to smaller
-n_star_list = [20, 10, 5]
-n_test_stars = 4  # 20% of the max test stars
+n_star_list = [2000]
+n_test_stars = 500  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -48,9 +48,9 @@ output_dim = 32
 LP_filter_length = 2
 euclid_obsc = True
 
-# Desired WFE resolutions in increasing order
+# Desired WFE resolutions
 #WFE_resolutions = [256, 1024, 4096]
-WFE_resolutions = [128, 64]
+WFE_resolutions = [4096, 256]
 
 
 zernikes_multires = []
@@ -206,34 +206,25 @@ WFE_res_id = 0
 
 # SNR varying randomly from 10 to 120 - shared over all WFE resolutions
 rand_SNR = (np.random.rand(tot_train_stars) * 100) + 10
-# # Generate Gaussian noise patterns
-# noisy_train_patterns = np.zeros((tot_train_stars, output_dim, output_dim))
-# noisy_train_patterns = np.stack([wf_psf.utils.add_noise(_im, desired_SNR=_SNR) 
-#                                   for _im, _SNR in zip(noisy_train_patterns, rand_SNR)], axis=0)
-
 # Copy the training stars
 train_stars = np.copy(np.array(poly_psf_multires[0])[:tot_train_stars, :, :])
 # Add Gaussian noise to the observations
 noisy_train_stars = np.stack([wf_psf.utils.add_noise(_im, desired_SNR=_SNR) 
                               for _im, _SNR in zip(train_stars, rand_SNR)], axis=0)
+# Generate Gaussian noise patterns to be shared over all datasets (but not every star)
 noisy_train_patterns = noisy_train_stars - train_stars
 
 
 # Generate datasets for every WFE resolution
 for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires):
     
-    # Generate numpy arrays from the lists
-    #poly_psf_np = np.array(poly_psf_list)
-    #zernike_coef_np = np.array(zernike_coef_list)
+    # Generate numpy array from the SED list
     SED_np = np.array(SED_list)
 
-    
     # Add same noise dataset to each WFE-resolution dataset
     noisy_train_stars = np.copy(poly_psf_np[:tot_train_stars, :, :]) + noisy_train_patterns
 
-
     # Save only one test dataset
-
     # Build param dicitionary
     dataset_params = {'d_max':d_max, 'max_order':max_order, 'x_lims':x_lims, 'y_lims':y_lims,
                      'grid_points':grid_points, 'n_bins':n_bins, 'max_wfe_rms':max_wfe_rms,
@@ -258,8 +249,6 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
 
 
     # Save the different train datasets
-
-
     for it_glob in range(len(n_star_list)):
 
         n_train_stars = n_star_list[it_glob]
@@ -286,36 +275,24 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
         
     WFE_res_id += 1
 
-# # Load and test generated dataset
+# Load and test generated dataset
+path = output_folder
 
-# path = output_folder
+dataset_4096 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_001_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
+dataset_256 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_001_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
 
-# dataset_256 = np.load(path + 'train_Euclid_res_1_TrainStars_id_001_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
-# dataset_1024 = np.load(path + 'train_Euclid_res_1_TrainStars_id_001_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
-# dataset_4096 = np.load(path + 'train_Euclid_res_1_TrainStars_id_001_wfeRes_'+str(WFE_resolutions[2])+'.npy', allow_pickle=True)[()]
+star_to_show = 0
 
-# star_to_show = 0
+plt.figure(figsize=(15,9))
+plt.suptitle('Noisy star PSF', fontsize=30)
+plt.subplot(131)
+plt.imshow(dataset_4096['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
+plt.title('WFE dim: 4096', fontsize=20)
+plt.subplot(132)
+plt.imshow(dataset_256['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
+plt.title('WFE dim: 256', fontsize=20)
+plt.subplot(133)
+plt.imshow(np.abs(dataset_256['noisy_stars'][star_to_show,:,:] - dataset_4096['noisy_stars'][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
+plt.title('Absolute difference', fontsize=20)
 
-# plt.figure(figsize=(15,9))
-# plt.suptitle('Noisy star PSF', fontsize=35)
-# plt.subplot(231)
-# plt.imshow(dataset_256['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-# plt.title('WFE dim: 256', fontsize=24)
-# plt.subplot(232)
-# plt.imshow(dataset_1024['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-# plt.title('WFE dim: 1024', fontsize=24)
-# plt.subplot(233)
-# plt.imshow(dataset_4096['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-# plt.title('WFE dim: 4096', fontsize=24)
-# plt.subplot(234)
-# plt.imshow(np.abs(dataset_256['noisy_stars'][star_to_show,:,:] - dataset_1024['noisy_stars'][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
-# plt.title('256 vs 1024', fontsize=24)
-# plt.subplot(235)
-# plt.imshow(np.abs(dataset_256['noisy_stars'][star_to_show,:,:] - dataset_4096['noisy_stars'][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
-# plt.title('256 vs 4096', fontsize=24)
-# plt.subplot(236)
-# plt.imshow(np.abs( dataset_1024['noisy_stars'][star_to_show,:,:] - dataset_4096['noisy_stars'][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
-# plt.title('1024 vs 4096', fontsize=24)
-# plt.show()
-
-
+plt.savefig(output_folder + 'multiple_WFE_resolution_dataset_psf_comparison.pdf')
