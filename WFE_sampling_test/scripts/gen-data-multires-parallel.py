@@ -18,7 +18,7 @@ output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/'
 #output_folder = './../../../output/'
 
 # Dataset ID
-dataset_id = 1
+dataset_id = 2
 dataset_id_str = '%03d'%(dataset_id)
 
 
