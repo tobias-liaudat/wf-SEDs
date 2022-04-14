@@ -10,7 +10,7 @@ import sys
 # Paths
 
 # SED folder path
-SED_path = '~/wf-psf/data/SEDs/save_SEDs/'
+SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'
 #SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'
 
 # Output saving path (in node05 of candide)
