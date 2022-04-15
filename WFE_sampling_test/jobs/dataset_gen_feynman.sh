@@ -15,7 +15,7 @@ module load anaconda
 source activate $ANACONDA_DIR
 
 # Change location
-cd /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/
+cd /feynman/home/dap/lcs/ec270266/wf-SEDs/WFE_sampling_test/scripts/
 
 # Run code
 srun python ./gen-data-multires-parallel.py $SLURM_ARRAY_TASK_ID
