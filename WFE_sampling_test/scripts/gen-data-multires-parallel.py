@@ -10,14 +10,14 @@ import time
 # Paths
 
 # SED folder path
-#SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'                 # Candide
+SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'                 # Candide
 #SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
-SED_path = '/feynman/home/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
+#SED_path = '/feynman/home/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
 # Output saving path (in node05 of candide)
-#output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
+output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
 #output_folder = './../../../output/'                                       # Local
-output_folder = '/feynman/home/dap/lcs/ec270266/output'                     # Feynman
+#output_folder = '/feynman/home/dap/lcs/ec270266/output'                     # Feynman
 
 # Save output prints to logfile
 old_stdout = sys.stdout
@@ -26,12 +26,12 @@ sys.stdout = log_file
 print('Starting the log file.')
 
 # Dataset ID
-dataset_id = 1
+dataset_id = 2
 dataset_id_str = '%03d'%(dataset_id)
 
 # This list must be in order from bigger to smaller
-n_star_list = [1]
-n_test_stars = 1  # 20% of the max test stars
+n_star_list = [2000, 1000, 500, 200]
+n_test_stars = 400  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -57,7 +57,7 @@ euclid_obsc = True
 
 # Desired WFE resolutions
 #WFE_resolutions = [256, 1024, 4096]
-WFE_resolutions = [4096, 256]
+WFE_resolutions = [128, 256]
 
 print('\nInit dataset generation')
 
@@ -288,8 +288,8 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
 # Load and test generated dataset
 path = output_folder
 
-dataset_4096 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_001_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
-dataset_256 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_001_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
+dataset_4096 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
+dataset_256 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
 
 star_to_show = 0
 
