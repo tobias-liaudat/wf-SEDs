@@ -172,7 +172,7 @@ def simulate_star(star_id, gen_poly_fieldPSF_multires,i):
     _psf, _zernike, _ = gen_poly_fieldPSF_multires[i][j_].get_poly_PSF(xv_flat=pos_np[star_id, 0],
                                                            yv_flat=pos_np[star_id, 1],
                                                            SED=SED_list[star_id])
-    print_status(star_id, i, star_id,log_file)
+    print_status(star_id, i, star_id)
     return (star_id, _psf, _zernike)
 
 # Measure time
