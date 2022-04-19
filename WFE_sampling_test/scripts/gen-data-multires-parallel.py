@@ -11,6 +11,7 @@ import time
 
 # SED folder path
 #SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'                 # Candide
+
 SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
 #SED_path = '/feynman/home/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
@@ -184,6 +185,7 @@ for i in range(len(WFE_resolutions)):
         results = Parallel(n_jobs=n_cpus)(delayed(simulate_star)(_star_id, gen_poly_fieldPSF_multires,i)
                                             for _star_id in star_id_list)
     results_list.append(results)
+
 end_time = time.time()
 print('\nAll stars generated in '+ str(end_time-start_time) +' seconds')
 
