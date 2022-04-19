@@ -70,10 +70,10 @@ for i, pupil_diameter_ in tqdm(enumerate(WFE_resolutions)):
     # Generate Zernike maps in max resolution
     zernikes_multires.append( wf_psf.utils.zernike_generator(n_zernikes=max_order, wfe_dim=pupil_diameter_) )
     
-    # Initialize PSF simulator for each star
+    # Initialize PSF simulator for each star (no euclid obscurations and wfr_rms init)
     packed_PSFToolkit = [ wf_psf.SimPSFToolkit(
         zernikes_multires[i], max_order=max_order, max_wfe_rms=max_wfe_rms, oversampling_rate=oversampling_rate,
-        output_Q=output_Q, output_dim=output_dim, pupil_diameter=pupil_diameter_, euclid_obsc=euclid_obsc,
+        output_Q=output_Q, output_dim=output_dim, pupil_diameter=pupil_diameter_, euclid_obsc=False,
         LP_filter_length=LP_filter_length)
         for j in range(n_stars)
     ]
@@ -89,17 +89,31 @@ for i, pupil_diameter_ in tqdm(enumerate(WFE_resolutions)):
     gen_poly_fieldPSF_multires.append( packed_polyField_PSF)
     
 
-# Dummy PolyFieldPSF to init C_poly coefficients
-init_polyField = wf_psf.GenPolyFieldPSF(sim_PSF_toolkit_multires[0][0], d_max=d_max,
+# Dummy SimPSFToolkit to init obscurations
+init_toolkit = []
+init_polyField = []
+for i, pupil_diameter_ in enumerate(WFE_resolutions):
+    init_toolkit.append( wf_psf.SimPSFToolkit(
+        zernikes_multires[i], max_order=max_order, max_wfe_rms=max_wfe_rms, oversampling_rate=oversampling_rate,
+        output_Q=output_Q, output_dim=output_dim, pupil_diameter=pupil_diameter_, euclid_obsc=euclid_obsc,
+        LP_filter_length=LP_filter_length) )
+    init_polyField.append( wf_psf.GenPolyFieldPSF(init_toolkit[i], d_max=d_max,
         grid_points=grid_points, max_order=max_order,
         x_lims=x_lims, y_lims=y_lims, n_bins=n_bins,
-        lim_max_wfe_rms=max_wfe_rms, auto_init=True, verbose=verbose)
+        lim_max_wfe_rms=max_wfe_rms, auto_init=True, verbose=verbose))
+
+# # Dummy PolyFieldPSF to init C_poly coefficients
+# init_polyField = wf_psf.GenPolyFieldPSF(sim_PSF_toolkit_multires[0][0], d_max=d_max,
+#         grid_points=grid_points, max_order=max_order,
+#         x_lims=x_lims, y_lims=y_lims, n_bins=n_bins,
+#         lim_max_wfe_rms=max_wfe_rms, auto_init=True, verbose=verbose)
 
 # Share C_poly coefficients throughout all the different resolution models
 for i in range(len(gen_poly_fieldPSF_multires)):
     for j in range(n_stars):
         gen_poly_fieldPSF_multires[i][j].set_C_poly(init_polyField.C_poly)
         gen_poly_fieldPSF_multires[i][j].set_WFE_RMS(init_polyField.WFE_RMS)
+        gen_poly_fieldPSF_multires[i][j].sim_psf_toolkit.obscurations = init_toolkit[i].obscurations
 
 # Load the SEDs
 stellar_SEDs = np.load(SED_path + 'SEDs.npy', allow_pickle=True)
