@@ -30,8 +30,8 @@ dataset_id = 2
 dataset_id_str = '%03d'%(dataset_id)
 
 # This list must be in order from bigger to smaller
-n_star_list = [20, 10, 5, 2]
-n_test_stars = 4  # 20% of the max test stars
+n_star_list = [2000, 1000, 500, 200]
+n_test_stars = 400  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -305,8 +305,8 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
 # Load and test generated dataset
 path = output_folder
 
-dataset_4096 = np.load(path + 'train_Euclid_res_20_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
-dataset_256 = np.load(path + 'train_Euclid_res_20_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
+dataset_4096 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
+dataset_256 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
 
 star_to_show = 0
 
