@@ -111,8 +111,8 @@ for i, pupil_diameter_ in enumerate(WFE_resolutions):
 # Share C_poly coefficients throughout all the different resolution models
 for i in range(len(gen_poly_fieldPSF_multires)):
     for j in range(n_stars):
-        gen_poly_fieldPSF_multires[i][j].set_C_poly(init_polyField.C_poly)
-        gen_poly_fieldPSF_multires[i][j].set_WFE_RMS(init_polyField.WFE_RMS)
+        gen_poly_fieldPSF_multires[i][j].set_C_poly(init_polyField[i].C_poly)
+        gen_poly_fieldPSF_multires[i][j].set_WFE_RMS(init_polyField[i].WFE_RMS)
         gen_poly_fieldPSF_multires[i][j].sim_psf_toolkit.obscurations = init_toolkit[i].obscurations
 
 # Load the SEDs
