@@ -10,14 +10,14 @@ import time
 # Paths
 
 # SED folder path
-SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'                 # Candide
+#SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'                 # Candide
 #SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
-#SED_path = '/feynman/home/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
+SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
 # Output saving path (in node05 of candide)
-output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
+#output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
 #output_folder = './../../../output/'                                       # Local
-#output_folder = '/feynman/home/dap/lcs/ec270266/output'                     # Feynman
+output_folder = '/feynman/work/dap/lcs/ec270266/output'                     # Feynman
 
 # Save output prints to logfile
 old_stdout = sys.stdout
