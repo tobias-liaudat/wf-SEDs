@@ -166,13 +166,16 @@ def unwrap_id(id, n_stars):
     j = int(id - i * n_stars)
     return i, j
 
+def print_status(star_id, i, j):
+    print('\nStar ' +str(star_id)+ ' done!' + '   index=('+str(i)+','+str(j)+')')
+
 # Function to get one PSF
 def simulate_star(star_id, gen_poly_fieldPSF_multires):
     i,j = unwrap_id(star_id, n_stars)
     _psf, _zernike, _ = gen_poly_fieldPSF_multires[i][j].get_poly_PSF(xv_flat=pos_np[j, 0],
                                                            yv_flat=pos_np[j, 1],
                                                            SED=SED_list[j])
-    print('\nStar ' +str(star_id)+ ' done!' + '   index=('+str(i)+','+str(j)+')')
+    print_status(star_id, i, j)
     return (star_id, _psf, _zernike)
 
 # Measure time
