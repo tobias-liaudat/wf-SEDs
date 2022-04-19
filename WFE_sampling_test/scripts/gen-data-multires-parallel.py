@@ -17,7 +17,10 @@ SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Fe
 # Output saving path (in node05 of candide)
 #output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
 #output_folder = './../../../output/'                                       # Local
-output_folder = '/feynman/work/dap/lcs/ec270266/output'                     # Feynman
+output_folder = '/feynman/work/dap/lcs/ec270266/output/'                    # Feynman
+
+# Temporary local storage for large data processing
+tmp_folder = '/tmp/tmp.WISiX0KNNG'
 
 # Save output prints to logfile
 old_stdout = sys.stdout
@@ -180,7 +183,7 @@ def simulate_star(star_id, gen_poly_fieldPSF_multires):
 
 # Measure time
 start_time = time.time()
-with parallel_backend("loky", inner_max_num_threads=1):
+with parallel_backend("loky", inner_max_num_threads=1,):
     results = Parallel(n_jobs=n_cpus)(delayed(simulate_star)(_star_id, gen_poly_fieldPSF_multires)
                                         for _star_id in star_id_list)
 end_time = time.time()
