@@ -34,8 +34,8 @@ dataset_id = 2
 dataset_id_str = '%03d'%(dataset_id)
 
 # This list must be in order from bigger to smaller
-n_star_list = [2000, 1000, 500, 200]
-n_test_stars = 400  # 20% of the max test stars
+n_star_list = [20, 10, 5, 2]
+n_test_stars = 4  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -60,8 +60,8 @@ LP_filter_length = 2
 euclid_obsc = True
 
 # Desired WFE resolutions
-WFE_resolutions = [256, 128]
-#WFE_resolutions = [4096, 256]
+#WFE_resolutions = [256, 128]
+WFE_resolutions = [4096, 256]
 
 print('\nInit dataset generation')
 
@@ -172,7 +172,7 @@ def simulate_star(star_id, gen_poly_fieldPSF_multires,i):
     _psf, _zernike, _ = gen_poly_fieldPSF_multires[i][j_].get_poly_PSF(xv_flat=pos_np[star_id, 0],
                                                            yv_flat=pos_np[star_id, 1],
                                                            SED=SED_list[star_id])
-    print_status(star_id, i, star_id)
+    #print_status(star_id, i, star_id)
     return (star_id, _psf, _zernike)
 
 # Measure time
@@ -182,7 +182,7 @@ results_list = []
 
 for i in range(len(WFE_resolutions)):
     with parallel_backend("loky", inner_max_num_threads=1):
-        results = Parallel(n_jobs=n_cpus)(delayed(simulate_star)(_star_id, gen_poly_fieldPSF_multires,i)
+        results = Parallel(n_jobs=n_cpus, verbose=100)(delayed(simulate_star)(_star_id, gen_poly_fieldPSF_multires,i)
                                             for _star_id in star_id_list)
     results_list.append(results)
 
@@ -279,8 +279,8 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
 # Load and test generated dataset
 path = output_folder
 
-dataset_4096 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
-dataset_256 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
+dataset_4096 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
+dataset_256 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
 
 star_to_show = 0
 
