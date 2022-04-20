@@ -5,7 +5,7 @@
 #SBATCH --partition=htc
 #SBATCH --nodes=1
 #SBATCH --array=1
-#SBATCH --cpus-per-task=86
+#SBATCH --cpus-per-task=32
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=1G
 #SBATCH --output=output_data_gen-%j-%a.log
