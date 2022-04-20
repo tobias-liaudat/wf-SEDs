@@ -10,12 +10,18 @@ import time
 # Paths
 
 # SED folder path
-SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'
-#SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'
+#SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'                 # Candide
+
+#SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
+SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
 # Output saving path (in node05 of candide)
-output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/'
-#output_folder = './../../../output/'
+#output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
+#output_folder = './../../../output/'                                       # Local
+output_folder = '/feynman/work/dap/lcs/ec270266/output/'                     # Feynman
+
+# Number of cpu available
+n_cpus = cpu_count()
 
 # Save output prints to logfile
 old_stdout = sys.stdout
@@ -24,12 +30,12 @@ sys.stdout = log_file
 print('Starting the log file.')
 
 # Dataset ID
-dataset_id = 1
+dataset_id = 2
 dataset_id_str = '%03d'%(dataset_id)
 
 # This list must be in order from bigger to smaller
-n_star_list = [1]
-n_test_stars = 1  # 20% of the max test stars
+n_star_list = [20, 10, 5, 2]
+n_test_stars = 4  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -54,7 +60,7 @@ LP_filter_length = 2
 euclid_obsc = True
 
 # Desired WFE resolutions
-#WFE_resolutions = [256, 1024, 4096]
+#WFE_resolutions = [256, 128]
 WFE_resolutions = [4096, 256]
 
 print('\nInit dataset generation')
@@ -68,12 +74,12 @@ for i, pupil_diameter_ in tqdm(enumerate(WFE_resolutions)):
     # Generate Zernike maps in max resolution
     zernikes_multires.append( wf_psf.utils.zernike_generator(n_zernikes=max_order, wfe_dim=pupil_diameter_) )
     
-    # Initialize PSF simulator for each star
+    # Initialize PSF simulator for each star (no euclid obscurations and wfr_rms init)
     packed_PSFToolkit = [ wf_psf.SimPSFToolkit(
         zernikes_multires[i], max_order=max_order, max_wfe_rms=max_wfe_rms, oversampling_rate=oversampling_rate,
-        output_Q=output_Q, output_dim=output_dim, pupil_diameter=pupil_diameter_, euclid_obsc=euclid_obsc,
+        output_Q=output_Q, output_dim=output_dim, pupil_diameter=pupil_diameter_, euclid_obsc=False,
         LP_filter_length=LP_filter_length)
-        for j in range(n_stars)
+        for j in range(n_cpus)
     ]
     sim_PSF_toolkit_multires.append( packed_PSFToolkit )
 
@@ -82,22 +88,30 @@ for i, pupil_diameter_ in tqdm(enumerate(WFE_resolutions)):
         grid_points=grid_points, max_order=max_order,
         x_lims=x_lims, y_lims=y_lims, n_bins=n_bins,
         lim_max_wfe_rms=max_wfe_rms, auto_init=auto_init, verbose=verbose)
-        for j in range(n_stars)
+        for j in range(n_cpus)
     ]
     gen_poly_fieldPSF_multires.append( packed_polyField_PSF)
     
 
-# Dummy PolyFieldPSF to init C_poly coefficients
-init_polyField = wf_psf.GenPolyFieldPSF(sim_PSF_toolkit_multires[0][0], d_max=d_max,
+# Dummy SimPSFToolkit to init obscurations
+init_toolkit = []
+init_polyField = []
+for i, pupil_diameter_ in enumerate(WFE_resolutions):
+    init_toolkit.append( wf_psf.SimPSFToolkit(
+        zernikes_multires[i], max_order=max_order, max_wfe_rms=max_wfe_rms, oversampling_rate=oversampling_rate,
+        output_Q=output_Q, output_dim=output_dim, pupil_diameter=pupil_diameter_, euclid_obsc=euclid_obsc,
+        LP_filter_length=LP_filter_length) )
+    init_polyField.append( wf_psf.GenPolyFieldPSF(init_toolkit[i], d_max=d_max,
         grid_points=grid_points, max_order=max_order,
         x_lims=x_lims, y_lims=y_lims, n_bins=n_bins,
-        lim_max_wfe_rms=max_wfe_rms, auto_init=True, verbose=verbose)
+        lim_max_wfe_rms=max_wfe_rms, auto_init=True, verbose=verbose))
 
 # Share C_poly coefficients throughout all the different resolution models
 for i in range(len(gen_poly_fieldPSF_multires)):
-    for j in range(n_stars):
-        gen_poly_fieldPSF_multires[i][j].set_C_poly(init_polyField.C_poly)
-        gen_poly_fieldPSF_multires[i][j].set_WFE_RMS(init_polyField.WFE_RMS)
+    for j in range(n_cpus):
+        gen_poly_fieldPSF_multires[i][j].set_C_poly(init_polyField[i].C_poly)
+        gen_poly_fieldPSF_multires[i][j].set_WFE_RMS(init_polyField[i].WFE_RMS)
+        gen_poly_fieldPSF_multires[i][j].sim_psf_toolkit.obscurations = init_toolkit[i].obscurations
 
 # Load the SEDs
 stellar_SEDs = np.load(SED_path + 'SEDs.npy', allow_pickle=True)
@@ -129,7 +143,6 @@ print('\nStar positions selected')
 
 # Total number of stars
 n_procs = n_stars*len(WFE_resolutions)
-n_cpus = 8
 
 # Print some info
 cpu_info = ' - Number of available CPUs: {}'.format(cpu_count())
@@ -138,11 +151,11 @@ print(cpu_info)
 print(proc_info)
 
 # Generate star list
-star_id_list = [id_ for id_ in range(n_procs)]
+star_id_list = [id_ for id_ in range(n_stars)]
 
 # ndArray for PSFs and zernikes
-poly_psf_multires = np.zeros((len(WFE_resolutions),n_stars),dtype=object)
-zernike_coef_multires = np.zeros((len(WFE_resolutions),n_stars),dtype=object)
+#poly_psf_multires = np.zeros((len(WFE_resolutions),n_stars),dtype=object)
+#zernike_coef_multires = np.zeros((len(WFE_resolutions),n_stars),dtype=object)
 
 # Function to get (i,j) from id
 def unwrap_id(id, n_stars):
@@ -150,20 +163,29 @@ def unwrap_id(id, n_stars):
     j = int(id - i * n_stars)
     return i, j
 
-# Function to get one PSF
-def simulate_star(star_id, gen_poly_fieldPSF_multires):
-    i,j = unwrap_id(star_id, n_stars)
-    _psf, _zernike, _ = gen_poly_fieldPSF_multires[i][j].get_poly_PSF(xv_flat=pos_np[j, 0],
-                                                           yv_flat=pos_np[j, 1],
-                                                           SED=SED_list[j])
+def print_status(star_id, i, j):
     print('\nStar ' +str(star_id)+ ' done!' + '   index=('+str(i)+','+str(j)+')')
+
+# Function to get one PSF
+def simulate_star(star_id, gen_poly_fieldPSF_multires,i):
+    i_,j_ = unwrap_id(star_id, n_cpus)
+    _psf, _zernike, _ = gen_poly_fieldPSF_multires[i][j_].get_poly_PSF(xv_flat=pos_np[star_id, 0],
+                                                           yv_flat=pos_np[star_id, 1],
+                                                           SED=SED_list[star_id])
+    #print_status(star_id, i, star_id)
     return (star_id, _psf, _zernike)
 
 # Measure time
 start_time = time.time()
-with parallel_backend("loky", inner_max_num_threads=1):
-    results = Parallel(n_jobs=n_cpus)(delayed(simulate_star)(_star_id, gen_poly_fieldPSF_multires)
-                                        for _star_id in star_id_list)
+
+results_list = []
+
+for i in range(len(WFE_resolutions)):
+    with parallel_backend("loky", inner_max_num_threads=1):
+        results = Parallel(n_jobs=n_cpus, verbose=100)(delayed(simulate_star)(_star_id, gen_poly_fieldPSF_multires,i)
+                                            for _star_id in star_id_list)
+    results_list.append(results)
+
 end_time = time.time()
 print('\nAll stars generated in '+ str(end_time-start_time) +' seconds')
 
@@ -171,44 +193,15 @@ print('\nAll stars generated in '+ str(end_time-start_time) +' seconds')
 #            END PARALLEL             #
 #######################################
 
-poly_psf_list = np.array( [star[1] for star in results] )
-zernike_coef_list = np.array( [star[2] for star in results] )
-
 zernike_coef_multires = []
 poly_psf_multires = []
+index_multires = []
 
+# Arrange generated data
 for i in range(len(WFE_resolutions)):
-    poly_psf_multires.append(poly_psf_list[i*n_stars:(i+1)*n_stars])
-    zernike_coef_multires.append(zernike_coef_list[i*n_stars:(i+1)*n_stars])
-
-# star_to_show = 0
-
-# plt.figure(figsize=(30,10))
-# plt.suptitle('Pixel PSFs with different WFE resolution', fontsize=35)
-# plt.subplot(131)
-# plt.imshow(poly_psf_multires[0][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-# plt.title('WFE dim: 256', fontsize=24)
-# plt.subplot(132)
-# plt.imshow(poly_psf_multires[1][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-# plt.title('WFE dim: 1024', fontsize=24)
-# plt.subplot(133)
-# plt.imshow(poly_psf_multires[2][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-# plt.title('WFE dim: 4096', fontsize=24)
-# plt.show()
-
-# plt.figure(figsize=(30,10))
-# plt.suptitle('Pixelwise differences between PSFs with different WFE resolution', fontsize=35)
-# plt.subplot(131)
-# plt.imshow(np.abs( poly_psf_multires[0][star_to_show,:,:]-poly_psf_multires[1][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
-# plt.title('256 vs 1024', fontsize=24)
-# plt.subplot(132)
-# plt.imshow(np.abs( poly_psf_multires[0][star_to_show,:,:]-poly_psf_multires[2][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
-# plt.title('256 vs 4096', fontsize=24)
-# plt.subplot(133)
-# plt.imshow(np.abs( poly_psf_multires[2][star_to_show,:,:]-poly_psf_multires[1][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
-# plt.title('1024 vs 4096', fontsize=24)
-# plt.show()
-
+    index_multires.append( np.array( [star[0] for star in results_list[i]] ) )
+    poly_psf_multires.append( np.array( [star[1] for star in results_list[i]] ) )
+    zernike_coef_multires.append( np.array( [star[2] for star in results_list[i]] ) )
 
 WFE_res_id = 0
 
@@ -242,7 +235,7 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
                      'n_stars':n_test_stars}
 
     # Save dataset C coefficient matrix (reproductible dataset)
-    C_poly = init_polyField.C_poly
+    C_poly = init_polyField[0].C_poly
 
     test_psf_dataset = {'stars' : poly_psf_np[tot_train_stars:, :, :],
                          'positions' : pos_np[tot_train_stars:, :],
@@ -286,8 +279,8 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
 # Load and test generated dataset
 path = output_folder
 
-dataset_4096 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_001_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
-dataset_256 = np.load(path + 'train_Euclid_res_2000_TrainStars_id_001_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
+dataset_4096 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
+dataset_256 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
 
 star_to_show = 0
 

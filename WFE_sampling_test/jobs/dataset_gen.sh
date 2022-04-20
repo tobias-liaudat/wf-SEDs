@@ -12,9 +12,9 @@
 # Join output and errors in one file
 #PBS -j oe
 # Set maximum computing time (e.g. 5min)
-#PBS -l walltime=48:00:00
+#PBS -l walltime=72:00:00
 # Request number of cores
-#PBS -l nodes=1:ppn=32
+#PBS -l nodes=n17:ppn=32
 
 # Activate conda environment
 module load tensorflow/2.7
