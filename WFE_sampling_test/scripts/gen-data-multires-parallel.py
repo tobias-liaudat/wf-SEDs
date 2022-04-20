@@ -11,7 +11,6 @@ import time
 
 # SED folder path
 #SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'                 # Candide
-
 #SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
 SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
@@ -34,8 +33,8 @@ dataset_id = 2
 dataset_id_str = '%03d'%(dataset_id)
 
 # This list must be in order from bigger to smaller
-n_star_list = [20, 10, 5, 2]
-n_test_stars = 4  # 20% of the max test stars
+n_star_list = [60, 10, 5, 2]
+n_test_stars = 12  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -109,8 +108,8 @@ for i, pupil_diameter_ in enumerate(WFE_resolutions):
 # Share C_poly coefficients throughout all the different resolution models
 for i in range(len(gen_poly_fieldPSF_multires)):
     for j in range(n_cpus):
-        gen_poly_fieldPSF_multires[i][j].set_C_poly(init_polyField[i].C_poly)
-        gen_poly_fieldPSF_multires[i][j].set_WFE_RMS(init_polyField[i].WFE_RMS)
+        gen_poly_fieldPSF_multires[i][j].set_C_poly(init_polyField[0].C_poly)
+        gen_poly_fieldPSF_multires[i][j].set_WFE_RMS(init_polyField[0].WFE_RMS)
         gen_poly_fieldPSF_multires[i][j].sim_psf_toolkit.obscurations = init_toolkit[i].obscurations
 
 # Load the SEDs
@@ -166,6 +165,10 @@ def unwrap_id(id, n_stars):
 def print_status(star_id, i, j):
     print('\nStar ' +str(star_id)+ ' done!' + '   index=('+str(i)+','+str(j)+')')
 
+# Get batches from a list
+def chunker(seq, size):
+    return (seq[pos:pos + size] for pos in range(0, len(seq), size))
+
 # Function to get one PSF
 def simulate_star(star_id, gen_poly_fieldPSF_multires,i):
     i_,j_ = unwrap_id(star_id, n_cpus)
@@ -178,13 +181,26 @@ def simulate_star(star_id, gen_poly_fieldPSF_multires,i):
 # Measure time
 start_time = time.time()
 
-results_list = []
+zernike_coef_multires = []
+poly_psf_multires = []
+index_multires = []
 
 for i in range(len(WFE_resolutions)):
-    with parallel_backend("loky", inner_max_num_threads=1):
-        results = Parallel(n_jobs=n_cpus, verbose=100)(delayed(simulate_star)(_star_id, gen_poly_fieldPSF_multires,i)
-                                            for _star_id in star_id_list)
-    results_list.append(results)
+    index_i_list = []
+    psf_i_list = []
+    z_coef_i_list = []
+    for batch in chunker(star_id_list, n_cpus):
+        with parallel_backend("loky", inner_max_num_threads=1):
+            results = Parallel(n_jobs=n_cpus, verbose=100)(delayed(simulate_star)(_star_id, gen_poly_fieldPSF_multires,i)
+                                                for _star_id in batch)
+        index_batch,psf_batch,z_coef_batch = zip(*results)
+        index_i_list.extend(index_batch)
+        psf_i_list.extend(psf_batch)
+        z_coef_i_list.extend(z_coef_batch)
+
+    index_multires.append(np.array(index_i_list) )
+    poly_psf_multires.append(np.array( psf_i_list)) 
+    zernike_coef_multires.append(np.array(z_coef_i_list))
 
 end_time = time.time()
 print('\nAll stars generated in '+ str(end_time-start_time) +' seconds')
@@ -192,16 +208,6 @@ print('\nAll stars generated in '+ str(end_time-start_time) +' seconds')
 #######################################
 #            END PARALLEL             #
 #######################################
-
-zernike_coef_multires = []
-poly_psf_multires = []
-index_multires = []
-
-# Arrange generated data
-for i in range(len(WFE_resolutions)):
-    index_multires.append( np.array( [star[0] for star in results_list[i]] ) )
-    poly_psf_multires.append( np.array( [star[1] for star in results_list[i]] ) )
-    zernike_coef_multires.append( np.array( [star[2] for star in results_list[i]] ) )
 
 WFE_res_id = 0
 
@@ -235,7 +241,7 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
                      'n_stars':n_test_stars}
 
     # Save dataset C coefficient matrix (reproductible dataset)
-    C_poly = init_polyField[0].C_poly
+    C_poly = gen_poly_fieldPSF_multires[WFE_res_id][n_cpus-1].C_poly
 
     test_psf_dataset = {'stars' : poly_psf_np[tot_train_stars:, :, :],
                          'positions' : pos_np[tot_train_stars:, :],
