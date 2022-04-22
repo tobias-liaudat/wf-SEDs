@@ -21,6 +21,7 @@ output_folder = '/feynman/work/dap/lcs/ec270266/output/'                     # F
 
 # Number of cpu available
 n_cpus = cpu_count()
+n_cpus = 24
 
 # Save output prints to logfile
 old_stdout = sys.stdout
@@ -29,12 +30,12 @@ sys.stdout = log_file
 print('Starting the log file.')
 
 # Dataset ID
-dataset_id = 2
+dataset_id = 4
 dataset_id_str = '%03d'%(dataset_id)
 
 # This list must be in order from bigger to smaller
-n_star_list = [60, 10, 5, 2]
-n_test_stars = 12  # 20% of the max test stars
+n_star_list = [2000, 1000, 500, 200]
+n_test_stars = 400  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -59,8 +60,8 @@ LP_filter_length = 2
 euclid_obsc = True
 
 # Desired WFE resolutions
-#WFE_resolutions = [256, 128]
 WFE_resolutions = [4096, 256]
+#WFE_resolutions = [4096, 256]
 
 print('\nInit dataset generation')
 
@@ -285,24 +286,24 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
 # Load and test generated dataset
 path = output_folder
 
-dataset_4096 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
-dataset_256 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
+dataset_1 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_004_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
+dataset_2 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_004_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
 
 star_to_show = 0
 
 plt.figure(figsize=(15,9))
 plt.suptitle('Noisy star PSF', fontsize=30)
 plt.subplot(131)
-plt.imshow(dataset_4096['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-plt.title('WFE dim: 4096', fontsize=20)
+plt.imshow(dataset_1['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
+plt.title('WFE dim: '+str(WFE_resolutions[0]), fontsize=20)
 plt.subplot(132)
-plt.imshow(dataset_256['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-plt.title('WFE dim: 256', fontsize=20)
+plt.imshow(dataset_2['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
+plt.title('WFE dim: '+str(WFE_resolutions[1]), fontsize=20)
 plt.subplot(133)
-plt.imshow(np.abs(dataset_256['noisy_stars'][star_to_show,:,:] - dataset_4096['noisy_stars'][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
+plt.imshow(np.abs(dataset_2['noisy_stars'][star_to_show,:,:] - dataset_1['noisy_stars'][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
 plt.title('Absolute difference', fontsize=20)
 
-plt.savefig(output_folder + 'multiple_WFE_resolution_dataset_psf_comparison.pdf')
+plt.savefig(output_folder + 'multiple_WFE_resolution_dataset_psf_comparison_'+str(WFE_resolutions[0])+'vs'+str(WFE_resolutions[1])+'_.pdf')
 
 print('\nFigure saved at: ' + output_folder)
 print('\nDone!')
