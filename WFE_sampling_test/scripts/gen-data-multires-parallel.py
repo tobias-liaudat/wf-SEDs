@@ -14,12 +14,12 @@ import time
 #SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
 SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
-# Output saving path (in node05 of candide)
+# Output saving path (in node05 of candide or $WORK space on feynman)
 #output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
 #output_folder = './../../../output/'                                       # Local
 output_folder = '/feynman/work/dap/lcs/ec270266/output/'                     # Feynman
 
-# Number of cpu available
+# Number of cpu on the machine (may differ from n_cpus available !!!)
 n_cpus = cpu_count()
 
 # Save output prints to logfile
