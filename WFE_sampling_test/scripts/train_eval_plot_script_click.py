@@ -36,7 +36,7 @@ import click
     help="Model type. Options are: 'mccd', 'graph', 'poly, 'param', 'poly_physical'.")
 @click.option(
     "--id_name",
-    default="-coherent_euclid_200stars",
+    default="-coherent_euclid_2000stars",
     type=str,
     help="Model saving id.")
 # Saving paths
@@ -78,7 +78,7 @@ import click
     help="Folder path of datasets.")
 @click.option(
     "--train_dataset_file",
-    default="train_Euclid_res_200_TrainStars_id_004_wfeRes_256.npy",
+    default="train_Euclid_res_2000_TrainStars_id_004_wfeRes_256.npy",
     type=str,
     help="Train dataset file name.")
 @click.option(
