@@ -42,7 +42,7 @@ import click
 # Saving paths
 @click.option(
     "--base_path",
-    default="/gpfswork/rech/ynx/ulx23va/wf-outputs/",
+    default="/home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/",
     type=str,
     help="Base path for saving files.")
 @click.option(
@@ -62,7 +62,7 @@ import click
     help="Folder name to save optimisation history files.")
 @click.option(
     "--chkp_save_path",
-    default="/gpfsscratch/rech/ynx/ulx23va/wf-outputs/chkp/",
+    default="/home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/chkp/",
     type=str,
     help="Path to save model checkpoints during training.")
 @click.option(
@@ -73,17 +73,17 @@ import click
 # Input dataset paths
 @click.option(
     "--dataset_folder",
-    default="/gpfswork/rech/ynx/ulx23va/repo/wf-psf/data/coherent_euclid_dataset/",
+    default="/n05data/ecentofanti/WFE_sampling_test/multires_dataset",
     type=str,
     help="Folder path of datasets.")
 @click.option(
     "--train_dataset_file",
-    default="train_Euclid_res_200_TrainStars_id_001.npy",
+    default="train_Euclid_res_200_TrainStars_id_004_wfeRes_256.npy",
     type=str,
     help="Train dataset file name.")
 @click.option(
     "--test_dataset_file",
-    default="test_Euclid_res_id_001.npy",
+    default="test_Euclid_res_id_004_wfeRes_256.npy",
     type=str,
     help="Test dataset file name.")
 # Model parameters
@@ -208,7 +208,7 @@ import click
     help="Model used as ground truth for the evaluation. Options are: 'poly', 'physical'.")
 @click.option(
     "--metric_base_path",
-    default="/gpfswork/rech/ynx/ulx23va/wf-outputs/metrics/",
+    default="/home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/metrics/",
     type=str,
     help="Base path for saving metric files.")
 @click.option(
@@ -241,7 +241,7 @@ import click
 ## Plot parameters
 @click.option(
     "--base_id_name",
-    default="-coherent_euclid_",
+    default="-multires_euclid_",
     type=str,
     help="Plot parameter. Base id_name before dataset suffix are added.")
 @click.option(
