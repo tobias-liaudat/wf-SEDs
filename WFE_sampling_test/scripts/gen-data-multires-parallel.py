@@ -21,6 +21,7 @@ output_folder = '/feynman/work/dap/lcs/ec270266/output/'                     # F
 
 # Number of cpu on the machine (may differ from n_cpus available !!!)
 n_cpus = cpu_count()
+# Number of cpus to use for parallelization
 n_cpus = 24
 
 # Save output prints to logfile
@@ -74,7 +75,7 @@ for i, pupil_diameter_ in tqdm(enumerate(WFE_resolutions)):
     # Generate Zernike maps in max resolution
     zernikes_multires.append( wf_psf.utils.zernike_generator(n_zernikes=max_order, wfe_dim=pupil_diameter_) )
     
-    # Initialize PSF simulator for each star (no euclid obscurations and wfr_rms init)
+    # Initialize PSF simulator for each cpu available (no euclid obscurations and wfr_rms init)
     packed_PSFToolkit = [ wf_psf.SimPSFToolkit(
         zernikes_multires[i], max_order=max_order, max_wfe_rms=max_wfe_rms, oversampling_rate=oversampling_rate,
         output_Q=output_Q, output_dim=output_dim, pupil_diameter=pupil_diameter_, euclid_obsc=False,
@@ -117,7 +118,7 @@ for i in range(len(gen_poly_fieldPSF_multires)):
 stellar_SEDs = np.load(SED_path + 'SEDs.npy', allow_pickle=True)
 stellar_lambdas = np.load(SED_path + 'lambdas.npy', allow_pickle=True)
 
-# Generate all the stars and then go saving different subsets
+# Generate all the stars positions and assign SEDs
 # Select random SEDs
 SED_list = []
 for it in range(n_stars):
@@ -145,17 +146,13 @@ print('\nStar positions selected')
 n_procs = n_stars*len(WFE_resolutions)
 
 # Print some info
-cpu_info = ' - Number of available CPUs: {}'.format(cpu_count())
+cpu_info = ' - Number of available CPUs: {}'.format(n_cpus)
 proc_info = ' - Total number of processes: {}'.format(n_procs)
 print(cpu_info)
 print(proc_info)
 
 # Generate star list
 star_id_list = [id_ for id_ in range(n_stars)]
-
-# ndArray for PSFs and zernikes
-#poly_psf_multires = np.zeros((len(WFE_resolutions),n_stars),dtype=object)
-#zernike_coef_multires = np.zeros((len(WFE_resolutions),n_stars),dtype=object)
 
 # Function to get (i,j) from id
 def unwrap_id(id, n_stars):
@@ -210,7 +207,7 @@ print('\nAll stars generated in '+ str(end_time-start_time) +' seconds')
 #            END PARALLEL             #
 #######################################
 
-WFE_res_id = 0
+# Add noise to generated PSFs and save datasets
 
 # SNR varying randomly from 10 to 120 - shared over all WFE resolutions
 rand_SNR = (np.random.rand(tot_train_stars) * 100) + 10
@@ -222,6 +219,7 @@ noisy_train_stars = np.stack([wf_psf.utils.add_noise(_im, desired_SNR=_SNR)
 # Generate Gaussian noise patterns to be shared over all datasets (but not every star)
 noisy_train_patterns = noisy_train_stars - train_stars
 
+WFE_res_id = 0
 
 # Generate datasets for every WFE resolution
 for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires):
@@ -280,7 +278,8 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
 
         np.save(output_folder + 'train_Euclid_res_' + str(n_train_stars) + '_TrainStars_id_' + dataset_id_str + '_wfeRes_' + str(WFE_resolutions[WFE_res_id]) +'.npy',
                 train_psf_dataset, allow_pickle=True)
-        
+
+    # Next desired resolution   
     WFE_res_id += 1
 
 # Load and test generated dataset
