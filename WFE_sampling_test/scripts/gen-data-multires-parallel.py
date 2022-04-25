@@ -14,13 +14,15 @@ import time
 #SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
 SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
-# Output saving path (in node05 of candide)
+# Output saving path (in node05 of candide or $WORK space on feynman)
 #output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
 #output_folder = './../../../output/'                                       # Local
 output_folder = '/feynman/work/dap/lcs/ec270266/output/'                     # Feynman
 
-# Number of cpu available
+# Number of cpu on the machine (may differ from n_cpus available !!!)
 n_cpus = cpu_count()
+# Number of cpus to use for parallelization
+n_cpus = 24
 
 # Save output prints to logfile
 old_stdout = sys.stdout
@@ -29,12 +31,12 @@ sys.stdout = log_file
 print('Starting the log file.')
 
 # Dataset ID
-dataset_id = 2
+dataset_id = 4
 dataset_id_str = '%03d'%(dataset_id)
 
 # This list must be in order from bigger to smaller
-n_star_list = [60, 10, 5, 2]
-n_test_stars = 12  # 20% of the max test stars
+n_star_list = [2000, 1000, 500, 200]
+n_test_stars = 400  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -59,8 +61,8 @@ LP_filter_length = 2
 euclid_obsc = True
 
 # Desired WFE resolutions
-#WFE_resolutions = [256, 128]
 WFE_resolutions = [4096, 256]
+#WFE_resolutions = [4096, 256]
 
 print('\nInit dataset generation')
 
@@ -73,7 +75,7 @@ for i, pupil_diameter_ in tqdm(enumerate(WFE_resolutions)):
     # Generate Zernike maps in max resolution
     zernikes_multires.append( wf_psf.utils.zernike_generator(n_zernikes=max_order, wfe_dim=pupil_diameter_) )
     
-    # Initialize PSF simulator for each star (no euclid obscurations and wfr_rms init)
+    # Initialize PSF simulator for each cpu available (no euclid obscurations and wfr_rms init)
     packed_PSFToolkit = [ wf_psf.SimPSFToolkit(
         zernikes_multires[i], max_order=max_order, max_wfe_rms=max_wfe_rms, oversampling_rate=oversampling_rate,
         output_Q=output_Q, output_dim=output_dim, pupil_diameter=pupil_diameter_, euclid_obsc=False,
@@ -116,7 +118,7 @@ for i in range(len(gen_poly_fieldPSF_multires)):
 stellar_SEDs = np.load(SED_path + 'SEDs.npy', allow_pickle=True)
 stellar_lambdas = np.load(SED_path + 'lambdas.npy', allow_pickle=True)
 
-# Generate all the stars and then go saving different subsets
+# Generate all the stars positions and assign SEDs
 # Select random SEDs
 SED_list = []
 for it in range(n_stars):
@@ -144,17 +146,13 @@ print('\nStar positions selected')
 n_procs = n_stars*len(WFE_resolutions)
 
 # Print some info
-cpu_info = ' - Number of available CPUs: {}'.format(cpu_count())
+cpu_info = ' - Number of available CPUs: {}'.format(n_cpus)
 proc_info = ' - Total number of processes: {}'.format(n_procs)
 print(cpu_info)
 print(proc_info)
 
 # Generate star list
 star_id_list = [id_ for id_ in range(n_stars)]
-
-# ndArray for PSFs and zernikes
-#poly_psf_multires = np.zeros((len(WFE_resolutions),n_stars),dtype=object)
-#zernike_coef_multires = np.zeros((len(WFE_resolutions),n_stars),dtype=object)
 
 # Function to get (i,j) from id
 def unwrap_id(id, n_stars):
@@ -209,7 +207,7 @@ print('\nAll stars generated in '+ str(end_time-start_time) +' seconds')
 #            END PARALLEL             #
 #######################################
 
-WFE_res_id = 0
+# Add noise to generated PSFs and save datasets
 
 # SNR varying randomly from 10 to 120 - shared over all WFE resolutions
 rand_SNR = (np.random.rand(tot_train_stars) * 100) + 10
@@ -221,6 +219,7 @@ noisy_train_stars = np.stack([wf_psf.utils.add_noise(_im, desired_SNR=_SNR)
 # Generate Gaussian noise patterns to be shared over all datasets (but not every star)
 noisy_train_patterns = noisy_train_stars - train_stars
 
+WFE_res_id = 0
 
 # Generate datasets for every WFE resolution
 for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires):
@@ -279,30 +278,31 @@ for poly_psf_np, zernike_coef_np in zip(poly_psf_multires, zernike_coef_multires
 
         np.save(output_folder + 'train_Euclid_res_' + str(n_train_stars) + '_TrainStars_id_' + dataset_id_str + '_wfeRes_' + str(WFE_resolutions[WFE_res_id]) +'.npy',
                 train_psf_dataset, allow_pickle=True)
-        
+
+    # Next desired resolution   
     WFE_res_id += 1
 
 # Load and test generated dataset
 path = output_folder
 
-dataset_4096 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
-dataset_256 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_002_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
+dataset_1 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_004_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
+dataset_2 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_004_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
 
 star_to_show = 0
 
 plt.figure(figsize=(15,9))
 plt.suptitle('Noisy star PSF', fontsize=30)
 plt.subplot(131)
-plt.imshow(dataset_4096['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-plt.title('WFE dim: 4096', fontsize=20)
+plt.imshow(dataset_1['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
+plt.title('WFE dim: '+str(WFE_resolutions[0]), fontsize=20)
 plt.subplot(132)
-plt.imshow(dataset_256['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
-plt.title('WFE dim: 256', fontsize=20)
+plt.imshow(dataset_2['noisy_stars'][star_to_show,:,:], cmap='gist_stern');plt.colorbar()
+plt.title('WFE dim: '+str(WFE_resolutions[1]), fontsize=20)
 plt.subplot(133)
-plt.imshow(np.abs(dataset_256['noisy_stars'][star_to_show,:,:] - dataset_4096['noisy_stars'][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
+plt.imshow(np.abs(dataset_2['noisy_stars'][star_to_show,:,:] - dataset_1['noisy_stars'][star_to_show,:,:] ), cmap='gist_stern');plt.colorbar()
 plt.title('Absolute difference', fontsize=20)
 
-plt.savefig(output_folder + 'multiple_WFE_resolution_dataset_psf_comparison.pdf')
+plt.savefig(output_folder + 'multiple_WFE_resolution_dataset_psf_comparison_'+str(WFE_resolutions[0])+'vs'+str(WFE_resolutions[1])+'_.pdf')
 
 print('\nFigure saved at: ' + output_folder)
 print('\nDone!')
