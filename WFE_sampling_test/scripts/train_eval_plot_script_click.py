@@ -73,7 +73,7 @@ import click
 # Input dataset paths
 @click.option(
     "--dataset_folder",
-    default="/n05data/ecentofanti/WFE_sampling_test/multires_dataset",
+    default="/n05data/ecentofanti/WFE_sampling_test/multires_dataset/",
     type=str,
     help="Folder path of datasets.")
 @click.option(
