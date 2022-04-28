@@ -20,10 +20,8 @@
 module load tensorflow/2.7
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
-
     --n_epochs_param 2 2 \
     --n_epochs_non_param 2 2 \
-
     --model poly \
     --model_eval poly \
     --base_id_name _full_poly_WFE_res_ \
@@ -34,8 +32,6 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
     --star_numbers 200  \
     --cycle_def complete \
     --plots_folder plots/ \
-# --n_epochs_non_param 100 50 \
-# --n_epochs_param 15 15 \
     --n_zernikes 45 \
     --gt_n_zernikes 45 \
     --d_max_nonparam 2 \
