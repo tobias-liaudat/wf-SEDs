@@ -25,10 +25,10 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
     --model poly \
     --model_eval poly \
     --base_id_name _full_poly_WFE_res_ \
-    --suffix_id_name 256
-    --id_name _full_poly_WFE_res_256
-    --test_dataset_file test_Euclid_res_id_004_wfeRes_256.npy
-    --train_dataset_file train_Euclid_res_200_TrainStars_id_004_wfeRes_256.npy
+    --suffix_id_name 256 \
+    --id_name _full_poly_WFE_res_256 \
+    --test_dataset_file test_Euclid_res_id_004_wfeRes_256.npy \
+    --train_dataset_file train_Euclid_res_200_TrainStars_id_004_wfeRes_256.npy \
     --star_numbers 200  \
     --cycle_def complete \
     --plots_folder plots/ \
