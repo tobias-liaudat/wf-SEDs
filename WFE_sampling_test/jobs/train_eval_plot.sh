@@ -10,7 +10,7 @@
 # Set a name for the job
 #PBS -N wf-psf_train
 # Join output and errors in one file
-#PBS -j oe
+# PBS -j oe
 # Set maximum computing time (e.g. 5min)
 #PBS -l walltime=72:00:00
 # Request number of cores (n_machines:ppn=n_cores)
