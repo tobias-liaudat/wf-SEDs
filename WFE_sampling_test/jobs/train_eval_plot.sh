@@ -20,7 +20,7 @@
 module load tensorflow/2.7
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
-    --model param \
+    --model poly \
     --n_epochs_param 2 2 \
     --n_epochs_non_param 2 2 \
     --saved_model_type checkpoint \

@@ -3,7 +3,7 @@
 
 # PSF modelling and evaluation
 
-import wf-psf as wf
+import wf_psf as wf
 import click
 
 # from absl import app
