@@ -246,8 +246,8 @@ import click
     help="Plot parameter. Base id_name before dataset suffix are added.")
 @click.option(
     "--suffix_id_name",
-    default=["2c", "5c"],
-    multiple=True,
+    default="wfeRes_256",
+    #multiple=True,
     type=str,
     help="Plot parameter. Suffix needed to recreate the different id names.")
 @click.option(

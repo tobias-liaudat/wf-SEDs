@@ -10,28 +10,28 @@
 # Set a name for the job
 #PBS -N wf-psf_train
 # Join output and errors in one file
-# PBS -j oe
+#PBS -j oe
 # Set maximum computing time (e.g. 5min)
 #PBS -l walltime=72:00:00
 # Request number of cores (n_machines:ppn=n_cores)
-#PBS -l nodes=n03:ppn=2
+#PBS -l nodes=n03:ppn=4
 
 # Activate conda environment
 module load tensorflow/2.7
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
-    --n_epochs_param 2 2 \
-    --n_epochs_non_param 2 2 \
+    --n_epochs_param 15 15 \
+    --n_epochs_non_param 100 50 \
     --model poly \
     --model_eval poly \
-    --base_id_name _full_poly_WFE_res_ \
-    --suffix_id_name 256 \
-    --id_name _full_poly_WFE_res_256 \
+    --base_id_name _full_poly_ \
+    --suffix_id_name wfeRes_256 \
+    --id_name _full_poly_wfeRes_256 \
     --test_dataset_file test_Euclid_res_id_004_wfeRes_256.npy \
-    --train_dataset_file train_Euclid_res_200_TrainStars_id_004_wfeRes_256.npy \
-    --star_numbers 200  \
+    --train_dataset_file train_Euclid_res_2000_TrainStars_id_004_wfeRes_256.npy \
+    --star_numbers 2000  \
     --cycle_def complete \
-    --plots_folder plots/ \
+    --plots_folder plots/256_wfeRes \
     --n_zernikes 45 \
     --gt_n_zernikes 45 \
     --d_max_nonparam 2 \
@@ -50,9 +50,9 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
     --base_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/ \
     --dataset_folder /n05data/ecentofanti/WFE_sampling_test/multires_dataset/ \
     --metric_base_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/metrics/ \
-    --chkp_save_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/chkp/ \
+    --chkp_save_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/chkp/256_wfeRes \
     --log_folder log-files/ \
-    --model_folder chkp/ \
+    --model_folder chkp/256_wfeRes \
     --optim_hist_folder optim-hist/ \
 
 # Return exit code
