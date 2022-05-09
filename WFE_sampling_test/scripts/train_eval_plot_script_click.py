@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 
 # PSF modelling and evaluation
@@ -73,7 +73,7 @@ import click
 # Input dataset paths
 @click.option(
     "--dataset_folder",
-    default="/n05data/ecentofanti/WFE_sampling_test/multires_dataset",
+    default="/n05data/ecentofanti/WFE_sampling_test/multires_dataset/",
     type=str,
     help="Folder path of datasets.")
 @click.option(
@@ -246,8 +246,8 @@ import click
     help="Plot parameter. Base id_name before dataset suffix are added.")
 @click.option(
     "--suffix_id_name",
-    default=["2c", "5c"],
-    multiple=True,
+    default="wfeRes_256",
+    #multiple=True,
     type=str,
     help="Plot parameter. Suffix needed to recreate the different id names.")
 @click.option(
