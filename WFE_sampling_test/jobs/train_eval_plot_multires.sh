@@ -5,16 +5,16 @@
 ##########################
 
 # Receive email when job finishes or aborts (commented)
-# PBS -M ezequiel.centofanti@cea.fr
-# PBS -m ea
+#PBS -M ezequiel.centofanti@cea.fr
+#PBS -m ea
 # Set a name for the job
 #PBS -N wf-psf_train_multires
 # Join output and errors in one file
 #PBS -j oe
 # Set maximum computing time (e.g. 5min)
-#PBS -l walltime=72:00:00
+#PBS -l walltime=48:00:00
 # Request number of cores (n_machines:ppn=n_cores)
-#PBS -l nodes=n03:ppn=4
+#PBS -l nodes=n03:ppn=8
 
 # Activate conda environment
 module load tensorflow/2.7
@@ -50,7 +50,7 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
     --eval_opt True \
     --plot_opt True \
     --base_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/ \
-    --dataset_folder /n05data/ecentofanti/WFE_sampling_test/multires_dataset/ \
+    --dataset_folder /n05data/ecentofanti/WFE_sampling_test/super_res/ \
     --metric_base_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/metrics/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
@@ -86,7 +86,7 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
     --eval_opt True \
     --plot_opt True \
     --base_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/ \
-    --dataset_folder /n05data/ecentofanti/WFE_sampling_test/multires_dataset/ \
+    --dataset_folder /n05data/ecentofanti/WFE_sampling_test/super_res/ \
     --metric_base_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/metrics/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
