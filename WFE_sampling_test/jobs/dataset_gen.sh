@@ -14,7 +14,7 @@
 # Set maximum computing time (e.g. 5min)
 #PBS -l walltime=72:00:00
 # Request number of cores
-#PBS -l nodes=n18:ppn=24
+#PBS -l nodes=n20:ppn=48
 
 # Activate conda environment
 module load tensorflow/2.7
