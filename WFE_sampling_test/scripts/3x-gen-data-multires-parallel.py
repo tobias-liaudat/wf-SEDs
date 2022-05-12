@@ -10,14 +10,14 @@ import time
 # Paths
 
 # SED folder path
-#SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'                 # Candide
+SED_path = '/home/ecentofanti/wf-psf/data/SEDs/save_SEDs/'                 # Candide
 #SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
-SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
+#SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
 # Output saving path (in node05 of candide or $WORK space on feynman)
-#output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
+output_folder = '/n05data/ecentofanti/WFE_sampling_test/super_res/'         # Candide
 #output_folder = './../../../output/'                                       # Local
-output_folder = '/feynman/work/dap/lcs/ec270266/output/super_res/'                     # Feynman
+#output_folder = '/feynman/work/dap/lcs/ec270266/output/super_res/'         # Feynman
 
 # Number of cpu on the machine (may differ from n_cpus available !!!)
 n_cpus = cpu_count()
@@ -67,8 +67,8 @@ super_out_Q = 1
 super_out_res = 64
 
 # Desired WFE resolutions
-#WFE_resolutions = [4096, 256]
-WFE_resolutions = [1024, 256]
+WFE_resolutions = [4096, 256]
+#WFE_resolutions = [1024, 256]
 
 print('\nInit dataset generation')
 
