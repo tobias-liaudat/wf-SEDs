@@ -8,7 +8,7 @@
 #PBS -M ezequiel.centofanti@cea.fr
 #PBS -m ea
 # Set a name for the job
-#PBS -N wf-psf_train_32
+#PBS -N multires_training
 # Join output and errors in one file
 #PBS -j oe
 # Set maximum computing time (e.g. 5min)
