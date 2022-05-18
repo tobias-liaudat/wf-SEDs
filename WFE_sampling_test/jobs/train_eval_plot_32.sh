@@ -20,6 +20,7 @@
 module load tensorflow/2.7
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
+    --pupil_diameter 32 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
     --model poly \
