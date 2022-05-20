@@ -8,7 +8,7 @@
 #PBS -M ezequiel.centofanti@cea.fr
 #PBS -m ea
 # Set a name for the job
-#PBS -N wf-psf_train_multires
+#PBS -N train_4000_stars
 # Join output and errors in one file
 #PBS -j oe
 # Set maximum computing time (e.g. 5min)
@@ -29,11 +29,11 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
     --suffix_id_name wfeRes_128 \
     --id_name _full_poly_wfeRes_128 \
     --test_dataset_file test_Euclid_res_id_005_wfeRes_4096.npy \
-    --train_dataset_file train_Euclid_res_2000_TrainStars_id_005_wfeRes_4096.npy \
-    --plots_folder plots/128_wfeRes/ \
-    --model_folder chkp/128_wfeRes/ \
-    --chkp_save_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/chkp/128_wfeRes/ \
-    --star_numbers 2000  \
+    --train_dataset_file train_Euclid_res_4000_TrainStars_id_006_wfeRes_4096.npy \
+    --plots_folder plots/ \
+    --model_folder chkp/4000_stars/ \
+    --chkp_save_path /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/ \
+    --star_numbers 4000  \
     --cycle_def complete \
     --n_zernikes 15 \
     --gt_n_zernikes 45 \
@@ -50,9 +50,9 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
     --train_opt True \
     --eval_opt True \
     --plot_opt True \
-    --base_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/ \
-    --dataset_folder /n05data/ecentofanti/WFE_sampling_test/super_res/ \
-    --metric_base_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/metrics/ \
+    --base_path /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/ \
+    --dataset_folder /n05data/ecentofanti/WFE_sampling_test/4000_stars/ \
+    --metric_base_path /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/metrics/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
 
