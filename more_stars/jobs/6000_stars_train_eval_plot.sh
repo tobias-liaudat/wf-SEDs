@@ -8,7 +8,7 @@
 #PBS -M ezequiel.centofanti@cea.fr
 #PBS -m ea
 # Set a name for the job
-#PBS -N train_4000_stars
+#PBS -N multi_stars_train
 # Join output and errors in one file
 #PBS -j oe
 # Set maximum computing time (e.g. 5min)
@@ -21,7 +21,7 @@ module load tensorflow/2.7
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
     --pupil_diameter 128 \
-    --n_bins_lda 8
+    --n_bins_lda 8 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
     --model poly \
@@ -60,7 +60,7 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
     --pupil_diameter 128 \
-    --n_bins_lda 8
+    --n_bins_lda 8 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
     --model poly \
@@ -99,7 +99,7 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
     --pupil_diameter 128 \
-    --n_bins_lda 8
+    --n_bins_lda 8 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
     --model poly \
@@ -138,7 +138,7 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
     --pupil_diameter 128 \
-    --n_bins_lda 8
+    --n_bins_lda 8 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
     --model poly \
@@ -177,7 +177,7 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
     --pupil_diameter 128 \
-    --n_bins_lda 8
+    --n_bins_lda 8 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
     --model poly \
@@ -216,7 +216,7 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
     --pupil_diameter 128 \
-    --n_bins_lda 8
+    --n_bins_lda 8 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
     --model poly \
