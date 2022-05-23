@@ -17,7 +17,7 @@ SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Fe
 # Output saving path (in node05 of candide or $WORK space on feynman)
 #output_folder = '/n05data/ecentofanti/WFE_sampling_test/multires_dataset/' # Candide
 #output_folder = './../../../output/'                                       # Local
-output_folder = '/feynman/work/dap/lcs/ec270266/output/super_res/'                     # Feynman
+output_folder = '/feynman/work/dap/lcs/ec270266/output/more_stars/'          # Feynman
 
 # Number of cpu on the machine (may differ from n_cpus available !!!)
 n_cpus = cpu_count()
@@ -31,12 +31,12 @@ sys.stdout = log_file
 print('Starting the log file.')
 
 # Dataset ID
-dataset_id = 5
+dataset_id = 7
 dataset_id_str = '%03d'%(dataset_id)
 
 # This list must be in order from bigger to smaller
-n_star_list = [2000, 1000, 500, 200]
-n_test_stars = 400  # 20% of the max test stars
+n_star_list = [6000, 5000, 4000, 3000, 2000, 1000]
+n_test_stars = 1200  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -48,7 +48,7 @@ max_order = 45
 x_lims = [0, 1e3]
 y_lims = [0, 1e3]
 grid_points = [4, 4]
-n_bins = 20
+n_bins = 8
 auto_init = False
 verbose = True
 
@@ -67,8 +67,8 @@ super_out_Q = 1
 super_out_res = 64
 
 # Desired WFE resolutions
-#WFE_resolutions = [4096, 256]
-WFE_resolutions = [1024, 256]
+WFE_resolutions = [128]
+#WFE_resolutions = [1024, 256]
 
 print('\nInit dataset generation')
 
