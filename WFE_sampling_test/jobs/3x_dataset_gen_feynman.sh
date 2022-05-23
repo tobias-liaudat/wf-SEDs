@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name="Dataset Gen"
+#SBATCH --job-name="Dataset Gen 3x"
 #SBATCH --mail-user=ezequiel.centofanti@cea.fr
 #SBATCH --mail-type=ALL
 #SBATCH --partition=htc
@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=24
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
-#SBATCH --output=output_data_gen-%j-%a.log
+#SBATCH --output=dataset_gen_3x-%j-%a.log
 
 # Activate conda environment
 module load anaconda
