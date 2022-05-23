@@ -1,0 +1,2 @@
+model_checkpoint_path: "chkp_poly_full_poly_wfeRes_128_cycle2"
+all_model_checkpoint_paths: "chkp_poly_full_poly_wfeRes_128_cycle2"

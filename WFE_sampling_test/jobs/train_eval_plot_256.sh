@@ -20,6 +20,7 @@
 module load tensorflow/2.7
 
 python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_script_click.py \
+    --pupil_diameter 256 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
     --model poly \
@@ -34,9 +35,9 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
     --chkp_save_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/chkp/256_wfeRes/ \
     --star_numbers 2000  \
     --cycle_def complete \
-    --n_zernikes 45 \
+    --n_zernikes 15 \
     --gt_n_zernikes 45 \
-    --d_max_nonparam 2 \
+    --d_max_nonparam 5 \
     --l_rate_non_param 0.1 0.06 \
     --l_rate_param 0.01 0.004 \
     --saved_model_type checkpoint \
