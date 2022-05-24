@@ -1,6 +1,6 @@
 Starting the log file.
 Found GPU at: /device:GPU:0
-tf_version: 2.7.1
+tf_version: 2.7.2
 Zernike cube:
 (15, 512, 512)
 Dataset parameters:
