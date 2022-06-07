@@ -1,0 +1,2 @@
+model_checkpoint_path: "chkp_callback_poly_full_poly_4000_stars_cycle1"
+all_model_checkpoint_paths: "chkp_callback_poly_full_poly_4000_stars_cycle1"

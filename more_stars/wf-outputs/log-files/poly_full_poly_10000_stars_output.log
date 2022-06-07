@@ -1,0 +1,13 @@
+Starting the log file.
+Found GPU at: /device:GPU:0
+tf_version: 2.7.3
+Zernike cube:
+(15, 128, 128)
+Dataset parameters:
+{'d_max': 2, 'max_order': 45, 'x_lims': [0, 1000.0], 'y_lims': [0, 1000.0], 'grid_points': [4, 4], 'n_bins': 8, 'max_wfe_rms': 0.1, 'oversampling_rate': 3.0, 'output_Q': 3.0, 'output_dim': 32, 'LP_filter_length': 2, 'pupil_diameter': 128, 'euclid_obsc': True, 'n_stars': 10000}
+Starting cycle 1..
+Starting parametric update..
+Epoch 1/15
+
+Epoch 00001: mean_squared_error improved from inf to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/10000_stars/chkp_callback_poly_full_poly_10000_stars_cycle1
+313/313 - 408s - loss: 3.2990e-06 - mean_squared_error: 3.4449e-06 - val_loss: 1.0019e-06 - val_mean_squared_error: 1.0019e-06 - 408s/epoch - 1s/step
