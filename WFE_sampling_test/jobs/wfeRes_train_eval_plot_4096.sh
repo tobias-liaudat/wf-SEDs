@@ -14,7 +14,7 @@
 # Set maximum computing time (e.g. 5min)
 #PBS -l walltime=48:00:00
 # Request number of cores (n_machines:ppn=n_cores)
-#PBS -l nodes=n03:ppn=8
+#PBS -l nodes=n03:ppn=4
 
 # Activate conda environment
 module load tensorflow/2.7
@@ -26,13 +26,13 @@ python /home/ecentofanti/wf-SEDs/WFE_sampling_test/scripts/train_eval_plot_scrip
     --model poly \
     --model_eval poly \
     --base_id_name _full_poly_ \
-    --suffix_id_name wfeRes_256 \
-    --id_name _full_poly_wfeRes_256 \
+    --suffix_id_name wfeRes_4096 \
+    --id_name _full_poly_wfeRes_4096 \
     --test_dataset_file test_Euclid_res_id_005_wfeRes_4096.npy \
     --train_dataset_file train_Euclid_res_2000_TrainStars_id_005_wfeRes_4096.npy \
-    --plots_folder plots/256_wfeRes/ \
-    --model_folder chkp/256_wfeRes/ \
-    --chkp_save_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/chkp/256_wfeRes/ \
+    --plots_folder plots/4096_wfeRes/ \
+    --model_folder chkp/4096_wfeRes/ \
+    --chkp_save_path /home/ecentofanti/wf-SEDs/WFE_sampling_test/wf-outputs/chkp/4096_wfeRes/ \
     --star_numbers 2000  \
     --cycle_def complete \
     --n_zernikes 15 \
