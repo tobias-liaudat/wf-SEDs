@@ -352,3 +352,388 @@ Epoch 71/100
 
 Epoch 00071: mean_squared_error did not improve from 0.00000
 125/125 - 235s - loss: 9.4116e-07 - mean_squared_error: 1.3503e-06 - val_loss: 8.9262e-09 - val_mean_squared_error: 8.9262e-09 - 235s/epoch - 2s/step
+Epoch 72/100
+
+Epoch 00072: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.4101e-07 - mean_squared_error: 1.3502e-06 - val_loss: 6.9838e-09 - val_mean_squared_error: 6.9838e-09 - 235s/epoch - 2s/step
+Epoch 73/100
+
+Epoch 00073: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle1
+125/125 - 235s - loss: 9.3852e-07 - mean_squared_error: 1.3481e-06 - val_loss: 7.2093e-09 - val_mean_squared_error: 7.2093e-09 - 235s/epoch - 2s/step
+Epoch 74/100
+
+Epoch 00074: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3927e-07 - mean_squared_error: 1.3486e-06 - val_loss: 8.3166e-09 - val_mean_squared_error: 8.3166e-09 - 236s/epoch - 2s/step
+Epoch 75/100
+
+Epoch 00075: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3920e-07 - mean_squared_error: 1.3486e-06 - val_loss: 8.4503e-09 - val_mean_squared_error: 8.4503e-09 - 235s/epoch - 2s/step
+Epoch 76/100
+
+Epoch 00076: mean_squared_error did not improve from 0.00000
+125/125 - 237s - loss: 9.3957e-07 - mean_squared_error: 1.3491e-06 - val_loss: 6.9640e-09 - val_mean_squared_error: 6.9640e-09 - 237s/epoch - 2s/step
+Epoch 77/100
+
+Epoch 00077: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3989e-07 - mean_squared_error: 1.3493e-06 - val_loss: 9.1189e-09 - val_mean_squared_error: 9.1189e-09 - 236s/epoch - 2s/step
+Epoch 78/100
+
+Epoch 00078: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.4048e-07 - mean_squared_error: 1.3496e-06 - val_loss: 7.3527e-09 - val_mean_squared_error: 7.3527e-09 - 236s/epoch - 2s/step
+Epoch 79/100
+
+Epoch 00079: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3935e-07 - mean_squared_error: 1.3486e-06 - val_loss: 1.4343e-08 - val_mean_squared_error: 1.4343e-08 - 236s/epoch - 2s/step
+Epoch 80/100
+
+Epoch 00080: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3975e-07 - mean_squared_error: 1.3491e-06 - val_loss: 7.2912e-09 - val_mean_squared_error: 7.2912e-09 - 235s/epoch - 2s/step
+Epoch 81/100
+
+Epoch 00081: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3971e-07 - mean_squared_error: 1.3490e-06 - val_loss: 9.9254e-09 - val_mean_squared_error: 9.9254e-09 - 236s/epoch - 2s/step
+Epoch 82/100
+
+Epoch 00082: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.4103e-07 - mean_squared_error: 1.3501e-06 - val_loss: 7.5713e-09 - val_mean_squared_error: 7.5713e-09 - 235s/epoch - 2s/step
+Epoch 83/100
+
+Epoch 00083: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle1
+125/125 - 234s - loss: 9.3838e-07 - mean_squared_error: 1.3480e-06 - val_loss: 7.9758e-09 - val_mean_squared_error: 7.9758e-09 - 234s/epoch - 2s/step
+Epoch 84/100
+
+Epoch 00084: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3861e-07 - mean_squared_error: 1.3481e-06 - val_loss: 8.5031e-09 - val_mean_squared_error: 8.5031e-09 - 236s/epoch - 2s/step
+Epoch 85/100
+
+Epoch 00085: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3934e-07 - mean_squared_error: 1.3485e-06 - val_loss: 7.5940e-09 - val_mean_squared_error: 7.5940e-09 - 235s/epoch - 2s/step
+Epoch 86/100
+
+Epoch 00086: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3896e-07 - mean_squared_error: 1.3483e-06 - val_loss: 9.1769e-09 - val_mean_squared_error: 9.1769e-09 - 235s/epoch - 2s/step
+Epoch 87/100
+
+Epoch 00087: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle1
+125/125 - 235s - loss: 9.3825e-07 - mean_squared_error: 1.3479e-06 - val_loss: 7.4846e-09 - val_mean_squared_error: 7.4846e-09 - 235s/epoch - 2s/step
+Epoch 88/100
+
+Epoch 00088: mean_squared_error did not improve from 0.00000
+125/125 - 233s - loss: 9.3844e-07 - mean_squared_error: 1.3479e-06 - val_loss: 8.3224e-09 - val_mean_squared_error: 8.3224e-09 - 233s/epoch - 2s/step
+Epoch 89/100
+
+Epoch 00089: mean_squared_error did not improve from 0.00000
+125/125 - 233s - loss: 9.4139e-07 - mean_squared_error: 1.3501e-06 - val_loss: 8.1235e-09 - val_mean_squared_error: 8.1235e-09 - 233s/epoch - 2s/step
+Epoch 90/100
+
+Epoch 00090: mean_squared_error did not improve from 0.00000
+125/125 - 234s - loss: 9.3853e-07 - mean_squared_error: 1.3480e-06 - val_loss: 6.1571e-09 - val_mean_squared_error: 6.1571e-09 - 234s/epoch - 2s/step
+Epoch 91/100
+
+Epoch 00091: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle1
+125/125 - 236s - loss: 9.3802e-07 - mean_squared_error: 1.3476e-06 - val_loss: 7.6971e-09 - val_mean_squared_error: 7.6971e-09 - 236s/epoch - 2s/step
+Epoch 92/100
+
+Epoch 00092: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3840e-07 - mean_squared_error: 1.3480e-06 - val_loss: 8.3884e-09 - val_mean_squared_error: 8.3884e-09 - 236s/epoch - 2s/step
+Epoch 93/100
+
+Epoch 00093: mean_squared_error did not improve from 0.00000
+125/125 - 234s - loss: 9.3947e-07 - mean_squared_error: 1.3489e-06 - val_loss: 7.3830e-09 - val_mean_squared_error: 7.3830e-09 - 234s/epoch - 2s/step
+Epoch 94/100
+
+Epoch 00094: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle1
+125/125 - 236s - loss: 9.3787e-07 - mean_squared_error: 1.3474e-06 - val_loss: 6.1390e-09 - val_mean_squared_error: 6.1390e-09 - 236s/epoch - 2s/step
+Epoch 95/100
+
+Epoch 00095: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle1
+125/125 - 236s - loss: 9.3777e-07 - mean_squared_error: 1.3474e-06 - val_loss: 7.7195e-09 - val_mean_squared_error: 7.7195e-09 - 236s/epoch - 2s/step
+Epoch 96/100
+
+Epoch 00096: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3854e-07 - mean_squared_error: 1.3481e-06 - val_loss: 6.7051e-09 - val_mean_squared_error: 6.7051e-09 - 236s/epoch - 2s/step
+Epoch 97/100
+
+Epoch 00097: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle1
+125/125 - 236s - loss: 9.3714e-07 - mean_squared_error: 1.3468e-06 - val_loss: 6.9003e-09 - val_mean_squared_error: 6.9003e-09 - 236s/epoch - 2s/step
+Epoch 98/100
+
+Epoch 00098: mean_squared_error did not improve from 0.00000
+125/125 - 237s - loss: 9.3807e-07 - mean_squared_error: 1.3476e-06 - val_loss: 7.5347e-09 - val_mean_squared_error: 7.5347e-09 - 237s/epoch - 2s/step
+Epoch 99/100
+
+Epoch 00099: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3792e-07 - mean_squared_error: 1.3475e-06 - val_loss: 6.7246e-09 - val_mean_squared_error: 6.7246e-09 - 236s/epoch - 2s/step
+Epoch 100/100
+
+Epoch 00100: mean_squared_error did not improve from 0.00000
+125/125 - 237s - loss: 9.3743e-07 - mean_squared_error: 1.3471e-06 - val_loss: 1.1438e-08 - val_mean_squared_error: 1.1438e-08 - 237s/epoch - 2s/step
+Cycle1 elapsed time: 26932.781164
+Starting cycle 2..
+Starting parametric update..
+Epoch 1/15
+
+Epoch 00001: mean_squared_error improved from inf to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle2
+125/125 - 224s - loss: 9.3916e-07 - mean_squared_error: 1.3486e-06 - val_loss: 1.1501e-08 - val_mean_squared_error: 1.1501e-08 - 224s/epoch - 2s/step
+Epoch 2/15
+
+Epoch 00002: mean_squared_error did not improve from 0.00000
+125/125 - 221s - loss: 9.4362e-07 - mean_squared_error: 1.3529e-06 - val_loss: 1.3956e-08 - val_mean_squared_error: 1.3956e-08 - 221s/epoch - 2s/step
+Epoch 3/15
+
+Epoch 00003: mean_squared_error did not improve from 0.00000
+125/125 - 221s - loss: 9.4521e-07 - mean_squared_error: 1.3545e-06 - val_loss: 1.1386e-08 - val_mean_squared_error: 1.1386e-08 - 221s/epoch - 2s/step
+Epoch 4/15
+
+Epoch 00004: mean_squared_error did not improve from 0.00000
+125/125 - 222s - loss: 9.4520e-07 - mean_squared_error: 1.3544e-06 - val_loss: 1.2068e-08 - val_mean_squared_error: 1.2068e-08 - 222s/epoch - 2s/step
+Epoch 5/15
+
+Epoch 00005: mean_squared_error did not improve from 0.00000
+125/125 - 222s - loss: 9.5570e-07 - mean_squared_error: 1.3644e-06 - val_loss: 1.8937e-08 - val_mean_squared_error: 1.8937e-08 - 222s/epoch - 2s/step
+Epoch 6/15
+
+Epoch 00006: mean_squared_error did not improve from 0.00000
+125/125 - 222s - loss: 9.5046e-07 - mean_squared_error: 1.3591e-06 - val_loss: 6.7216e-08 - val_mean_squared_error: 6.7216e-08 - 222s/epoch - 2s/step
+Epoch 7/15
+
+Epoch 00007: mean_squared_error did not improve from 0.00000
+125/125 - 221s - loss: 9.5238e-07 - mean_squared_error: 1.3612e-06 - val_loss: 1.8662e-08 - val_mean_squared_error: 1.8662e-08 - 221s/epoch - 2s/step
+Epoch 8/15
+
+Epoch 00008: mean_squared_error did not improve from 0.00000
+125/125 - 221s - loss: 9.4560e-07 - mean_squared_error: 1.3550e-06 - val_loss: 1.7517e-08 - val_mean_squared_error: 1.7517e-08 - 221s/epoch - 2s/step
+Epoch 9/15
+
+Epoch 00009: mean_squared_error did not improve from 0.00000
+125/125 - 221s - loss: 9.4752e-07 - mean_squared_error: 1.3567e-06 - val_loss: 1.5465e-08 - val_mean_squared_error: 1.5465e-08 - 221s/epoch - 2s/step
+Epoch 10/15
+
+Epoch 00010: mean_squared_error did not improve from 0.00000
+125/125 - 220s - loss: 9.4744e-07 - mean_squared_error: 1.3568e-06 - val_loss: 1.1582e-08 - val_mean_squared_error: 1.1582e-08 - 220s/epoch - 2s/step
+Epoch 11/15
+
+Epoch 00011: mean_squared_error did not improve from 0.00000
+125/125 - 221s - loss: 9.6200e-07 - mean_squared_error: 1.3705e-06 - val_loss: 6.7158e-08 - val_mean_squared_error: 6.7158e-08 - 221s/epoch - 2s/step
+Epoch 12/15
+
+Epoch 00012: mean_squared_error did not improve from 0.00000
+125/125 - 221s - loss: 9.9213e-07 - mean_squared_error: 1.3963e-06 - val_loss: 3.1605e-08 - val_mean_squared_error: 3.1605e-08 - 221s/epoch - 2s/step
+Epoch 13/15
+
+Epoch 00013: mean_squared_error did not improve from 0.00000
+125/125 - 221s - loss: 9.4327e-07 - mean_squared_error: 1.3525e-06 - val_loss: 1.0479e-08 - val_mean_squared_error: 1.0479e-08 - 221s/epoch - 2s/step
+Epoch 14/15
+
+Epoch 00014: mean_squared_error did not improve from 0.00000
+125/125 - 222s - loss: 9.4714e-07 - mean_squared_error: 1.3563e-06 - val_loss: 1.9927e-08 - val_mean_squared_error: 1.9927e-08 - 222s/epoch - 2s/step
+Epoch 15/15
+
+Epoch 00015: mean_squared_error did not improve from 0.00000
+125/125 - 222s - loss: 9.5816e-07 - mean_squared_error: 1.3667e-06 - val_loss: 4.3541e-08 - val_mean_squared_error: 4.3541e-08 - 222s/epoch - 2s/step
+Starting non-parametric update..
+Epoch 1/50
+
+Epoch 00001: mean_squared_error did not improve from 0.00000
+125/125 - 238s - loss: 9.4086e-07 - mean_squared_error: 1.3507e-06 - val_loss: 5.3296e-09 - val_mean_squared_error: 5.3296e-09 - 238s/epoch - 2s/step
+Epoch 2/50
+
+Epoch 00002: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle2
+125/125 - 236s - loss: 9.3535e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.0005e-09 - val_mean_squared_error: 5.0005e-09 - 236s/epoch - 2s/step
+Epoch 3/50
+
+Epoch 00003: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle2
+125/125 - 235s - loss: 9.3525e-07 - mean_squared_error: 1.3451e-06 - val_loss: 5.1012e-09 - val_mean_squared_error: 5.1012e-09 - 235s/epoch - 2s/step
+Epoch 4/50
+
+Epoch 00004: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3529e-07 - mean_squared_error: 1.3451e-06 - val_loss: 5.0769e-09 - val_mean_squared_error: 5.0769e-09 - 236s/epoch - 2s/step
+Epoch 5/50
+
+Epoch 00005: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle2
+125/125 - 235s - loss: 9.3523e-07 - mean_squared_error: 1.3451e-06 - val_loss: 4.9922e-09 - val_mean_squared_error: 4.9922e-09 - 235s/epoch - 2s/step
+Epoch 6/50
+
+Epoch 00006: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3535e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.2981e-09 - val_mean_squared_error: 5.2981e-09 - 235s/epoch - 2s/step
+Epoch 7/50
+
+Epoch 00007: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3537e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.1162e-09 - val_mean_squared_error: 5.1162e-09 - 236s/epoch - 2s/step
+Epoch 8/50
+
+Epoch 00008: mean_squared_error did not improve from 0.00000
+125/125 - 237s - loss: 9.3531e-07 - mean_squared_error: 1.3451e-06 - val_loss: 5.2164e-09 - val_mean_squared_error: 5.2164e-09 - 237s/epoch - 2s/step
+Epoch 9/50
+
+Epoch 00009: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3532e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.0094e-09 - val_mean_squared_error: 5.0094e-09 - 235s/epoch - 2s/step
+Epoch 10/50
+
+Epoch 00010: mean_squared_error did not improve from 0.00000
+125/125 - 233s - loss: 9.3536e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.5022e-09 - val_mean_squared_error: 5.5022e-09 - 233s/epoch - 2s/step
+Epoch 11/50
+
+Epoch 00011: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3543e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.4912e-09 - val_mean_squared_error: 5.4912e-09 - 236s/epoch - 2s/step
+Epoch 12/50
+
+Epoch 00012: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3541e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.3240e-09 - val_mean_squared_error: 5.3240e-09 - 235s/epoch - 2s/step
+Epoch 13/50
+
+Epoch 00013: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3552e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.6989e-09 - val_mean_squared_error: 5.6989e-09 - 235s/epoch - 2s/step
+Epoch 14/50
+
+Epoch 00014: mean_squared_error did not improve from 0.00000
+125/125 - 236s - loss: 9.3552e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.2001e-09 - val_mean_squared_error: 5.2001e-09 - 236s/epoch - 2s/step
+Epoch 15/50
+
+Epoch 00015: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3555e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.1946e-09 - val_mean_squared_error: 5.1946e-09 - 235s/epoch - 2s/step
+Epoch 16/50
+
+Epoch 00016: mean_squared_error did not improve from 0.00000
+125/125 - 235s - loss: 9.3552e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.5769e-09 - val_mean_squared_error: 5.5769e-09 - 235s/epoch - 2s/step
+Epoch 17/50
+
+Epoch 00017: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3547e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.1230e-09 - val_mean_squared_error: 5.1230e-09 - 180s/epoch - 1s/step
+Epoch 18/50
+
+Epoch 00018: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3547e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.7640e-09 - val_mean_squared_error: 5.7640e-09 - 180s/epoch - 1s/step
+Epoch 19/50
+
+Epoch 00019: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3559e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.4236e-09 - val_mean_squared_error: 5.4236e-09 - 180s/epoch - 1s/step
+Epoch 20/50
+
+Epoch 00020: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3572e-07 - mean_squared_error: 1.3455e-06 - val_loss: 5.4383e-09 - val_mean_squared_error: 5.4383e-09 - 181s/epoch - 1s/step
+Epoch 21/50
+
+Epoch 00021: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3552e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.6340e-09 - val_mean_squared_error: 5.6340e-09 - 181s/epoch - 1s/step
+Epoch 22/50
+
+Epoch 00022: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3557e-07 - mean_squared_error: 1.3454e-06 - val_loss: 5.1416e-09 - val_mean_squared_error: 5.1416e-09 - 180s/epoch - 1s/step
+Epoch 23/50
+
+Epoch 00023: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3539e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.7013e-09 - val_mean_squared_error: 5.7013e-09 - 180s/epoch - 1s/step
+Epoch 24/50
+
+Epoch 00024: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3554e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.0926e-09 - val_mean_squared_error: 5.0926e-09 - 181s/epoch - 1s/step
+Epoch 25/50
+
+Epoch 00025: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3539e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.4582e-09 - val_mean_squared_error: 5.4582e-09 - 181s/epoch - 1s/step
+Epoch 26/50
+
+Epoch 00026: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3545e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.3431e-09 - val_mean_squared_error: 5.3431e-09 - 181s/epoch - 1s/step
+Epoch 27/50
+
+Epoch 00027: mean_squared_error did not improve from 0.00000
+125/125 - 182s - loss: 9.3552e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.3671e-09 - val_mean_squared_error: 5.3671e-09 - 182s/epoch - 1s/step
+Epoch 28/50
+
+Epoch 00028: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3561e-07 - mean_squared_error: 1.3454e-06 - val_loss: 5.5702e-09 - val_mean_squared_error: 5.5702e-09 - 180s/epoch - 1s/step
+Epoch 29/50
+
+Epoch 00029: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3562e-07 - mean_squared_error: 1.3454e-06 - val_loss: 5.0908e-09 - val_mean_squared_error: 5.0908e-09 - 180s/epoch - 1s/step
+Epoch 30/50
+
+Epoch 00030: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3557e-07 - mean_squared_error: 1.3454e-06 - val_loss: 5.4353e-09 - val_mean_squared_error: 5.4353e-09 - 180s/epoch - 1s/step
+Epoch 31/50
+
+Epoch 00031: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3570e-07 - mean_squared_error: 1.3455e-06 - val_loss: 6.0564e-09 - val_mean_squared_error: 6.0564e-09 - 181s/epoch - 1s/step
+Epoch 32/50
+
+Epoch 00032: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3548e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.3196e-09 - val_mean_squared_error: 5.3196e-09 - 181s/epoch - 1s/step
+Epoch 33/50
+
+Epoch 00033: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3554e-07 - mean_squared_error: 1.3454e-06 - val_loss: 5.2826e-09 - val_mean_squared_error: 5.2826e-09 - 181s/epoch - 1s/step
+Epoch 34/50
+
+Epoch 00034: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3580e-07 - mean_squared_error: 1.3455e-06 - val_loss: 5.7297e-09 - val_mean_squared_error: 5.7297e-09 - 181s/epoch - 1s/step
+Epoch 35/50
+
+Epoch 00035: mean_squared_error did not improve from 0.00000
+125/125 - 181s - loss: 9.3535e-07 - mean_squared_error: 1.3451e-06 - val_loss: 5.3339e-09 - val_mean_squared_error: 5.3339e-09 - 181s/epoch - 1s/step
+Epoch 36/50
+
+Epoch 00036: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3551e-07 - mean_squared_error: 1.3453e-06 - val_loss: 5.6661e-09 - val_mean_squared_error: 5.6661e-09 - 180s/epoch - 1s/step
+Epoch 37/50
+
+Epoch 00037: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3536e-07 - mean_squared_error: 1.3451e-06 - val_loss: 4.9873e-09 - val_mean_squared_error: 4.9873e-09 - 180s/epoch - 1s/step
+Epoch 38/50
+
+Epoch 00038: mean_squared_error did not improve from 0.00000
+125/125 - 180s - loss: 9.3533e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.1739e-09 - val_mean_squared_error: 5.1739e-09 - 180s/epoch - 1s/step
+Epoch 39/50
+
+Epoch 00039: mean_squared_error did not improve from 0.00000
+125/125 - 183s - loss: 9.3554e-07 - mean_squared_error: 1.3453e-06 - val_loss: 7.1730e-09 - val_mean_squared_error: 7.1730e-09 - 183s/epoch - 1s/step
+Epoch 40/50
+
+Epoch 00040: mean_squared_error did not improve from 0.00000
+125/125 - 185s - loss: 9.3552e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.2278e-09 - val_mean_squared_error: 5.2278e-09 - 185s/epoch - 1s/step
+Epoch 41/50
+
+Epoch 00041: mean_squared_error did not improve from 0.00000
+125/125 - 183s - loss: 9.3533e-07 - mean_squared_error: 1.3451e-06 - val_loss: 5.1159e-09 - val_mean_squared_error: 5.1159e-09 - 183s/epoch - 1s/step
+Epoch 42/50
+
+Epoch 00042: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle2
+125/125 - 184s - loss: 9.3516e-07 - mean_squared_error: 1.3449e-06 - val_loss: 6.2147e-09 - val_mean_squared_error: 6.2147e-09 - 184s/epoch - 1s/step
+Epoch 43/50
+
+Epoch 00043: mean_squared_error did not improve from 0.00000
+125/125 - 183s - loss: 9.3537e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.4609e-09 - val_mean_squared_error: 5.4609e-09 - 183s/epoch - 1s/step
+Epoch 44/50
+
+Epoch 00044: mean_squared_error did not improve from 0.00000
+125/125 - 186s - loss: 9.3542e-07 - mean_squared_error: 1.3452e-06 - val_loss: 5.4008e-09 - val_mean_squared_error: 5.4008e-09 - 186s/epoch - 1s/step
+Epoch 45/50
+
+Epoch 00045: mean_squared_error did not improve from 0.00000
+125/125 - 187s - loss: 9.3529e-07 - mean_squared_error: 1.3451e-06 - val_loss: 6.0130e-09 - val_mean_squared_error: 6.0130e-09 - 187s/epoch - 1s/step
+Epoch 46/50
+
+Epoch 00046: mean_squared_error improved from 0.00000 to 0.00000, saving model to /home/ecentofanti/wf-SEDs/more_stars/wf-outputs/chkp/4000_stars/chkp_callback_poly_full_poly_4000_stars_cycle2
+125/125 - 185s - loss: 9.3513e-07 - mean_squared_error: 1.3449e-06 - val_loss: 4.9774e-09 - val_mean_squared_error: 4.9774e-09 - 185s/epoch - 1s/step
+Epoch 47/50
+
+Epoch 00047: mean_squared_error did not improve from 0.00000
+125/125 - 186s - loss: 9.3517e-07 - mean_squared_error: 1.3450e-06 - val_loss: 5.0419e-09 - val_mean_squared_error: 5.0419e-09 - 186s/epoch - 1s/step
+Epoch 48/50
+
+Epoch 00048: mean_squared_error did not improve from 0.00000
+125/125 - 185s - loss: 9.3777e-07 - mean_squared_error: 1.3467e-06 - val_loss: 5.8219e-09 - val_mean_squared_error: 5.8219e-09 - 185s/epoch - 1s/step
+Epoch 49/50
+
+Epoch 00049: mean_squared_error did not improve from 0.00000
+125/125 - 186s - loss: 9.3545e-07 - mean_squared_error: 1.3451e-06 - val_loss: 5.6972e-09 - val_mean_squared_error: 5.6972e-09 - 186s/epoch - 1s/step
+Epoch 50/50
+
+Epoch 00050: mean_squared_error did not improve from 0.00000
+125/125 - 186s - loss: 9.3536e-07 - mean_squared_error: 1.3451e-06 - val_loss: 5.9423e-09 - val_mean_squared_error: 5.9423e-09 - 186s/epoch - 1s/step
+Cycle2 elapsed time: 13290.573906
+
+Total elapsed time: 40230.614092
+
+ Good bye..
