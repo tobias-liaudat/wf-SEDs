@@ -1,7 +1,23 @@
 # wf-SEDs
 
-One of the main objectives of this repository is to evaluate the *[WaveDiff](https://github.com/tobias-liaudat/wf-psf)* model and to investigate how errors in the SEDs impact on the prediction results.
+In this repository we evaluate the *[WaveDiff](https://github.com/tobias-liaudat/wf-psf)* model and analyse how errors in the SEDs impact on the prediction. This repository contains one folder for each test or experiment which include all the codes and data used to carry out the tests. 
 
-## WFE Sampling Test
+### WFE Sampling Test
 
-Here I analyze how the wavefront-error resolution on the training dataset impacts the model performance. 
+Analisis of the impact of the data wavefront-error resolution on the model predictions.
+
+### Model WFE size
+
+Analisis of the impact of the model wavefront-error resolution on the predictions.
+
+### More stars
+
+Optimising the model with 10k stars. Five times the number of stars used on [WaveDiff](https://github.com/tobias-liaudat/wf-psf).
+
+### Improve SEDs
+
+First study the SED binning errors impact on the PSF generation. Then implement SED interpolation to better approximate the ground truth data.
+
+### Explore Hyperparameters
+
+Tweaking some of the model hyperparameters and adjust the optimisation routine for 10k stars.
