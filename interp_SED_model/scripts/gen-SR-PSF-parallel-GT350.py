@@ -13,7 +13,7 @@ import time
 SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
 # Output saving path (in node05 of candide or $WORK space on feynman)
-output_folder = '/feynman/work/dap/lcs/ec270266/output/interp_sed/'          # Feynman
+output_folder = '/feynman/work/dap/lcs/ec270266/output/interp_SEDs/'          # Feynman
 
 # Reference dataset PATH
 reference_data = '../interp_SED_data/reference_dataset/'
