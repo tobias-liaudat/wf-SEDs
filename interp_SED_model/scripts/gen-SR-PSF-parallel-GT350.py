@@ -133,7 +133,7 @@ pos_np = np.vstack((train_dataset_ref['positions'],test_dataset_ref['positions']
 SED_list = []
 for it in range(n_stars):
     concat_SED_wv = np.concatenate((stellar_lambdas.reshape(-1,1),
-                                    stellar_SEDs[selected_id_SED,:].reshape(-1,1)), axis=1)
+                                    stellar_SEDs[selected_id_SED[it],:].reshape(-1,1)), axis=1)
     SED_list.append(concat_SED_wv)
 
 # Load and assign the C_poly matrix
