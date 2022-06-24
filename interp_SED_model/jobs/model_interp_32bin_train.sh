@@ -29,7 +29,7 @@ opt[1]="--id_name _interp_32_bins_sigma_005 --train_dataset_file train_Euclid_re
 opt[2]="--id_name _interp_32_bins_sigma_01 --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.01.npy"
 opt[3]="--id_name _interp_32_bins_sigma_02 --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.02.npy"
 
-cd $WORK/repo/wf-psf/long-runs/
+cd $WORK/repos/wf-SEDs/interp_SED_model/scripts/
 
 srun python -u ./train_eval_plot_script_click.py \
     --n_bins_lda 33 \
