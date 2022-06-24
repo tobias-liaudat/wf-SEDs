@@ -32,8 +32,7 @@ opt[3]="--id_name _interp_32_bins_sigma_02 --train_dataset_file train_Euclid_res
 cd $WORK/repo/wf-psf/long-runs/
 
 srun python -u ./train_eval_plot_script_click.py \
-
-    --n_bins = 33
+    --n_bins_lda 33 \
     --pupil_diameter 256 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
@@ -55,21 +54,18 @@ srun python -u ./train_eval_plot_script_click.py \
     --train_opt True \
     --eval_opt True \
     --plot_opt True \
-
     --dataset_folder /gpfswork/rech/ynx/uds36vp/datasets/interp_SEDs/ \
     --test_dataset_file test_Euclid_res_id_009_32_bins.npy \
-
     --plots_folder plots/32_bins/ \
     --model_folder chkp/32_bins/ \
     --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/32_bins/ \
     --base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/ \
-    
     --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/metrics/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
-
     --base_id_name _interp_32_bins_ \
     --suffix_id_name sigma_0 --suffix_id_name sigma_005 --suffix_id_name sigma_01 --suffix_id_name sigma_02 \
-    --star_numbers 2000  \
-
+    --star_numbers 0 --star_numbers 0.005 --star_numbers 0.01 --star_numbers 0.02  \
     ${opt[$SLURM_ARRAY_TASK_ID]} \
+
+## --star_numbers is for the final plot's x-axis. 

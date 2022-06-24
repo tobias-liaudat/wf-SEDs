@@ -12,7 +12,7 @@
 #SBATCH --output=test_gpu_%j.out  # nom du fichier de sortie
 #SBATCH --error=test_gpu_%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
-#SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
+##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
 #SBATCH --array=0-3
 
 # nettoyage des modules charges en interactif et herites par defaut
@@ -65,5 +65,7 @@ srun python -u ./train_eval_plot_script_click.py \
     --optim_hist_folder optim-hist/ \
     --base_id_name _interp_8bins_ \
     --suffix_id_name sigma_0 --suffix_id_name sigma_005 --suffix_id_name sigma_01 --suffix_id_name sigma_02 \
-    --star_numbers 2000  \
+    --star_numbers 0 --star_numbers 0.005 --star_numbers 0.01 --star_numbers 0.02  \
     ${opt[$SLURM_ARRAY_TASK_ID]} \
+
+## --star_numbers is for the final plot's x-axis. 
