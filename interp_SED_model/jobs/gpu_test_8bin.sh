@@ -65,7 +65,7 @@ srun python -u ./train_eval_plot_script_click.py \
     --optim_hist_folder optim-hist/ \
     --base_id_name _interp_8bins_ \
     --suffix_id_name sigma_0 --suffix_id_name sigma_005 --suffix_id_name sigma_01 --suffix_id_name sigma_02 \
-    --star_numbers 0 --star_numbers 0.005 --star_numbers 0.01 --star_numbers 0.02  \
+    --star_numbers 0 --star_numbers 5 --star_numbers 100 --star_numbers 200 \
     ${opt[$SLURM_ARRAY_TASK_ID]} \
 
 ## --star_numbers is for the final plot's x-axis. 
