@@ -32,7 +32,7 @@ opt[3]="--id_name _interp_8bins_sigma_02 --train_dataset_file train_Euclid_res_2
 cd $WORK/repos/wf-SEDs/interp_SED_model/scripts/
 
 srun python -u ./train_eval_plot_script_click.py \
-    --n_bins = 8 \
+    --n_bins_lda 8 \
     --pupil_diameter 256 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
