@@ -26,8 +26,8 @@ set -x
 
 opt[0]="--id_name model_graph_ft_15 --d_max_nonparam 5 --graph_features 15"
 opt[1]="--id_name model_graph_ft_29 --d_max_nonparam 5 --graph_features 29"
-opt[0]="--id_name model_graph_ft_14 --d_max_nonparam 7 --graph_features 14"
-opt[1]="--id_name model_graph_ft_30 --d_max_nonparam 7 --graph_features 30"
+opt[2]="--id_name model_graph_ft_14 --d_max_nonparam 7 --graph_features 14"
+opt[3]="--id_name model_graph_ft_30 --d_max_nonparam 7 --graph_features 30"
 
 cd $WORK/repos/wf-SEDs/explore_hyperparams/scripts/
 
