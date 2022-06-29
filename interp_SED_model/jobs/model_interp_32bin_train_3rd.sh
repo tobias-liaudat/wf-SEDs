@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=interp_train-3    # nom du job
+#SBATCH --job-name=32interp_train-3    # nom du job
 ##SBATCH --partition=gpu_p2          # de-commente pour la partition gpu_p2
 #SBATCH --ntasks=1                   # nombre total de tache MPI (= nombre total de GPU)
 #SBATCH --ntasks-per-node=1          # nombre de tache MPI par noeud (= nombre de GPU par noeud)
@@ -9,8 +9,8 @@
 # /!\ Attention, "multithread" fait reference a l'hyperthreading dans la terminologie Slurm
 #SBATCH --hint=nomultithread         # hyperthreading desactive
 #SBATCH --time=60:00:00              # temps d'execution maximum demande (HH:MM:SS)
-#SBATCH --output=interp_train_%j.out  # nom du fichier de sortie
-#SBATCH --error=interp_train_%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
+#SBATCH --output=32interp_train_%j.out  # nom du fichier de sortie
+#SBATCH --error=32interp_train_%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
 ##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
 #SBATCH --qos=qos_gpu_t4             # using the long run queue (100h)
