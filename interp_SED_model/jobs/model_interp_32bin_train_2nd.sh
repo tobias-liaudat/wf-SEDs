@@ -13,7 +13,7 @@
 #SBATCH --error=32interp_train_%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
 ##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
-#SBATCH --qos=qos_gpu_t4             # using the long run queue (100h)
+#SBATCH --qos=qos_gpu-t4             # using the long run queue (100h)
 #SBATCH --array=0-3
 
 # nettoyage des modules charges en interactif et herites par defaut
