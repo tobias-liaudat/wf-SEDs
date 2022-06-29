@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=model_poly    # nom du job
+#SBATCH --job-name=high_model_poly    # nom du job
 ##SBATCH --partition=gpu_p2          # de-commente pour la partition gpu_p2
 #SBATCH --ntasks=1                   # nombre total de tache MPI (= nombre total de GPU)
 #SBATCH --ntasks-per-node=1          # nombre de tache MPI par noeud (= nombre de GPU par noeud)
@@ -9,8 +9,8 @@
 # /!\ Attention, "multithread" fait reference a l'hyperthreading dans la terminologie Slurm
 #SBATCH --hint=nomultithread         # hyperthreading desactive
 #SBATCH --time=20:00:00              # temps d'execution maximum demande (HH:MM:SS)
-#SBATCH --output=model_poly%j.out  # nom du fichier de sortie
-#SBATCH --error=model_poly%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
+#SBATCH --output=high_model_poly%j.out  # nom du fichier de sortie
+#SBATCH --error=high_model_poly%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
 ##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
 #SBATCH --array=0-1
@@ -24,8 +24,8 @@ module load tensorflow-gpu/py3/2.7.0
 # echo des commandes lancees
 set -x
 
-opt[0]="--id_name model_poly_d_max_7 --d_max_nonparam 7"
-opt[1]="--id_name model_poly_d_max_10 --d_max_nonparam 10"
+opt[0]="--id_name model_poly_d_max_12 --d_max_nonparam 12"
+opt[1]="--id_name model_poly_d_max_15 --d_max_nonparam 15"
 
 cd $WORK/repos/wf-SEDs/explore_hyperparams/scripts/
 
@@ -62,8 +62,8 @@ srun python -u ./train_eval_plot_script_click.py \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
     --base_id_name model_poly_d_max_ \
-    --suffix_id_name 7 --suffix_id_name 10 \
-    --star_numbers 7 --star_numbers 10 \
+    --suffix_id_name 12 --suffix_id_name 15 \
+    --star_numbers 12 --star_numbers 15 \
     ${opt[$SLURM_ARRAY_TASK_ID]} \
 
 ## --star_numbers is for the final plot's x-axis. 
