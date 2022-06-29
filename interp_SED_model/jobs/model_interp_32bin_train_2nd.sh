@@ -8,11 +8,12 @@
 #SBATCH -C v100-32g 
 # /!\ Attention, "multithread" fait reference a l'hyperthreading dans la terminologie Slurm
 #SBATCH --hint=nomultithread         # hyperthreading desactive
-#SBATCH --time=20:00:00              # temps d'execution maximum demande (HH:MM:SS)
+#SBATCH --time=60:00:00              # temps d'execution maximum demande (HH:MM:SS)
 #SBATCH --output=interp_train_%j.out  # nom du fichier de sortie
 #SBATCH --error=interp_train_%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
 ##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
+#SBATCH --qos=qos_gpu_t4             # using the long run queue (100h)
 #SBATCH --array=0-3
 
 # nettoyage des modules charges en interactif et herites par defaut
