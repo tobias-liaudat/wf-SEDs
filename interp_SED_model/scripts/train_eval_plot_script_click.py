@@ -256,6 +256,11 @@ import click
     multiple=True,
     type=int,
     help="Plot parameter. Training star number of the different models evaluated. Needs to correspond with the `suffix_id_name`.")
+@click.option(
+    "--opt_stars_rel_pix_rmse",
+    default=False,
+    type=bool,
+    help="Option to get SR pixel PSF RMSE for each test star.")
 
 
 def main(**args):

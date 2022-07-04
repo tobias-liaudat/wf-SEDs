@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=interp_test    # nom du job
+#SBATCH --job-name=test_8_16_32    # nom du job
 ##SBATCH --partition=gpu_p2          # de-commente pour la partition gpu_p2
 #SBATCH --ntasks=1                   # nombre total de tache MPI (= nombre total de GPU)
 #SBATCH --ntasks-per-node=1          # nombre de tache MPI par noeud (= nombre de GPU par noeud)
@@ -9,8 +9,8 @@
 # /!\ Attention, "multithread" fait reference a l'hyperthreading dans la terminologie Slurm
 #SBATCH --hint=nomultithread         # hyperthreading desactive
 #SBATCH --time=20:00:00              # temps d'execution maximum demande (HH:MM:SS)
-#SBATCH --output=interp_test_%j.out  # nom du fichier de sortie
-#SBATCH --error=interp_test_%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
+#SBATCH --output=test_8_16_32_%j.out  # nom du fichier de sortie
+#SBATCH --error=test_8_16_32_%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
 ##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
 #SBATCH --array=0-2
@@ -25,9 +25,9 @@ module load tensorflow-gpu/py3/2.7.0
 set -x
 
 # n_bins ---> number of points per SED (n_bins + 1)
-opt[0]="--n_bins_lda 8 --test_dataset_file test_Euclid_res_id_009_8_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.npy --id_name _interp_8_bins"
-opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _interp_16_bins"
-opt[2]="--n_bins_lda 33 --test_dataset_file test_Euclid_res_id_009_32_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_32_bins_sigma_0.npy --id_name _interp_32_bins"
+opt[0]="--n_bins_lda 8 --test_dataset_file test_Euclid_res_id_009_8_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.npy --id_name _interp_8_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/8_bins/chkp_callback_poly_interp_8bins_sigma_0_cycle2"
+opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _interp_16_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/16_bins/chkp_callback_poly_interp_16bins_sigma_0_cycle2"
+opt[2]="--n_bins_lda 33 --test_dataset_file test_Euclid_res_id_009_32_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_32_bins_sigma_0.npy --id_name _interp_32_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/32_bins/chkp_callback_poly_interp_32bins_sigma_0_cycle2"
 
 cd $WORK/repos/wf-SEDs/interp_SED_model/scripts/
 
@@ -57,9 +57,8 @@ srun python -u ./train_eval_plot_script_click.py \
     --dataset_folder /gpfswork/rech/ynx/uds36vp/datasets/interp_SEDs/ \
     --plots_folder plots/ \
     --model_folder ../wf-outputs/chkp/ \
-    --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/8_bins/chkp_callback_poly_interp_8bins_sigma_0_cycle2 \
-    --base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs-interp/ \
-    --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs-interp/metrics/ \
+    --base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs-per-star/ \
+    --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_modelwf-outputs-per-star/metrics/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
     --base_id_name _interp_ \
