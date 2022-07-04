@@ -35,7 +35,7 @@ cd $WORK/repos/wf-SEDs/explore_hyperparams/scripts/
 srun python -u ./train_eval_plot_script_click.py \
     --n_bins_lda 8 \
     --pupil_diameter 128 \
-    --d_max_nonparam 10
+    --d_max_nonparam 10 \
     --n_epochs_param 15 15 \
     --n_epochs_non_param 100 50 \
     --model poly \
