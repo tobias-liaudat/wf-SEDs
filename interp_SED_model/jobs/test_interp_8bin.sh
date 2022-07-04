@@ -44,7 +44,7 @@ srun python -u ./train_eval_plot_script_click.py \
     --d_max_nonparam 5 \
     --l_rate_non_param 0.1 0.06 \
     --l_rate_param 0.01 0.004 \
-    --saved_model_type checkpoint \
+    --saved_model_type external \
     --saved_cycle cycle2 \
     --total_cycles 2 \
     --use_sample_weights True \
@@ -56,7 +56,7 @@ srun python -u ./train_eval_plot_script_click.py \
     --dataset_folder /gpfswork/rech/ynx/uds36vp/datasets/interp_SEDs/ \
     --plots_folder plots/ \
     --model_folder ../wf-outputs/chkp/ \
-    --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/8_bins/ \
+    --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/8_bins/chkp_callback_poly_interp_8bins_sigma_0_cycle2 \
     --base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs-interp/ \
     --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs-interp/metrics/ \
     --log_folder log-files/ \
