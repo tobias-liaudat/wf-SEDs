@@ -58,7 +58,7 @@ srun python -u ./train_eval_plot_script_click.py \
     --plots_folder plots/ \
     --model_folder ../wf-outputs/chkp/ \
     --base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs-per-star/ \
-    --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_modelwf-outputs-per-star/metrics/ \
+    --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs-per-star/metrics/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
     --base_id_name _interp_ \
