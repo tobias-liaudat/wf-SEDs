@@ -13,7 +13,7 @@
 #SBATCH --error=interp_test_%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
 ##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
-#SBATCH --array=0-1
+#SBATCH --array=0-2
 
 # nettoyage des modules charges en interactif et herites par defaut
 module purge
@@ -25,8 +25,9 @@ module load tensorflow-gpu/py3/2.7.0
 set -x
 
 # n_bins ---> number of points per SED (n_bins + 1)
-opt[0]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _interp_16_bins"
-opt[1]="--n_bins_lda 33 --test_dataset_file test_Euclid_res_id_009_32_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_32_bins_sigma_0.npy --id_name _interp_32_bins"
+opt[0]="--n_bins_lda 8 --test_dataset_file test_Euclid_res_id_009_8_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.npy --id_name _interp_8_bins"
+opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _interp_16_bins"
+opt[2]="--n_bins_lda 33 --test_dataset_file test_Euclid_res_id_009_32_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_32_bins_sigma_0.npy --id_name _interp_32_bins"
 
 cd $WORK/repos/wf-SEDs/interp_SED_model/scripts/
 
@@ -61,8 +62,8 @@ srun python -u ./train_eval_plot_script_click.py \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
     --base_id_name _interp_ \
-    --suffix_id_name 16_bins --suffix_id_name 32_bins \
-    --star_numbers 16 --star_numbers 32 \
+    --suffix_id_name 8_bins --suffix_id_name 16_bins --suffix_id_name 32_bins \
+    --star_numbers 8 --star_numbers 16 --star_numbers 32 \
     ${opt[$SLURM_ARRAY_TASK_ID]} \
 
 ## --star_numbers is for the final plot's x-axis. 
