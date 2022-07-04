@@ -26,8 +26,8 @@ set -x
 
 # n_bins ---> number of points per SED (n_bins + 1)
 opt[0]="--n_bins_lda 8 --test_dataset_file test_Euclid_res_id_009_8_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.npy --id_name _interp_8_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/8_bins/chkp_callback_poly_interp_8bins_sigma_0_cycle2"
-opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _interp_16_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/16_bins/chkp_callback_poly_interp_16bins_sigma_0_cycle2"
-opt[2]="--n_bins_lda 33 --test_dataset_file test_Euclid_res_id_009_32_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_32_bins_sigma_0.npy --id_name _interp_32_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/32_bins/chkp_callback_poly_interp_32bins_sigma_0_cycle2"
+opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _interp_16_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/16_bins/chkp_callback_poly_interp_16_bins_sigma_0_cycle2"
+opt[2]="--n_bins_lda 33 --test_dataset_file test_Euclid_res_id_009_32_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_32_bins_sigma_0.npy --id_name _interp_32_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/interp_SED_model/wf-outputs/chkp/32_bins/chkp_callback_poly_interp_32_bins_sigma_0_cycle2"
 
 cd $WORK/repos/wf-SEDs/interp_SED_model/scripts/
 
