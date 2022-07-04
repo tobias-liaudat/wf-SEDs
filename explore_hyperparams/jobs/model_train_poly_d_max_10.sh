@@ -61,7 +61,7 @@ srun python -u ./train_eval_plot_script_click.py \
     --model_folder chkp/ \
     --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/explore_hyperparams/wf-outputs-poly-d-10/chkp/ \
     --base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/explore_hyperparams/wf-outputs-poly-d-10/ \
-    --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/explore_hyperparamswf-outputs-poly-d-10/metrics/ \
+    --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/explore_hyperparams/wf-outputs-poly-d-10/metrics/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
     --base_id_name model_poly_ \
