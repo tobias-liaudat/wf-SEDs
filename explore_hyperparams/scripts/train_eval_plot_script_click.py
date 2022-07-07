@@ -169,24 +169,28 @@ import click
     "--l_rate_param",
     #nargs=2,
     default=[1e-2, 1e-2],
+    multiple=True,
     type=float,
     help="Learning rates for the parametric parts.")
 @click.option(
     "--l_rate_non_param",
     #nargs=2,
     default=[1e-1, 1e-1],
+    multiple=True,
     type=float,
     help="Learning rates for the non-parametric parts.")
 @click.option(
     "--n_epochs_param",
     #nargs=2,
     default=[20, 20],
+    multiple=True,
     type=int,
     help="Number of training epochs of the parametric parts.")
 @click.option(
     "--n_epochs_non_param",
     #nargs=2,
     default=[100, 120],
+    multiple=True,
     type=int,
     help="Number of training epochs of the non-parametric parts.")
 @click.option(
