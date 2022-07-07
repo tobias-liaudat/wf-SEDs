@@ -32,15 +32,15 @@ srun python -u ./train_eval_plot_script_click.py \
     --d_max_nonparam 5 \
     --n_bins_lda 8 \
     --pupil_diameter 128 \
-    --n_epochs_param 2 2 2 2\
-    --n_epochs_non_param 5 5 5 5 \
+    --n_epochs_param 2 --n_epochs_param 2 --n_epochs_param 2 --n_epochs_param 2 \
+    --n_epochs_non_param 5 --n_epochs_param 5 --n_epochs_param 5 --n_epochs_param 5 \
+    --l_rate_non_param 0.1 --n_epochs_param 0.1 --n_epochs_param 0.06 --n_epochs_param 0.06 \
+    --l_rate_param 0.01 --n_epochs_param 0.01 --n_epochs_param 0.004 --n_epochs_param 0.004 \
     --model poly \
     --model_eval poly \
     --cycle_def complete \
     --n_zernikes 15 \
     --gt_n_zernikes 45 \
-    --l_rate_non_param 0.1 0.1 0.06 0.06 \
-    --l_rate_param 0.01 0.01 0.004 0.004 \
     --saved_model_type checkpoint \
     --saved_cycle cycle4 \
     --total_cycles 4 \
