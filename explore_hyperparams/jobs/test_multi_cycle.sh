@@ -12,7 +12,7 @@
 #SBATCH --output=multi_cycle%j.out  # nom du fichier de sortie
 #SBATCH --error=multi_cycle%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
-##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
+#SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
 #SBATCH --array=0
 
 # nettoyage des modules charges en interactif et herites par defaut
