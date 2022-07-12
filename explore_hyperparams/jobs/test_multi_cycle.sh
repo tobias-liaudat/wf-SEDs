@@ -35,7 +35,7 @@ srun python -u ./train_eval_plot_script_click_multi_cycle.py \
     --n_epochs_param_multi_cycle "2 2 2 2" \
     --n_epochs_non_param_multi_cycle "3 3 3 3" \
     --l_rate_non_param_multi_cycle "0.1 0.1 0.06 0.06" \
-    --l_rate_param_multi_cycle "0.01 0.004" \
+    --l_rate_param_multi_cycle "0.01 0.01 0.004 0.004" \
     --model poly \
     --model_eval poly \
     --cycle_def complete \
