@@ -290,7 +290,7 @@ import click
     type=bool,
     help="Option to get SR pixel PSF RMSE for each test star.")
 @click.option(
-    "--project_DD_features",
+    "--project_dd_features",
     default=False,
     type=bool,
     help="Project NP DD features onto parametric model.")

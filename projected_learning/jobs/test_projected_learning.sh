@@ -32,7 +32,7 @@ opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy -
 cd $WORK/repos/wf-SEDs/projected_learning/scripts/
 
 srun python -u ./train_project_click_multi_cycle.py \
-    --project_DD_features True \
+    --project_dd_features True \
     --project_last_cycle True \
     --plot_opt False \
     --opt_stars_rel_pix_rmse False \
