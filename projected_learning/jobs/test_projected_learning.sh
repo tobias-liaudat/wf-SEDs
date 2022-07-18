@@ -33,7 +33,7 @@ cd $WORK/repos/wf-SEDs/projected_learning/scripts/
 
 srun python -u ./train_project_click_multi_cycle.py \
     --project_DD_features True \
-    --project_final_cycle True \
+    --project_last_cycle True \
     --plot_opt False \
     --opt_stars_rel_pix_rmse False \
     --pupil_diameter 256 \
