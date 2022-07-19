@@ -38,6 +38,8 @@ srun python -u ./train_project_click_multi_cycle.py \
     --opt_stars_rel_pix_rmse False \
     --pupil_diameter 256 \
     --n_epochs_param 15 15 \
+    --l_rate_non_param 0.1 0.06 \
+    --l_rate_param 0.01 0.004 \
     --n_epochs_non_param 100 50 \
     --model poly \
     --model_eval poly \
@@ -45,8 +47,6 @@ srun python -u ./train_project_click_multi_cycle.py \
     --n_zernikes 15 \
     --gt_n_zernikes 45 \
     --d_max_nonparam 5 \
-    --l_rate_non_param 0.1 0.06 \
-    --l_rate_param 0.01 0.004 \
     --saved_model_type checkpoint \
     --saved_cycle cycle2 \
     --total_cycles 2 \
@@ -54,7 +54,7 @@ srun python -u ./train_project_click_multi_cycle.py \
     --l2_param 0. \
     --interpolation_type none \
     --eval_batch_size 16 \
-    --train_opt False \
+    --train_opt True \
     --eval_opt True \
     --dataset_folder /gpfswork/rech/ynx/uds36vp/datasets/interp_SEDs/ \
     --plots_folder plots/ \
