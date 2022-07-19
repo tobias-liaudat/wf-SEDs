@@ -25,8 +25,8 @@ module load tensorflow-gpu/py3/2.7.0
 set -x
 
 # n_bins ---> number of points per SED (n_bins + 1)
-opt[0]="--n_bins_lda 8 --test_dataset_file test_Euclid_res_id_009_8_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.npy --id_name _project_8_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/8_bins/"
-opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _project_16_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/16_bins/"
+opt[0]="--n_bins_lda 8 --test_dataset_file test_Euclid_res_id_009_8_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.npy --id_name _project_8_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/8_bins/ --model_folder chkp/8_bins"
+opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _project_16_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/16_bins/ --model_folder chkp/16_bins"
 # opt[2]="--n_bins_lda 33 --test_dataset_file test_Euclid_res_id_009_32_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_32_bins_sigma_0.npy --id_name _project_32_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/32_bins/"
 
 cd $WORK/repos/wf-SEDs/projected_learning/scripts/
@@ -47,18 +47,17 @@ srun python -u ./train_project_click_multi_cycle.py \
     --d_max_nonparam 5 \
     --l_rate_non_param 0.1 0.06 \
     --l_rate_param 0.01 0.004 \
-    --saved_model_type external \
+    --saved_model_type checkpoint \
     --saved_cycle cycle2 \
     --total_cycles 2 \
     --use_sample_weights True \
     --l2_param 0. \
     --interpolation_type none \
     --eval_batch_size 16 \
-    --train_opt True \
+    --train_opt False \
     --eval_opt True \
     --dataset_folder /gpfswork/rech/ynx/uds36vp/datasets/interp_SEDs/ \
     --plots_folder plots/ \
-    --model_folder ../wf-outputs/chkp/ \
     --base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/ \
     --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/metrics/ \
     --log_folder log-files/ \
