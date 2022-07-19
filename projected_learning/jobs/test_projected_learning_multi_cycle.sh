@@ -25,8 +25,8 @@ module load tensorflow-gpu/py3/2.7.0
 set -x
 
 # n_bins ---> number of points per SED (n_bins + 1)
-opt[0]="--n_bins_lda 8 --test_dataset_file test_Euclid_res_id_009_8_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.npy --id_name _project_8_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/8_bins/ --model_folder chkp/8_bins"
-opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _project_16_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/16_bins/ --model_folder chkp/16_bins"
+opt[0]="--n_bins_lda 8 --test_dataset_file test_Euclid_res_id_009_8_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_8_bins_sigma_0.npy --id_name _project_mc_8_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/8_bins/ --model_folder chkp/8_bins"
+opt[1]="--n_bins_lda 17 --test_dataset_file test_Euclid_res_id_009_16_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_16_bins_sigma_0.npy --id_name _project_mc_16_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/16_bins/ --model_folder chkp/16_bins"
 # opt[2]="--n_bins_lda 33 --test_dataset_file test_Euclid_res_id_009_32_bins.npy --train_dataset_file train_Euclid_res_2000_TrainStars_id_009_32_bins_sigma_0.npy --id_name _project_32_bins --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/32_bins/"
 
 cd $WORK/repos/wf-SEDs/projected_learning/scripts/
@@ -62,7 +62,7 @@ srun python -u ./train_project_click_multi_cycle.py \
     --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/metrics/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
-    --base_id_name _project_ \
+    --base_id_name _project_mc_ \
     --suffix_id_name 8_bins --suffix_id_name 16_bins \
     --star_numbers 8 --star_numbers 16 \
     ${opt[$SLURM_ARRAY_TASK_ID]} \
