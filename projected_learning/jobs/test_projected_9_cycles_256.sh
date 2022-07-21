@@ -39,7 +39,7 @@ srun python -u ./train_project_click_multi_cycle.py \
     --opt_stars_rel_pix_rmse False \
     --pupil_diameter 256 \
     --n_epochs_param_multi_cycle "4 4 4 4 4 4 4 4 10" \
-    --n_epochs_non_param_multi_cycle "13 13 13 13 13 13 13 13 13 50" \
+    --n_epochs_non_param_multi_cycle "13 13 13 13 13 13 13 13 50" \
     --l_rate_non_param_multi_cycle "0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.06" \
     --l_rate_param_multi_cycle "0.01 0.008 0.008 0.008 0.008 0.004 0.004 0.004 0.004" \
     --total_cycles 9 \
