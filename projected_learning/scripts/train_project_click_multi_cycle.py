@@ -216,7 +216,11 @@ import click
     default="100 120",
     type=str,
     help="Number of training epochs of the non-parametric parts. It should be a strign where numeric values are separated by spaces.")
-
+@click.option(
+    "--save_all_cycles",
+    default=False,
+    type=bool,
+    help="Make checkpoint at every cycle or just save the checkpoint at the end of the training.")
 @click.option(
     "--total_cycles",
     default=2,
@@ -294,11 +298,7 @@ import click
     default=False,
     type=bool,
     help="Project NP DD features onto parametric model.")
-@click.option(
-    "--project_last_cycle",
-    default=False,
-    type=bool,
-    help="Project NP DD features after the last optimisation cycle.")
+
 
 
 def main(**args):
