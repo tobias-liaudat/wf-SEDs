@@ -25,10 +25,10 @@ module load tensorflow-gpu/py3/2.7.0
 set -x
 
 # n_bins ---> number of points per SED (n_bins + 1)
-opt[0]="--id_name _2_cycles_256_no_proj_d5 --project_dd_features False  --n_epochs_param_multi_cycle \"15 15\" --n_epochs_non_param_multi_cycle \"100 50\" --l_rate_non_param_multi_cycle \"0.1 0.06\" --l_rate_param_multi_cycle \"0.01 0.004\" --total_cycles 2 --saved_cycle cycle2"
-opt[1]="--id_name _2_cycles_256_proj_d5 --project_dd_features True --n_epochs_param_multi_cycle \"15 15\" --n_epochs_non_param_multi_cycle \"100 50\" --l_rate_non_param_multi_cycle \"0.1 0.06\" --l_rate_param_multi_cycle \"0.01 0.004\" --total_cycles 2 --saved_cycle cycle2"
-opt[2]="--id_name _5_cycles_256_proj_d5 --project_dd_features True --n_epochs_param_multi_cycle \"10 5 5 5 15\" --n_epochs_non_param_multi_cycle \"25 25 25 25 50\" --l_rate_non_param_multi_cycle \"0.1 0.1 0.1 0.1 0.06\" --l_rate_param_multi_cycle \"0.01 0.008 0.008 0.004 0.004\" --total_cycles 5 --saved_cycle cycle5"
-opt[3]="--id_name _9_cycles_256_proj_d5 --project_dd_features True --n_epochs_param_multi_cycle \"4 4 4 4 4 4 4 4 10\" --n_epochs_non_param_multi_cycle \"13 13 13 13 13 13 13 13 50\" --l_rate_non_param_multi_cycle \"0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.06\" --l_rate_param_multi_cycle \"0.01 0.008 0.008 0.008 0.008 0.004 0.004 0.004 0.004\" --total_cycles 9 --saved_cycle cycle9"
+opt[0]="--id_name _2_cycles_256_no_proj_d5 --project_dd_features False  --total_cycles 2 --saved_cycle cycle2"
+opt[1]="--id_name _2_cycles_256_proj_d5 --project_dd_features True --total_cycles 2 --saved_cycle cycle2"
+opt[2]="--id_name _5_cycles_256_proj_d5 --project_dd_features True --total_cycles 5 --saved_cycle cycle5"
+opt[3]="--id_name _9_cycles_256_proj_d5 --project_dd_features True --total_cycles 9 --saved_cycle cycle9"
 
 
 cd $WORK/repos/wf-SEDs/projected_learning/scripts/
@@ -36,6 +36,10 @@ cd $WORK/repos/wf-SEDs/projected_learning/scripts/
 srun python -u ./train_project_click_multi_cycle.py \
     --d_max 5 \
     --save_all_cycles True \
+    --n_epochs_param_multi_cycle 0 \
+    --n_epochs_non_param_multi_cycle 0 \
+    --l_rate_non_param_multi_cycle 0 \
+    --l_rate_param_multi_cycle 0 \
     --n_bins_lda 8 \
     --plot_opt True \
     --opt_stars_rel_pix_rmse False \
