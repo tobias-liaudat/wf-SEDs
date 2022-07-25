@@ -36,7 +36,7 @@ srun python -u ./train_project_click_multi_cycle.py \
     --save_all_cycles True \
     --n_bins_lda 8 \
     --plot_opt True \
-    --opt_stars_rel_pix_rmse False \
+    --opt_stars_rel_pix_rmse True \
     --pupil_diameter 256 \
     --n_epochs_param_multi_cycle "15 15" \
     --n_epochs_non_param_multi_cycle "100 50" \
