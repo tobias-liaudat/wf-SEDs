@@ -65,7 +65,7 @@ srun python -u ./train_project_click_multi_cycle.py \
     --base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/ \
     --metric_base_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/metrics/ \
     --chkp_save_path /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/projected_learning/wf-outputs/chkp/8_bins/ \
-    --model_folder chkp/8_bins \
+    --model_folder chkp/8_bins/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
     --base_id_name _2_cycles_256_ \
