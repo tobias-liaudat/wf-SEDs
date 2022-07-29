@@ -8,20 +8,20 @@ Dataset parameters:
 Metric evaluation on the test dataset
 ***
 
-Absolute RMSE:	 1.4486e-04 	 +/- 2.9289e-05
-Relative RMSE:	 1.9579e+00 % 	 +/- 5.4357e-01 %
-Absolute RMSE:	 1.5282e-01 	 +/- 3.1816e-02
-Relative RMSE:	 1.9402e+02 % 	 +/- 1.8759e+01 %
+Absolute RMSE:	 1.4775e-04 	 +/- 2.7658e-05
+Relative RMSE:	 1.9961e+00 % 	 +/- 5.1883e-01 %
+Absolute RMSE:	 1.6359e-01 	 +/- 2.6577e-02
+Relative RMSE:	 2.0856e+02 % 	 +/- 1.3055e+01 %
 
-Pixel star absolute RMSE:	 7.1173e-05 	 +/- 1.9040e-05 
-Pixel star relative RMSE:	 4.7643e+00 % 	 +/- 1.6170e+00 %
+Pixel star absolute RMSE:	 6.3004e-05 	 +/- 1.4484e-05 
+Pixel star relative RMSE:	 4.2093e+00 % 	 +/- 1.3122e+00 %
 
-sigma(e1) RMSE =		 1.3137e-02 	 +/- 1.1484e-02 
-sigma(e2) RMSE =		 6.1290e-03 	 +/- 5.8345e-03 
-sigma(R2)/<R2> =		 3.8408e-02 	 +/- 3.1521e-02 
+sigma(e1) RMSE =		 1.2910e-02 	 +/- 1.2214e-02 
+sigma(e2) RMSE =		 7.0725e-03 	 +/- 5.7450e-03 
+sigma(R2)/<R2> =		 2.9732e-02 	 +/- 1.9946e-02 
 
-Relative sigma(e1) RMSE =	 2.6465e+02 % 	 +/- 2.6104e+02 %
-Relative sigma(e2) RMSE =	 1.2923e+03 % 	 +/- 1.2903e+03 %
+Relative sigma(e1) RMSE =	 4.0584e+02 % 	 +/- 4.0573e+02 %
+Relative sigma(e2) RMSE =	 1.8039e+03 % 	 +/- 1.8012e+03 %
 
 Total number of stars: 		400
 Problematic number of stars: 	1
@@ -30,24 +30,24 @@ Problematic number of stars: 	1
 Metric evaluation on the train dataset
 ***
 
-Absolute RMSE:	 1.4433e-04 	 +/- 2.9186e-05
-Relative RMSE:	 1.9581e+00 % 	 +/- 5.8683e-01 %
-Absolute RMSE:	 1.5335e-01 	 +/- 3.3607e-02
-Relative RMSE:	 1.9508e+02 % 	 +/- 2.0096e+01 %
+Absolute RMSE:	 1.4689e-04 	 +/- 2.9301e-05
+Relative RMSE:	 1.9948e+00 % 	 +/- 6.0101e-01 %
+Absolute RMSE:	 1.6358e-01 	 +/- 2.8032e-02
+Relative RMSE:	 2.0891e+02 % 	 +/- 1.2824e+01 %
 
-Pixel star absolute RMSE:	 7.1910e-05 	 +/- 1.9604e-05 
-Pixel star relative RMSE:	 4.8289e+00 % 	 +/- 1.7719e+00 %
+Pixel star absolute RMSE:	 6.2587e-05 	 +/- 1.4614e-05 
+Pixel star relative RMSE:	 4.1913e+00 % 	 +/- 1.4081e+00 %
 
-sigma(e1) RMSE =		 1.4921e-02 	 +/- 1.3275e-02 
-sigma(e2) RMSE =		 7.6672e-03 	 +/- 7.4573e-03 
-sigma(R2)/<R2> =		 7.9791e-02 	 +/- 5.5462e-02 
+sigma(e1) RMSE =		 1.3887e-02 	 +/- 1.3128e-02 
+sigma(e2) RMSE =		 8.0940e-03 	 +/- 7.1514e-03 
+sigma(R2)/<R2> =		 6.2106e-02 	 +/- 2.7170e-02 
 
-Relative sigma(e1) RMSE =	 4.3200e+03 % 	 +/- 4.3194e+03 %
-Relative sigma(e2) RMSE =	 1.2335e+04 % 	 +/- 1.2334e+04 %
+Relative sigma(e1) RMSE =	 3.6573e+03 % 	 +/- 3.6549e+03 %
+Relative sigma(e2) RMSE =	 1.7531e+04 % 	 +/- 1.7526e+04 %
 
 Total number of stars: 		2000
 Problematic number of stars: 	0
 
-Total elapsed time: 1906.357559
+Total elapsed time: 1940.063728
 
  Good bye..
