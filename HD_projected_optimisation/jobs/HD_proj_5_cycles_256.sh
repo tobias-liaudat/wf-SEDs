@@ -31,7 +31,7 @@ opt[2]="--id_name _5_cycles_256_proj_d5_45z --project_dd_features True --d_max 5
 opt[3]="--id_name _5_cycles_256_proj_d2_60z --project_dd_features True --d_max 2 --n_zernikes 60"
 
 
-cd $WORK/repos/wf-SEDs/projected_learning/scripts/
+cd $WORK/repos/wf-SEDs/HD_projected_optimisation/scripts/
 
 srun python -u ./train_project_click_multi_cycle.py \
     --save_all_cycles True \

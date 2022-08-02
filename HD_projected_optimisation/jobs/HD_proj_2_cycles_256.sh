@@ -28,7 +28,7 @@ opt[0]="--id_name _2_cycles_256_no_proj_d2_45z --n_zernikes 45 "
 opt[1]="--id_name _2_cycles_256_no_proj_d2_60z --n_zernikes 60 "
 
 
-cd $WORK/repos/wf-SEDs/projected_learning/scripts/
+cd $WORK/repos/wf-SEDs/HD_projected_optimisation/scripts/
 
 srun python -u ./train_project_click_multi_cycle.py \
     --project_dd_features False \
