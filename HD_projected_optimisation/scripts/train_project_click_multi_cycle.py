@@ -298,7 +298,12 @@ import click
     default=False,
     type=bool,
     help="Project NP DD features onto parametric model.")
-
+@click.option(
+    "--eval_only_param",
+    default=False,
+    type=bool,
+    help="Use only the parametric model for evaluation."
+)
 
 
 def main(**args):
