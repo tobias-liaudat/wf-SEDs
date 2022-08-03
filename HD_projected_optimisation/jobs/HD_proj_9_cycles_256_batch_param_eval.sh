@@ -8,7 +8,7 @@
 #SBATCH -C v100-32g 
 # /!\ Attention, "multithread" fait reference a l'hyperthreading dans la terminologie Slurm
 #SBATCH --hint=nomultithread         # hyperthreading desactive
-#SBATCH --time=20:00:00              # temps d'execution maximum demande (HH:MM:SS)
+#SBATCH --time=05:00:00              # temps d'execution maximum demande (HH:MM:SS)
 #SBATCH --output=param_ev_9_cycles_256_batch%j.out  # nom du fichier de sortie
 #SBATCH --error=param_ev_9_cycles_256_batch%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
