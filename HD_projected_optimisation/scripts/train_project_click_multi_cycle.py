@@ -304,6 +304,12 @@ import click
     type=bool,
     help="Use only the parametric model for evaluation."
 )
+@click.option(
+    "--reset_dd_features",
+    default= False,
+    type=bool,
+    help="Reset to random initialisation the non-parametric model after projecting."
+)
 
 
 def main(**args):
