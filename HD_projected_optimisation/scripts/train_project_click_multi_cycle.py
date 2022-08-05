@@ -310,6 +310,12 @@ import click
     type=bool,
     help="Reset to random initialisation the non-parametric model after projecting."
 )
+@click.option(
+    "--pretrained_model",
+    default= None,
+    type=str,
+    help="Path to pretrained model checkpoint callback."
+)
 
 
 def main(**args):
