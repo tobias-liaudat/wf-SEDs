@@ -48,6 +48,7 @@ opt[17]="--id_name _5_cycles_256_hd_proj_reset_eval_param_2 --reset_dd_features 
 opt[18]="--id_name _5_cycles_256_hd_proj_reset_eval_param_3 --reset_dd_features True --total_cycles 5 --saved_cycle cycle5"
 opt[19]="--id_name _5_cycles_256_hd_proj_reset_eval_param_4 --reset_dd_features True --total_cycles 5 --saved_cycle cycle5"
 
+# --cycle_def non-parametric to only train non-param model.
 
 cd $WORK/repos/wf-SEDs/HD_projected_optimisation/scripts/
 
