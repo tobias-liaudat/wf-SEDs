@@ -46,7 +46,7 @@ srun python -u ./train_project_click_multi_cycle.py \
     --n_epochs_param_multi_cycle "15 15" \
     --n_epochs_non_param_multi_cycle "0" \
     --l_rate_non_param_multi_cycle "0" \
-    --l_rate_param_multi_cycle "0.01 0.004" \
+    --l_rate_param_multi_cycle "0.004 0.002" \
     --total_cycles 2 \
     --saved_cycle cycle2 \
     --model poly \
