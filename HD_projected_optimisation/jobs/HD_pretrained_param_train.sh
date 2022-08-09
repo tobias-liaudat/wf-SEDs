@@ -13,7 +13,7 @@
 #SBATCH --error=pretrained_param_train%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
 ##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
-#SBATCH --array=0-4
+#SBATCH --array=0-5
 
 # nettoyage des modules charges en interactif et herites par defaut
 module purge
@@ -24,11 +24,13 @@ module load tensorflow-gpu/py3/2.7.0
 # echo des commandes lancees
 set -x
 
-opt[0]="--id_name _2_cycles_pretrained_param_train_0"
-opt[1]="--id_name _2_cycles_pretrained_param_train_1"
-opt[2]="--id_name _2_cycles_pretrained_param_train_2"
-opt[3]="--id_name _2_cycles_pretrained_param_train_3"
-opt[4]="--id_name _2_cycles_pretrained_param_train_4"
+opt[0]="--id_name _1_cycles_pretrained_param_train_1e-3 --l_rate_param_multi_cycle 1e-3"
+opt[1]="--id_name _1_cycles_pretrained_param_train_5e-4 --l_rate_param_multi_cycle 5e-4"
+opt[2]="--id_name _1_cycles_pretrained_param_train_1e-4 --l_rate_param_multi_cycle 1e-4"
+opt[3]="--id_name _1_cycles_pretrained_param_train_5e-5 --l_rate_param_multi_cycle 5e-5"
+opt[4]="--id_name _1_cycles_pretrained_param_train_1e-5 --l_rate_param_multi_cycle 1e-5"
+opt[5]="--id_name _1_cycles_pretrained_param_train_1e-6 --l_rate_param_multi_cycle 1e-6"
+
 
 cd $WORK/repos/wf-SEDs/HD_projected_optimisation/scripts/
 
@@ -43,12 +45,11 @@ srun python -u ./train_project_click_multi_cycle.py \
     --n_bins_lda 8 \
     --opt_stars_rel_pix_rmse True \
     --pupil_diameter 256 \
-    --n_epochs_param_multi_cycle "15 15" \
+    --n_epochs_param_multi_cycle "15" \
     --n_epochs_non_param_multi_cycle "0" \
     --l_rate_non_param_multi_cycle "0" \
-    --l_rate_param_multi_cycle "0.004 0.002" \
-    --total_cycles 2 \
-    --saved_cycle cycle2 \
+    --total_cycles 1 \
+    --saved_cycle cycle1 \
     --model poly \
     --model_eval poly \
     --cycle_def only-parametric \
@@ -72,9 +73,9 @@ srun python -u ./train_project_click_multi_cycle.py \
     --model_folder chkp/8_bins/ \
     --log_folder log-files/ \
     --optim_hist_folder optim-hist/ \
-    --base_id_name _2_cycles_pretrained_param_train_ \
-    --suffix_id_name 0 --suffix_id_name 1 --suffix_id_name 2 --suffix_id_name 3 --suffix_id_name 4 \
-    --star_numbers 0 --star_numbers 1 --star_numbers 2 --star_numbers 3 --star_numbers 4 \
+    --base_id_name _1_cycles_pretrained_param_train_ \
+    --suffix_id_name 1e-3 --suffix_id_name 5e-4 --suffix_id_name 1e-4 --suffix_id_name 5e-5 --suffix_id_name 1e-5 --suffix_id_name 1e-6 \
+    --star_numbers 0 --star_numbers 1 --star_numbers 2 --star_numbers 3 --star_numbers 4 --star_numbers 5 \
     ${opt[$SLURM_ARRAY_TASK_ID]} \
 
 ## --star_numbers is for the final plot's x-axis. 
