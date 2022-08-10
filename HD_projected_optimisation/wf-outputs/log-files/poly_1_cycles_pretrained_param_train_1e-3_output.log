@@ -1,0 +1,76 @@
+Starting the log file.
+Found GPU at: /device:GPU:0
+tf_version: 2.7.0
+Zernike cube:
+(45, 256, 256)
+Dataset parameters:
+{'d_max': 2, 'max_order': 45, 'x_lims': [0, 1000.0], 'y_lims': [0, 1000.0], 'grid_points': [4, 4], 'n_bins': 350, 'max_wfe_rms': 0.1, 'oversampling_rate': 3.0, 'output_Q': 3.0, 'output_dim': 32, 'LP_filter_length': 2, 'pupil_diameter': 256, 'euclid_obsc': True, 'n_stars': 2000}
+Model loaded.
+DD features projected over parametric model
+Starting cycle 1..
+Starting parametric update..
+Epoch 1/15
+
+Epoch 00001: mean_squared_error improved from inf to 0.00006, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_1_cycles_pretrained_param_train_1e-3_cycle1
+63/63 - 56s - loss: 5.6960e-05 - mean_squared_error: 5.7071e-05 - val_loss: 5.6409e-05 - val_mean_squared_error: 5.6409e-05 - 56s/epoch - 891ms/step
+Epoch 2/15
+
+Epoch 00002: mean_squared_error did not improve from 0.00006
+63/63 - 51s - loss: 5.7759e-05 - mean_squared_error: 5.7956e-05 - val_loss: 5.6403e-05 - val_mean_squared_error: 5.6403e-05 - 51s/epoch - 817ms/step
+Epoch 3/15
+
+Epoch 00003: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7759e-05 - mean_squared_error: 5.7955e-05 - val_loss: 5.6404e-05 - val_mean_squared_error: 5.6404e-05 - 52s/epoch - 818ms/step
+Epoch 4/15
+
+Epoch 00004: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7766e-05 - mean_squared_error: 5.7966e-05 - val_loss: 5.6380e-05 - val_mean_squared_error: 5.6380e-05 - 52s/epoch - 818ms/step
+Epoch 5/15
+
+Epoch 00005: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7752e-05 - mean_squared_error: 5.7950e-05 - val_loss: 5.6402e-05 - val_mean_squared_error: 5.6402e-05 - 52s/epoch - 819ms/step
+Epoch 6/15
+
+Epoch 00006: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7760e-05 - mean_squared_error: 5.7961e-05 - val_loss: 5.6380e-05 - val_mean_squared_error: 5.6380e-05 - 52s/epoch - 818ms/step
+Epoch 7/15
+
+Epoch 00007: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7757e-05 - mean_squared_error: 5.7959e-05 - val_loss: 5.6407e-05 - val_mean_squared_error: 5.6407e-05 - 52s/epoch - 818ms/step
+Epoch 8/15
+
+Epoch 00008: mean_squared_error did not improve from 0.00006
+63/63 - 51s - loss: 5.7757e-05 - mean_squared_error: 5.7961e-05 - val_loss: 5.6427e-05 - val_mean_squared_error: 5.6427e-05 - 51s/epoch - 817ms/step
+Epoch 9/15
+
+Epoch 00009: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7764e-05 - mean_squared_error: 5.7962e-05 - val_loss: 5.6404e-05 - val_mean_squared_error: 5.6404e-05 - 52s/epoch - 818ms/step
+Epoch 10/15
+
+Epoch 00010: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7768e-05 - mean_squared_error: 5.7961e-05 - val_loss: 5.6394e-05 - val_mean_squared_error: 5.6394e-05 - 52s/epoch - 820ms/step
+Epoch 11/15
+
+Epoch 00011: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7746e-05 - mean_squared_error: 5.7944e-05 - val_loss: 5.6404e-05 - val_mean_squared_error: 5.6404e-05 - 52s/epoch - 819ms/step
+Epoch 12/15
+
+Epoch 00012: mean_squared_error did not improve from 0.00006
+63/63 - 51s - loss: 5.7763e-05 - mean_squared_error: 5.7958e-05 - val_loss: 5.6401e-05 - val_mean_squared_error: 5.6401e-05 - 51s/epoch - 817ms/step
+Epoch 13/15
+
+Epoch 00013: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7763e-05 - mean_squared_error: 5.7957e-05 - val_loss: 5.6393e-05 - val_mean_squared_error: 5.6393e-05 - 52s/epoch - 819ms/step
+Epoch 14/15
+
+Epoch 00014: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7755e-05 - mean_squared_error: 5.7952e-05 - val_loss: 5.6410e-05 - val_mean_squared_error: 5.6410e-05 - 52s/epoch - 821ms/step
+Epoch 15/15
+
+Epoch 00015: mean_squared_error did not improve from 0.00006
+63/63 - 52s - loss: 5.7764e-05 - mean_squared_error: 5.7963e-05 - val_loss: 5.6378e-05 - val_mean_squared_error: 5.6378e-05 - 52s/epoch - 818ms/step
+Cycle1 elapsed time: 783.183351
+
+Total elapsed time: 787.786086
+
+ Good bye..
