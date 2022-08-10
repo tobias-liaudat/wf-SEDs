@@ -24,7 +24,7 @@ module load tensorflow-gpu/py3/2.7.0
 # echo des commandes lancees
 set -x
 
-opt[0]="--id_name _1_cycles_pretrained_param_train_1e-3 --l_rate_param_multi_cycle 1e-3"
+opt[0]="--id_name _1_cycles_pretrained_param_train_1e-3 --l_rate_param_multi_cycle 0"
 opt[1]="--id_name _1_cycles_pretrained_param_train_5e-4 --l_rate_param_multi_cycle 5e-4"
 opt[2]="--id_name _1_cycles_pretrained_param_train_1e-4 --l_rate_param_multi_cycle 1e-4"
 opt[3]="--id_name _1_cycles_pretrained_param_train_5e-5 --l_rate_param_multi_cycle 5e-5"
@@ -45,7 +45,7 @@ srun python -u ./train_project_click_multi_cycle.py \
     --n_bins_lda 8 \
     --opt_stars_rel_pix_rmse True \
     --pupil_diameter 256 \
-    --n_epochs_param_multi_cycle "15" \
+    --n_epochs_param_multi_cycle "5" \
     --n_epochs_non_param_multi_cycle "0" \
     --l_rate_non_param_multi_cycle "0" \
     --total_cycles 1 \
