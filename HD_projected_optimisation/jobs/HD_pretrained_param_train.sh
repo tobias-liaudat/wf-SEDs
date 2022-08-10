@@ -35,7 +35,7 @@ opt[5]="--id_name _1_cycles_pretrained_param_train_1e-6 --l_rate_param_multi_cyc
 cd $WORK/repos/wf-SEDs/HD_projected_optimisation/scripts/
 
 srun python -u ./train_project_click_multi_cycle.py \
-    --pretrained_model /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_poly_5_cycles_256_hd_proj_reset_eval_param_1_cycle5 \
+    --pretrained_model /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_5_cycles_256_hd_proj_reset_eval_param_1_cycle5 \
     --eval_only_param True \
     --project_dd_features False \
     --reset_dd_features True \
