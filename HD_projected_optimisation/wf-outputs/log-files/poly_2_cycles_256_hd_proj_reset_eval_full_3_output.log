@@ -1,0 +1,621 @@
+Starting the log file.
+Found GPU at: /device:GPU:0
+tf_version: 2.7.0
+Zernike cube:
+(45, 256, 256)
+Dataset parameters:
+{'d_max': 2, 'max_order': 45, 'x_lims': [0, 1000.0], 'y_lims': [0, 1000.0], 'grid_points': [4, 4], 'n_bins': 350, 'max_wfe_rms': 0.1, 'oversampling_rate': 3.0, 'output_Q': 3.0, 'output_dim': 32, 'LP_filter_length': 2, 'pupil_diameter': 256, 'euclid_obsc': True, 'n_stars': 2000}
+Starting cycle 1..
+Starting parametric update..
+Starting non-parametric update..
+Epoch 1/75
+
+Epoch 00001: mean_squared_error improved from inf to 0.00001, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 60s - loss: 7.2279e-06 - mean_squared_error: 6.9628e-06 - val_loss: 2.0061e-06 - val_mean_squared_error: 2.0061e-06 - 60s/epoch - 946ms/step
+Epoch 2/75
+
+Epoch 00002: mean_squared_error improved from 0.00001 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 2.5772e-06 - mean_squared_error: 2.8268e-06 - val_loss: 1.0433e-06 - val_mean_squared_error: 1.0433e-06 - 54s/epoch - 860ms/step
+Epoch 3/75
+
+Epoch 00003: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.9289e-06 - mean_squared_error: 2.2382e-06 - val_loss: 6.8869e-07 - val_mean_squared_error: 6.8869e-07 - 54s/epoch - 858ms/step
+Epoch 4/75
+
+Epoch 00004: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 55s - loss: 1.5668e-06 - mean_squared_error: 1.9145e-06 - val_loss: 4.4433e-07 - val_mean_squared_error: 4.4433e-07 - 55s/epoch - 865ms/step
+Epoch 5/75
+
+Epoch 00005: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.3726e-06 - mean_squared_error: 1.7401e-06 - val_loss: 3.2055e-07 - val_mean_squared_error: 3.2055e-07 - 54s/epoch - 859ms/step
+Epoch 6/75
+
+Epoch 00006: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.2720e-06 - mean_squared_error: 1.6492e-06 - val_loss: 2.5651e-07 - val_mean_squared_error: 2.5651e-07 - 54s/epoch - 859ms/step
+Epoch 7/75
+
+Epoch 00007: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.2101e-06 - mean_squared_error: 1.5950e-06 - val_loss: 2.1224e-07 - val_mean_squared_error: 2.1224e-07 - 54s/epoch - 863ms/step
+Epoch 8/75
+
+Epoch 00008: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.1703e-06 - mean_squared_error: 1.5600e-06 - val_loss: 1.8366e-07 - val_mean_squared_error: 1.8366e-07 - 54s/epoch - 859ms/step
+Epoch 9/75
+
+Epoch 00009: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.1430e-06 - mean_squared_error: 1.5364e-06 - val_loss: 1.6084e-07 - val_mean_squared_error: 1.6084e-07 - 54s/epoch - 859ms/step
+Epoch 10/75
+
+Epoch 00010: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.1205e-06 - mean_squared_error: 1.5170e-06 - val_loss: 1.4384e-07 - val_mean_squared_error: 1.4384e-07 - 54s/epoch - 865ms/step
+Epoch 11/75
+
+Epoch 00011: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.1021e-06 - mean_squared_error: 1.5008e-06 - val_loss: 1.2883e-07 - val_mean_squared_error: 1.2883e-07 - 54s/epoch - 863ms/step
+Epoch 12/75
+
+Epoch 00012: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0868e-06 - mean_squared_error: 1.4869e-06 - val_loss: 1.1789e-07 - val_mean_squared_error: 1.1789e-07 - 54s/epoch - 860ms/step
+Epoch 13/75
+
+Epoch 00013: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0747e-06 - mean_squared_error: 1.4765e-06 - val_loss: 1.0568e-07 - val_mean_squared_error: 1.0568e-07 - 54s/epoch - 861ms/step
+Epoch 14/75
+
+Epoch 00014: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 55s - loss: 1.0612e-06 - mean_squared_error: 1.4651e-06 - val_loss: 9.6624e-08 - val_mean_squared_error: 9.6624e-08 - 55s/epoch - 867ms/step
+Epoch 15/75
+
+Epoch 00015: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0518e-06 - mean_squared_error: 1.4567e-06 - val_loss: 8.8823e-08 - val_mean_squared_error: 8.8823e-08 - 54s/epoch - 854ms/step
+Epoch 16/75
+
+Epoch 00016: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0430e-06 - mean_squared_error: 1.4492e-06 - val_loss: 8.0435e-08 - val_mean_squared_error: 8.0435e-08 - 54s/epoch - 863ms/step
+Epoch 17/75
+
+Epoch 00017: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 55s - loss: 1.0353e-06 - mean_squared_error: 1.4420e-06 - val_loss: 7.4950e-08 - val_mean_squared_error: 7.4950e-08 - 55s/epoch - 870ms/step
+Epoch 18/75
+
+Epoch 00018: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0293e-06 - mean_squared_error: 1.4367e-06 - val_loss: 6.9245e-08 - val_mean_squared_error: 6.9245e-08 - 54s/epoch - 857ms/step
+Epoch 19/75
+
+Epoch 00019: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0235e-06 - mean_squared_error: 1.4316e-06 - val_loss: 6.5197e-08 - val_mean_squared_error: 6.5197e-08 - 54s/epoch - 859ms/step
+Epoch 20/75
+
+Epoch 00020: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0178e-06 - mean_squared_error: 1.4269e-06 - val_loss: 6.1620e-08 - val_mean_squared_error: 6.1620e-08 - 54s/epoch - 857ms/step
+Epoch 21/75
+
+Epoch 00021: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0148e-06 - mean_squared_error: 1.4239e-06 - val_loss: 5.6748e-08 - val_mean_squared_error: 5.6748e-08 - 54s/epoch - 858ms/step
+Epoch 22/75
+
+Epoch 00022: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0099e-06 - mean_squared_error: 1.4198e-06 - val_loss: 5.3609e-08 - val_mean_squared_error: 5.3609e-08 - 54s/epoch - 862ms/step
+Epoch 23/75
+
+Epoch 00023: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0072e-06 - mean_squared_error: 1.4171e-06 - val_loss: 5.0933e-08 - val_mean_squared_error: 5.0933e-08 - 54s/epoch - 864ms/step
+Epoch 24/75
+
+Epoch 00024: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0050e-06 - mean_squared_error: 1.4153e-06 - val_loss: 4.8048e-08 - val_mean_squared_error: 4.8048e-08 - 54s/epoch - 852ms/step
+Epoch 25/75
+
+Epoch 00025: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 1.0021e-06 - mean_squared_error: 1.4126e-06 - val_loss: 4.7587e-08 - val_mean_squared_error: 4.7587e-08 - 54s/epoch - 862ms/step
+Epoch 26/75
+
+Epoch 00026: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 55s - loss: 1.0005e-06 - mean_squared_error: 1.4111e-06 - val_loss: 4.6360e-08 - val_mean_squared_error: 4.6360e-08 - 55s/epoch - 865ms/step
+Epoch 27/75
+
+Epoch 00027: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.9692e-07 - mean_squared_error: 1.4081e-06 - val_loss: 4.1327e-08 - val_mean_squared_error: 4.1327e-08 - 54s/epoch - 860ms/step
+Epoch 28/75
+
+Epoch 00028: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.9799e-07 - mean_squared_error: 1.4090e-06 - val_loss: 4.6389e-08 - val_mean_squared_error: 4.6389e-08 - 54s/epoch - 863ms/step
+Epoch 29/75
+
+Epoch 00029: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.9263e-07 - mean_squared_error: 1.4044e-06 - val_loss: 4.1473e-08 - val_mean_squared_error: 4.1473e-08 - 54s/epoch - 862ms/step
+Epoch 30/75
+
+Epoch 00030: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.9258e-07 - mean_squared_error: 1.4039e-06 - val_loss: 3.7741e-08 - val_mean_squared_error: 3.7741e-08 - 54s/epoch - 863ms/step
+Epoch 31/75
+
+Epoch 00031: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.9062e-07 - mean_squared_error: 1.4025e-06 - val_loss: 3.6691e-08 - val_mean_squared_error: 3.6691e-08 - 54s/epoch - 862ms/step
+Epoch 32/75
+
+Epoch 00032: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.9106e-07 - mean_squared_error: 1.4021e-06 - val_loss: 3.9307e-08 - val_mean_squared_error: 3.9307e-08 - 54s/epoch - 863ms/step
+Epoch 33/75
+
+Epoch 00033: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.8782e-07 - mean_squared_error: 1.3998e-06 - val_loss: 3.3303e-08 - val_mean_squared_error: 3.3303e-08 - 54s/epoch - 857ms/step
+Epoch 34/75
+
+Epoch 00034: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.8507e-07 - mean_squared_error: 1.3975e-06 - val_loss: 3.2631e-08 - val_mean_squared_error: 3.2631e-08 - 54s/epoch - 859ms/step
+Epoch 35/75
+
+Epoch 00035: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.8580e-07 - mean_squared_error: 1.3978e-06 - val_loss: 3.3644e-08 - val_mean_squared_error: 3.3644e-08 - 54s/epoch - 857ms/step
+Epoch 36/75
+
+Epoch 00036: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.8346e-07 - mean_squared_error: 1.3960e-06 - val_loss: 3.2505e-08 - val_mean_squared_error: 3.2505e-08 - 54s/epoch - 863ms/step
+Epoch 37/75
+
+Epoch 00037: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.8163e-07 - mean_squared_error: 1.3946e-06 - val_loss: 2.9372e-08 - val_mean_squared_error: 2.9372e-08 - 54s/epoch - 856ms/step
+Epoch 38/75
+
+Epoch 00038: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.8237e-07 - mean_squared_error: 1.3948e-06 - val_loss: 2.9649e-08 - val_mean_squared_error: 2.9649e-08 - 54s/epoch - 862ms/step
+Epoch 39/75
+
+Epoch 00039: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.8066e-07 - mean_squared_error: 1.3935e-06 - val_loss: 2.9431e-08 - val_mean_squared_error: 2.9431e-08 - 54s/epoch - 859ms/step
+Epoch 40/75
+
+Epoch 00040: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.8367e-07 - mean_squared_error: 1.3954e-06 - val_loss: 2.8922e-08 - val_mean_squared_error: 2.8922e-08 - 54s/epoch - 858ms/step
+Epoch 41/75
+
+Epoch 00041: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.8577e-07 - mean_squared_error: 1.3965e-06 - val_loss: 3.2715e-08 - val_mean_squared_error: 3.2715e-08 - 54s/epoch - 849ms/step
+Epoch 42/75
+
+Epoch 00042: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.8476e-07 - mean_squared_error: 1.3962e-06 - val_loss: 3.0809e-08 - val_mean_squared_error: 3.0809e-08 - 54s/epoch - 856ms/step
+Epoch 43/75
+
+Epoch 00043: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.7971e-07 - mean_squared_error: 1.3923e-06 - val_loss: 2.6584e-08 - val_mean_squared_error: 2.6584e-08 - 54s/epoch - 856ms/step
+Epoch 44/75
+
+Epoch 00044: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.7654e-07 - mean_squared_error: 1.3900e-06 - val_loss: 2.8178e-08 - val_mean_squared_error: 2.8178e-08 - 54s/epoch - 861ms/step
+Epoch 45/75
+
+Epoch 00045: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7760e-07 - mean_squared_error: 1.3906e-06 - val_loss: 2.7028e-08 - val_mean_squared_error: 2.7028e-08 - 54s/epoch - 861ms/step
+Epoch 46/75
+
+Epoch 00046: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7711e-07 - mean_squared_error: 1.3902e-06 - val_loss: 2.3718e-08 - val_mean_squared_error: 2.3718e-08 - 54s/epoch - 857ms/step
+Epoch 47/75
+
+Epoch 00047: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.7440e-07 - mean_squared_error: 1.3881e-06 - val_loss: 2.3149e-08 - val_mean_squared_error: 2.3149e-08 - 54s/epoch - 854ms/step
+Epoch 48/75
+
+Epoch 00048: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.7398e-07 - mean_squared_error: 1.3875e-06 - val_loss: 2.7261e-08 - val_mean_squared_error: 2.7261e-08 - 54s/epoch - 859ms/step
+Epoch 49/75
+
+Epoch 00049: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7499e-07 - mean_squared_error: 1.3883e-06 - val_loss: 2.3264e-08 - val_mean_squared_error: 2.3264e-08 - 54s/epoch - 863ms/step
+Epoch 50/75
+
+Epoch 00050: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.7192e-07 - mean_squared_error: 1.3858e-06 - val_loss: 2.1765e-08 - val_mean_squared_error: 2.1765e-08 - 54s/epoch - 855ms/step
+Epoch 51/75
+
+Epoch 00051: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7381e-07 - mean_squared_error: 1.3869e-06 - val_loss: 2.2473e-08 - val_mean_squared_error: 2.2473e-08 - 54s/epoch - 863ms/step
+Epoch 52/75
+
+Epoch 00052: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7816e-07 - mean_squared_error: 1.3904e-06 - val_loss: 3.0010e-08 - val_mean_squared_error: 3.0010e-08 - 54s/epoch - 860ms/step
+Epoch 53/75
+
+Epoch 00053: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.8399e-07 - mean_squared_error: 1.3945e-06 - val_loss: 2.2767e-08 - val_mean_squared_error: 2.2767e-08 - 54s/epoch - 862ms/step
+Epoch 54/75
+
+Epoch 00054: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7898e-07 - mean_squared_error: 1.3905e-06 - val_loss: 2.4266e-08 - val_mean_squared_error: 2.4266e-08 - 54s/epoch - 861ms/step
+Epoch 55/75
+
+Epoch 00055: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.8630e-07 - mean_squared_error: 1.3963e-06 - val_loss: 3.1350e-08 - val_mean_squared_error: 3.1350e-08 - 54s/epoch - 858ms/step
+Epoch 56/75
+
+Epoch 00056: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7801e-07 - mean_squared_error: 1.3903e-06 - val_loss: 2.2896e-08 - val_mean_squared_error: 2.2896e-08 - 54s/epoch - 859ms/step
+Epoch 57/75
+
+Epoch 00057: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 1.0022e-06 - mean_squared_error: 1.4103e-06 - val_loss: 6.1471e-08 - val_mean_squared_error: 6.1471e-08 - 54s/epoch - 856ms/step
+Epoch 58/75
+
+Epoch 00058: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.8738e-07 - mean_squared_error: 1.3979e-06 - val_loss: 2.3827e-08 - val_mean_squared_error: 2.3827e-08 - 54s/epoch - 863ms/step
+Epoch 59/75
+
+Epoch 00059: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7613e-07 - mean_squared_error: 1.3888e-06 - val_loss: 2.2142e-08 - val_mean_squared_error: 2.2142e-08 - 54s/epoch - 852ms/step
+Epoch 60/75
+
+Epoch 00060: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 55s - loss: 9.7166e-07 - mean_squared_error: 1.3850e-06 - val_loss: 2.5716e-08 - val_mean_squared_error: 2.5716e-08 - 55s/epoch - 867ms/step
+Epoch 61/75
+
+Epoch 00061: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7158e-07 - mean_squared_error: 1.3854e-06 - val_loss: 1.9812e-08 - val_mean_squared_error: 1.9812e-08 - 54s/epoch - 860ms/step
+Epoch 62/75
+
+Epoch 00062: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 55s - loss: 9.6831e-07 - mean_squared_error: 1.3827e-06 - val_loss: 1.9209e-08 - val_mean_squared_error: 1.9209e-08 - 55s/epoch - 866ms/step
+Epoch 63/75
+
+Epoch 00063: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.6754e-07 - mean_squared_error: 1.3820e-06 - val_loss: 1.8441e-08 - val_mean_squared_error: 1.8441e-08 - 54s/epoch - 862ms/step
+Epoch 64/75
+
+Epoch 00064: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.6956e-07 - mean_squared_error: 1.3831e-06 - val_loss: 1.7620e-08 - val_mean_squared_error: 1.7620e-08 - 54s/epoch - 853ms/step
+Epoch 65/75
+
+Epoch 00065: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.6666e-07 - mean_squared_error: 1.3812e-06 - val_loss: 1.9281e-08 - val_mean_squared_error: 1.9281e-08 - 54s/epoch - 863ms/step
+Epoch 66/75
+
+Epoch 00066: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.6681e-07 - mean_squared_error: 1.3813e-06 - val_loss: 1.7905e-08 - val_mean_squared_error: 1.7905e-08 - 54s/epoch - 858ms/step
+Epoch 67/75
+
+Epoch 00067: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.6820e-07 - mean_squared_error: 1.3823e-06 - val_loss: 2.0562e-08 - val_mean_squared_error: 2.0562e-08 - 54s/epoch - 858ms/step
+Epoch 68/75
+
+Epoch 00068: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.6837e-07 - mean_squared_error: 1.3824e-06 - val_loss: 2.0149e-08 - val_mean_squared_error: 2.0149e-08 - 54s/epoch - 862ms/step
+Epoch 69/75
+
+Epoch 00069: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.6613e-07 - mean_squared_error: 1.3808e-06 - val_loss: 1.6256e-08 - val_mean_squared_error: 1.6256e-08 - 54s/epoch - 863ms/step
+Epoch 70/75
+
+Epoch 00070: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.6599e-07 - mean_squared_error: 1.3805e-06 - val_loss: 1.8916e-08 - val_mean_squared_error: 1.8916e-08 - 54s/epoch - 862ms/step
+Epoch 71/75
+
+Epoch 00071: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7333e-07 - mean_squared_error: 1.3859e-06 - val_loss: 2.3131e-08 - val_mean_squared_error: 2.3131e-08 - 54s/epoch - 862ms/step
+Epoch 72/75
+
+Epoch 00072: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.6888e-07 - mean_squared_error: 1.3827e-06 - val_loss: 1.7026e-08 - val_mean_squared_error: 1.7026e-08 - 54s/epoch - 861ms/step
+Epoch 73/75
+
+Epoch 00073: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.6589e-07 - mean_squared_error: 1.3803e-06 - val_loss: 1.7815e-08 - val_mean_squared_error: 1.7815e-08 - 54s/epoch - 861ms/step
+Epoch 74/75
+
+Epoch 00074: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.6591e-07 - mean_squared_error: 1.3802e-06 - val_loss: 1.5791e-08 - val_mean_squared_error: 1.5791e-08 - 54s/epoch - 861ms/step
+Epoch 75/75
+
+Epoch 00075: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle1
+63/63 - 54s - loss: 9.6509e-07 - mean_squared_error: 1.3798e-06 - val_loss: 1.6410e-08 - val_mean_squared_error: 1.6410e-08 - 54s/epoch - 863ms/step
+Cycle1 elapsed time: 4075.435204
+Project non-param DD features onto param model: done!
+DD features reseted to random initialisation.
+Starting cycle 2..
+Starting parametric update..
+Starting non-parametric update..
+Epoch 1/75
+
+Epoch 00001: mean_squared_error improved from inf to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 56s - loss: 2.5891e-06 - mean_squared_error: 2.6358e-06 - val_loss: 5.6093e-07 - val_mean_squared_error: 5.6093e-07 - 56s/epoch - 886ms/step
+Epoch 2/75
+
+Epoch 00002: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.4814e-06 - mean_squared_error: 1.7935e-06 - val_loss: 3.5239e-07 - val_mean_squared_error: 3.5239e-07 - 54s/epoch - 852ms/step
+Epoch 3/75
+
+Epoch 00003: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.3067e-06 - mean_squared_error: 1.6579e-06 - val_loss: 2.6564e-07 - val_mean_squared_error: 2.6564e-07 - 54s/epoch - 854ms/step
+Epoch 4/75
+
+Epoch 00004: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.2280e-06 - mean_squared_error: 1.5949e-06 - val_loss: 2.1585e-07 - val_mean_squared_error: 2.1585e-07 - 54s/epoch - 851ms/step
+Epoch 5/75
+
+Epoch 00005: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.1807e-06 - mean_squared_error: 1.5573e-06 - val_loss: 1.8554e-07 - val_mean_squared_error: 1.8554e-07 - 54s/epoch - 850ms/step
+Epoch 6/75
+
+Epoch 00006: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.1491e-06 - mean_squared_error: 1.5322e-06 - val_loss: 1.6454e-07 - val_mean_squared_error: 1.6454e-07 - 54s/epoch - 852ms/step
+Epoch 7/75
+
+Epoch 00007: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.1255e-06 - mean_squared_error: 1.5138e-06 - val_loss: 1.4648e-07 - val_mean_squared_error: 1.4648e-07 - 54s/epoch - 854ms/step
+Epoch 8/75
+
+Epoch 00008: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.1076e-06 - mean_squared_error: 1.4994e-06 - val_loss: 1.3298e-07 - val_mean_squared_error: 1.3298e-07 - 54s/epoch - 856ms/step
+Epoch 9/75
+
+Epoch 00009: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0938e-06 - mean_squared_error: 1.4882e-06 - val_loss: 1.2206e-07 - val_mean_squared_error: 1.2206e-07 - 54s/epoch - 858ms/step
+Epoch 10/75
+
+Epoch 00010: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 1.0827e-06 - mean_squared_error: 1.4791e-06 - val_loss: 1.1349e-07 - val_mean_squared_error: 1.1349e-07 - 53s/epoch - 843ms/step
+Epoch 11/75
+
+Epoch 00011: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0730e-06 - mean_squared_error: 1.4713e-06 - val_loss: 1.0598e-07 - val_mean_squared_error: 1.0598e-07 - 54s/epoch - 850ms/step
+Epoch 12/75
+
+Epoch 00012: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 1.0651e-06 - mean_squared_error: 1.4648e-06 - val_loss: 9.9419e-08 - val_mean_squared_error: 9.9419e-08 - 53s/epoch - 845ms/step
+Epoch 13/75
+
+Epoch 00013: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 1.0577e-06 - mean_squared_error: 1.4591e-06 - val_loss: 9.3539e-08 - val_mean_squared_error: 9.3539e-08 - 53s/epoch - 843ms/step
+Epoch 14/75
+
+Epoch 00014: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0509e-06 - mean_squared_error: 1.4538e-06 - val_loss: 8.8262e-08 - val_mean_squared_error: 8.8262e-08 - 54s/epoch - 849ms/step
+Epoch 15/75
+
+Epoch 00015: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0447e-06 - mean_squared_error: 1.4486e-06 - val_loss: 8.3276e-08 - val_mean_squared_error: 8.3276e-08 - 54s/epoch - 852ms/step
+Epoch 16/75
+
+Epoch 00016: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 1.0395e-06 - mean_squared_error: 1.4441e-06 - val_loss: 7.8497e-08 - val_mean_squared_error: 7.8497e-08 - 53s/epoch - 848ms/step
+Epoch 17/75
+
+Epoch 00017: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 1.0352e-06 - mean_squared_error: 1.4403e-06 - val_loss: 7.6193e-08 - val_mean_squared_error: 7.6193e-08 - 53s/epoch - 846ms/step
+Epoch 18/75
+
+Epoch 00018: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0293e-06 - mean_squared_error: 1.4359e-06 - val_loss: 7.0193e-08 - val_mean_squared_error: 7.0193e-08 - 54s/epoch - 849ms/step
+Epoch 19/75
+
+Epoch 00019: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 1.0244e-06 - mean_squared_error: 1.4319e-06 - val_loss: 6.6768e-08 - val_mean_squared_error: 6.6768e-08 - 53s/epoch - 838ms/step
+Epoch 20/75
+
+Epoch 00020: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 1.0201e-06 - mean_squared_error: 1.4283e-06 - val_loss: 6.2519e-08 - val_mean_squared_error: 6.2519e-08 - 53s/epoch - 846ms/step
+Epoch 21/75
+
+Epoch 00021: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0164e-06 - mean_squared_error: 1.4251e-06 - val_loss: 6.0781e-08 - val_mean_squared_error: 6.0781e-08 - 54s/epoch - 851ms/step
+Epoch 22/75
+
+Epoch 00022: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0132e-06 - mean_squared_error: 1.4223e-06 - val_loss: 5.7199e-08 - val_mean_squared_error: 5.7199e-08 - 54s/epoch - 851ms/step
+Epoch 23/75
+
+Epoch 00023: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0095e-06 - mean_squared_error: 1.4191e-06 - val_loss: 5.3415e-08 - val_mean_squared_error: 5.3415e-08 - 54s/epoch - 849ms/step
+Epoch 24/75
+
+Epoch 00024: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0069e-06 - mean_squared_error: 1.4168e-06 - val_loss: 5.0917e-08 - val_mean_squared_error: 5.0917e-08 - 54s/epoch - 850ms/step
+Epoch 25/75
+
+Epoch 00025: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0035e-06 - mean_squared_error: 1.4141e-06 - val_loss: 4.8660e-08 - val_mean_squared_error: 4.8660e-08 - 54s/epoch - 852ms/step
+Epoch 26/75
+
+Epoch 00026: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 1.0009e-06 - mean_squared_error: 1.4118e-06 - val_loss: 4.7014e-08 - val_mean_squared_error: 4.7014e-08 - 54s/epoch - 851ms/step
+Epoch 27/75
+
+Epoch 00027: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.9937e-07 - mean_squared_error: 1.4102e-06 - val_loss: 4.5118e-08 - val_mean_squared_error: 4.5118e-08 - 53s/epoch - 847ms/step
+Epoch 28/75
+
+Epoch 00028: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.9689e-07 - mean_squared_error: 1.4082e-06 - val_loss: 4.2843e-08 - val_mean_squared_error: 4.2843e-08 - 53s/epoch - 840ms/step
+Epoch 29/75
+
+Epoch 00029: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.9507e-07 - mean_squared_error: 1.4065e-06 - val_loss: 4.1739e-08 - val_mean_squared_error: 4.1739e-08 - 53s/epoch - 845ms/step
+Epoch 30/75
+
+Epoch 00030: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.9305e-07 - mean_squared_error: 1.4048e-06 - val_loss: 3.9020e-08 - val_mean_squared_error: 3.9020e-08 - 53s/epoch - 848ms/step
+Epoch 31/75
+
+Epoch 00031: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.9159e-07 - mean_squared_error: 1.4034e-06 - val_loss: 3.8254e-08 - val_mean_squared_error: 3.8254e-08 - 53s/epoch - 849ms/step
+Epoch 32/75
+
+Epoch 00032: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.9011e-07 - mean_squared_error: 1.4022e-06 - val_loss: 3.6882e-08 - val_mean_squared_error: 3.6882e-08 - 54s/epoch - 852ms/step
+Epoch 33/75
+
+Epoch 00033: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.8814e-07 - mean_squared_error: 1.4004e-06 - val_loss: 3.4895e-08 - val_mean_squared_error: 3.4895e-08 - 54s/epoch - 853ms/step
+Epoch 34/75
+
+Epoch 00034: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.8654e-07 - mean_squared_error: 1.3991e-06 - val_loss: 3.3864e-08 - val_mean_squared_error: 3.3864e-08 - 54s/epoch - 853ms/step
+Epoch 35/75
+
+Epoch 00035: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.8749e-07 - mean_squared_error: 1.3995e-06 - val_loss: 3.6320e-08 - val_mean_squared_error: 3.6320e-08 - 53s/epoch - 846ms/step
+Epoch 36/75
+
+Epoch 00036: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.9020e-07 - mean_squared_error: 1.4015e-06 - val_loss: 3.4105e-08 - val_mean_squared_error: 3.4105e-08 - 53s/epoch - 846ms/step
+Epoch 37/75
+
+Epoch 00037: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.8845e-07 - mean_squared_error: 1.3991e-06 - val_loss: 3.4311e-08 - val_mean_squared_error: 3.4311e-08 - 53s/epoch - 847ms/step
+Epoch 38/75
+
+Epoch 00038: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.8526e-07 - mean_squared_error: 1.3973e-06 - val_loss: 3.1715e-08 - val_mean_squared_error: 3.1715e-08 - 54s/epoch - 850ms/step
+Epoch 39/75
+
+Epoch 00039: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.8167e-07 - mean_squared_error: 1.3947e-06 - val_loss: 3.0310e-08 - val_mean_squared_error: 3.0310e-08 - 53s/epoch - 840ms/step
+Epoch 40/75
+
+Epoch 00040: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.8009e-07 - mean_squared_error: 1.3932e-06 - val_loss: 2.9245e-08 - val_mean_squared_error: 2.9245e-08 - 54s/epoch - 853ms/step
+Epoch 41/75
+
+Epoch 00041: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.7980e-07 - mean_squared_error: 1.3929e-06 - val_loss: 2.7619e-08 - val_mean_squared_error: 2.7619e-08 - 54s/epoch - 851ms/step
+Epoch 42/75
+
+Epoch 00042: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.7892e-07 - mean_squared_error: 1.3919e-06 - val_loss: 3.0766e-08 - val_mean_squared_error: 3.0766e-08 - 54s/epoch - 852ms/step
+Epoch 43/75
+
+Epoch 00043: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.7967e-07 - mean_squared_error: 1.3924e-06 - val_loss: 2.6769e-08 - val_mean_squared_error: 2.6769e-08 - 53s/epoch - 847ms/step
+Epoch 44/75
+
+Epoch 00044: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.8021e-07 - mean_squared_error: 1.3922e-06 - val_loss: 2.8299e-08 - val_mean_squared_error: 2.8299e-08 - 54s/epoch - 850ms/step
+Epoch 45/75
+
+Epoch 00045: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.8262e-07 - mean_squared_error: 1.3941e-06 - val_loss: 2.5628e-08 - val_mean_squared_error: 2.5628e-08 - 53s/epoch - 842ms/step
+Epoch 46/75
+
+Epoch 00046: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.7627e-07 - mean_squared_error: 1.3894e-06 - val_loss: 2.4112e-08 - val_mean_squared_error: 2.4112e-08 - 53s/epoch - 841ms/step
+Epoch 47/75
+
+Epoch 00047: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.7436e-07 - mean_squared_error: 1.3881e-06 - val_loss: 2.6322e-08 - val_mean_squared_error: 2.6322e-08 - 53s/epoch - 849ms/step
+Epoch 48/75
+
+Epoch 00048: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7601e-07 - mean_squared_error: 1.3888e-06 - val_loss: 2.3156e-08 - val_mean_squared_error: 2.3156e-08 - 54s/epoch - 851ms/step
+Epoch 49/75
+
+Epoch 00049: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.9379e-07 - mean_squared_error: 1.4032e-06 - val_loss: 4.0089e-08 - val_mean_squared_error: 4.0089e-08 - 54s/epoch - 853ms/step
+Epoch 50/75
+
+Epoch 00050: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.8524e-07 - mean_squared_error: 1.3953e-06 - val_loss: 2.4668e-08 - val_mean_squared_error: 2.4668e-08 - 53s/epoch - 848ms/step
+Epoch 51/75
+
+Epoch 00051: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.7364e-07 - mean_squared_error: 1.3871e-06 - val_loss: 2.2885e-08 - val_mean_squared_error: 2.2885e-08 - 54s/epoch - 850ms/step
+Epoch 52/75
+
+Epoch 00052: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.7220e-07 - mean_squared_error: 1.3860e-06 - val_loss: 2.1719e-08 - val_mean_squared_error: 2.1719e-08 - 54s/epoch - 849ms/step
+Epoch 53/75
+
+Epoch 00053: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.7286e-07 - mean_squared_error: 1.3863e-06 - val_loss: 2.1366e-08 - val_mean_squared_error: 2.1366e-08 - 53s/epoch - 846ms/step
+Epoch 54/75
+
+Epoch 00054: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.7198e-07 - mean_squared_error: 1.3858e-06 - val_loss: 2.2114e-08 - val_mean_squared_error: 2.2114e-08 - 53s/epoch - 843ms/step
+Epoch 55/75
+
+Epoch 00055: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.7063e-07 - mean_squared_error: 1.3846e-06 - val_loss: 2.0750e-08 - val_mean_squared_error: 2.0750e-08 - 54s/epoch - 852ms/step
+Epoch 56/75
+
+Epoch 00056: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7113e-07 - mean_squared_error: 1.3848e-06 - val_loss: 2.1052e-08 - val_mean_squared_error: 2.1052e-08 - 54s/epoch - 850ms/step
+Epoch 57/75
+
+Epoch 00057: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.7005e-07 - mean_squared_error: 1.3839e-06 - val_loss: 1.9288e-08 - val_mean_squared_error: 1.9288e-08 - 54s/epoch - 852ms/step
+Epoch 58/75
+
+Epoch 00058: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7198e-07 - mean_squared_error: 1.3851e-06 - val_loss: 2.0283e-08 - val_mean_squared_error: 2.0283e-08 - 54s/epoch - 851ms/step
+Epoch 59/75
+
+Epoch 00059: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.6886e-07 - mean_squared_error: 1.3829e-06 - val_loss: 1.9638e-08 - val_mean_squared_error: 1.9638e-08 - 53s/epoch - 846ms/step
+Epoch 60/75
+
+Epoch 00060: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.6906e-07 - mean_squared_error: 1.3829e-06 - val_loss: 1.8401e-08 - val_mean_squared_error: 1.8401e-08 - 54s/epoch - 849ms/step
+Epoch 61/75
+
+Epoch 00061: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.6870e-07 - mean_squared_error: 1.3826e-06 - val_loss: 1.8199e-08 - val_mean_squared_error: 1.8199e-08 - 54s/epoch - 851ms/step
+Epoch 62/75
+
+Epoch 00062: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.7016e-07 - mean_squared_error: 1.3837e-06 - val_loss: 1.9107e-08 - val_mean_squared_error: 1.9107e-08 - 53s/epoch - 845ms/step
+Epoch 63/75
+
+Epoch 00063: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.6842e-07 - mean_squared_error: 1.3823e-06 - val_loss: 2.2715e-08 - val_mean_squared_error: 2.2715e-08 - 53s/epoch - 838ms/step
+Epoch 64/75
+
+Epoch 00064: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.6862e-07 - mean_squared_error: 1.3825e-06 - val_loss: 1.7023e-08 - val_mean_squared_error: 1.7023e-08 - 53s/epoch - 848ms/step
+Epoch 65/75
+
+Epoch 00065: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.6724e-07 - mean_squared_error: 1.3813e-06 - val_loss: 1.6771e-08 - val_mean_squared_error: 1.6771e-08 - 54s/epoch - 855ms/step
+Epoch 66/75
+
+Epoch 00066: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.6690e-07 - mean_squared_error: 1.3809e-06 - val_loss: 2.0186e-08 - val_mean_squared_error: 2.0186e-08 - 54s/epoch - 851ms/step
+Epoch 67/75
+
+Epoch 00067: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.6711e-07 - mean_squared_error: 1.3813e-06 - val_loss: 1.7672e-08 - val_mean_squared_error: 1.7672e-08 - 53s/epoch - 842ms/step
+Epoch 68/75
+
+Epoch 00068: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 53s - loss: 9.6614e-07 - mean_squared_error: 1.3804e-06 - val_loss: 1.6135e-08 - val_mean_squared_error: 1.6135e-08 - 53s/epoch - 846ms/step
+Epoch 69/75
+
+Epoch 00069: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.6613e-07 - mean_squared_error: 1.3806e-06 - val_loss: 1.6539e-08 - val_mean_squared_error: 1.6539e-08 - 54s/epoch - 853ms/step
+Epoch 70/75
+
+Epoch 00070: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.6563e-07 - mean_squared_error: 1.3799e-06 - val_loss: 1.6581e-08 - val_mean_squared_error: 1.6581e-08 - 54s/epoch - 853ms/step
+Epoch 71/75
+
+Epoch 00071: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.6579e-07 - mean_squared_error: 1.3802e-06 - val_loss: 1.6651e-08 - val_mean_squared_error: 1.6651e-08 - 54s/epoch - 857ms/step
+Epoch 72/75
+
+Epoch 00072: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.6641e-07 - mean_squared_error: 1.3805e-06 - val_loss: 1.8086e-08 - val_mean_squared_error: 1.8086e-08 - 53s/epoch - 841ms/step
+Epoch 73/75
+
+Epoch 00073: mean_squared_error did not improve from 0.00000
+63/63 - 53s - loss: 9.6824e-07 - mean_squared_error: 1.3820e-06 - val_loss: 1.8564e-08 - val_mean_squared_error: 1.8564e-08 - 53s/epoch - 848ms/step
+Epoch 74/75
+
+Epoch 00074: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/uds36vp/repos/wf-SEDs/HD_projected_optimisation/wf-outputs/chkp/8_bins/chkp_callback_poly_2_cycles_256_hd_proj_reset_eval_full_3_cycle2
+63/63 - 54s - loss: 9.6553e-07 - mean_squared_error: 1.3799e-06 - val_loss: 1.9230e-08 - val_mean_squared_error: 1.9230e-08 - 54s/epoch - 851ms/step
+Epoch 75/75
+
+Epoch 00075: mean_squared_error did not improve from 0.00000
+63/63 - 54s - loss: 9.7118e-07 - mean_squared_error: 1.3839e-06 - val_loss: 2.0746e-08 - val_mean_squared_error: 2.0746e-08 - 54s/epoch - 849ms/step
+Cycle2 elapsed time: 4018.1811349391937
+
+Total elapsed time: 8097.266739
+
+ Good bye..
