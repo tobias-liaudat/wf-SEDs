@@ -9,6 +9,10 @@ __pycache__/
 # C extensions
 *.so
 
+# Ignore large dataset
+WFE_sampling_test/multires_dataset/4096/train_Euclid_res_2000_TrainStars_id_005_wfeRes_256.npy
+WFE_sampling_test/multires_dataset/4096/train_Euclid_res_2000_TrainStars_id_005_wfeRes_4096.npy
+
 # Model checkpoints
 chkp*
 
