@@ -1,0 +1,739 @@
+Starting the log file.
+Found GPU at: /device:GPU:0
+tf_version: 2.7.0
+Zernike cube:
+(15, 64, 64)
+Dataset parameters:
+{'d_max': 2, 'max_order': 45, 'x_lims': [0, 1000.0], 'y_lims': [0, 1000.0], 'grid_points': [4, 4], 'n_bins': 20, 'max_wfe_rms': 0.1, 'oversampling_rate': 3.0, 'output_Q': 3.0, 'output_dim': 32, 'LP_filter_length': 2, 'pupil_diameter': 4096, 'euclid_obsc': True, 'n_stars': 2000}
+Starting cycle 1..
+Starting parametric update..
+Epoch 1/15
+
+Epoch 00001: mean_squared_error improved from inf to 0.00001, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 112s - loss: 8.4910e-06 - mean_squared_error: 7.9743e-06 - val_loss: 2.0556e-06 - val_mean_squared_error: 2.0556e-06 - 112s/epoch - 2s/step
+Epoch 2/15
+
+Epoch 00002: mean_squared_error improved from 0.00001 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 2.5556e-06 - mean_squared_error: 2.7699e-06 - val_loss: 1.1080e-06 - val_mean_squared_error: 1.1080e-06 - 107s/epoch - 2s/step
+Epoch 3/15
+
+Epoch 00003: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 108s - loss: 1.9560e-06 - mean_squared_error: 2.2374e-06 - val_loss: 8.7610e-07 - val_mean_squared_error: 8.7610e-07 - 108s/epoch - 2s/step
+Epoch 4/15
+
+Epoch 00004: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 1.8436e-06 - mean_squared_error: 2.1405e-06 - val_loss: 8.5045e-07 - val_mean_squared_error: 8.5045e-07 - 107s/epoch - 2s/step
+Epoch 5/15
+
+Epoch 00005: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 1.8211e-06 - mean_squared_error: 2.1185e-06 - val_loss: 8.4077e-07 - val_mean_squared_error: 8.4077e-07 - 107s/epoch - 2s/step
+Epoch 6/15
+
+Epoch 00006: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 1.8170e-06 - mean_squared_error: 2.1136e-06 - val_loss: 8.2772e-07 - val_mean_squared_error: 8.2772e-07 - 107s/epoch - 2s/step
+Epoch 7/15
+
+Epoch 00007: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 1.8380e-06 - mean_squared_error: 2.1376e-06 - val_loss: 8.5641e-07 - val_mean_squared_error: 8.5641e-07 - 107s/epoch - 2s/step
+Epoch 8/15
+
+Epoch 00008: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 1.8263e-06 - mean_squared_error: 2.1265e-06 - val_loss: 8.1259e-07 - val_mean_squared_error: 8.1259e-07 - 107s/epoch - 2s/step
+Epoch 9/15
+
+Epoch 00009: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 1.8192e-06 - mean_squared_error: 2.1215e-06 - val_loss: 8.4748e-07 - val_mean_squared_error: 8.4748e-07 - 107s/epoch - 2s/step
+Epoch 10/15
+
+Epoch 00010: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 1.8247e-06 - mean_squared_error: 2.1225e-06 - val_loss: 8.2588e-07 - val_mean_squared_error: 8.2588e-07 - 107s/epoch - 2s/step
+Epoch 11/15
+
+Epoch 00011: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 1.8690e-06 - mean_squared_error: 2.1597e-06 - val_loss: 9.5022e-07 - val_mean_squared_error: 9.5022e-07 - 107s/epoch - 2s/step
+Epoch 12/15
+
+Epoch 00012: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 1.8741e-06 - mean_squared_error: 2.1727e-06 - val_loss: 8.9689e-07 - val_mean_squared_error: 8.9689e-07 - 107s/epoch - 2s/step
+Epoch 13/15
+
+Epoch 00013: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 1.8583e-06 - mean_squared_error: 2.1524e-06 - val_loss: 8.7421e-07 - val_mean_squared_error: 8.7421e-07 - 106s/epoch - 2s/step
+Epoch 14/15
+
+Epoch 00014: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 1.8773e-06 - mean_squared_error: 2.1776e-06 - val_loss: 9.6567e-07 - val_mean_squared_error: 9.6567e-07 - 106s/epoch - 2s/step
+Epoch 15/15
+
+Epoch 00015: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 1.8899e-06 - mean_squared_error: 2.1872e-06 - val_loss: 9.9653e-07 - val_mean_squared_error: 9.9653e-07 - 105s/epoch - 2s/step
+Starting non-parametric update..
+Epoch 1/100
+
+Epoch 00001: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 110s - loss: 1.6528e-06 - mean_squared_error: 1.9732e-06 - val_loss: 4.9411e-07 - val_mean_squared_error: 4.9411e-07 - 110s/epoch - 2s/step
+Epoch 2/100
+
+Epoch 00002: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 1.2832e-06 - mean_squared_error: 1.6377e-06 - val_loss: 2.4837e-07 - val_mean_squared_error: 2.4837e-07 - 107s/epoch - 2s/step
+Epoch 3/100
+
+Epoch 00003: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 1.1187e-06 - mean_squared_error: 1.4847e-06 - val_loss: 1.6446e-07 - val_mean_squared_error: 1.6446e-07 - 107s/epoch - 2s/step
+Epoch 4/100
+
+Epoch 00004: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 1.0552e-06 - mean_squared_error: 1.4263e-06 - val_loss: 1.2798e-07 - val_mean_squared_error: 1.2798e-07 - 106s/epoch - 2s/step
+Epoch 5/100
+
+Epoch 00005: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 1.0296e-06 - mean_squared_error: 1.4023e-06 - val_loss: 1.2020e-07 - val_mean_squared_error: 1.2020e-07 - 107s/epoch - 2s/step
+Epoch 6/100
+
+Epoch 00006: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 1.0093e-06 - mean_squared_error: 1.3857e-06 - val_loss: 9.6410e-08 - val_mean_squared_error: 9.6410e-08 - 107s/epoch - 2s/step
+Epoch 7/100
+
+Epoch 00007: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.8992e-07 - mean_squared_error: 1.3671e-06 - val_loss: 7.8074e-08 - val_mean_squared_error: 7.8074e-08 - 107s/epoch - 2s/step
+Epoch 8/100
+
+Epoch 00008: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.8879e-07 - mean_squared_error: 1.3659e-06 - val_loss: 9.3373e-08 - val_mean_squared_error: 9.3373e-08 - 106s/epoch - 2s/step
+Epoch 9/100
+
+Epoch 00009: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.7670e-07 - mean_squared_error: 1.3547e-06 - val_loss: 6.0903e-08 - val_mean_squared_error: 6.0903e-08 - 107s/epoch - 2s/step
+Epoch 10/100
+
+Epoch 00010: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.6647e-07 - mean_squared_error: 1.3448e-06 - val_loss: 5.3030e-08 - val_mean_squared_error: 5.3030e-08 - 107s/epoch - 2s/step
+Epoch 11/100
+
+Epoch 00011: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.6166e-07 - mean_squared_error: 1.3407e-06 - val_loss: 5.3217e-08 - val_mean_squared_error: 5.3217e-08 - 106s/epoch - 2s/step
+Epoch 12/100
+
+Epoch 00012: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.6078e-07 - mean_squared_error: 1.3390e-06 - val_loss: 1.3006e-07 - val_mean_squared_error: 1.3006e-07 - 107s/epoch - 2s/step
+Epoch 13/100
+
+Epoch 00013: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.8525e-07 - mean_squared_error: 1.3592e-06 - val_loss: 5.8884e-08 - val_mean_squared_error: 5.8884e-08 - 106s/epoch - 2s/step
+Epoch 14/100
+
+Epoch 00014: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.5586e-07 - mean_squared_error: 1.3348e-06 - val_loss: 5.2132e-08 - val_mean_squared_error: 5.2132e-08 - 107s/epoch - 2s/step
+Epoch 15/100
+
+Epoch 00015: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.5431e-07 - mean_squared_error: 1.3331e-06 - val_loss: 5.3563e-08 - val_mean_squared_error: 5.3563e-08 - 107s/epoch - 2s/step
+Epoch 16/100
+
+Epoch 00016: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.6672e-07 - mean_squared_error: 1.3435e-06 - val_loss: 5.8084e-08 - val_mean_squared_error: 5.8084e-08 - 106s/epoch - 2s/step
+Epoch 17/100
+
+Epoch 00017: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.4998e-07 - mean_squared_error: 1.3297e-06 - val_loss: 4.0500e-08 - val_mean_squared_error: 4.0500e-08 - 106s/epoch - 2s/step
+Epoch 18/100
+
+Epoch 00018: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.4700e-07 - mean_squared_error: 1.3259e-06 - val_loss: 4.4467e-08 - val_mean_squared_error: 4.4467e-08 - 107s/epoch - 2s/step
+Epoch 19/100
+
+Epoch 00019: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.4772e-07 - mean_squared_error: 1.3268e-06 - val_loss: 5.2949e-08 - val_mean_squared_error: 5.2949e-08 - 107s/epoch - 2s/step
+Epoch 20/100
+
+Epoch 00020: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.5081e-07 - mean_squared_error: 1.3295e-06 - val_loss: 4.5753e-08 - val_mean_squared_error: 4.5753e-08 - 106s/epoch - 2s/step
+Epoch 21/100
+
+Epoch 00021: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.4142e-07 - mean_squared_error: 1.3211e-06 - val_loss: 3.5060e-08 - val_mean_squared_error: 3.5060e-08 - 106s/epoch - 2s/step
+Epoch 22/100
+
+Epoch 00022: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.3706e-07 - mean_squared_error: 1.3177e-06 - val_loss: 3.3532e-08 - val_mean_squared_error: 3.3532e-08 - 107s/epoch - 2s/step
+Epoch 23/100
+
+Epoch 00023: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.3653e-07 - mean_squared_error: 1.3176e-06 - val_loss: 4.0807e-08 - val_mean_squared_error: 4.0807e-08 - 106s/epoch - 2s/step
+Epoch 24/100
+
+Epoch 00024: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.4573e-07 - mean_squared_error: 1.3240e-06 - val_loss: 4.8367e-08 - val_mean_squared_error: 4.8367e-08 - 106s/epoch - 2s/step
+Epoch 25/100
+
+Epoch 00025: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3993e-07 - mean_squared_error: 1.3202e-06 - val_loss: 3.3010e-08 - val_mean_squared_error: 3.3010e-08 - 107s/epoch - 2s/step
+Epoch 26/100
+
+Epoch 00026: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.3646e-07 - mean_squared_error: 1.3173e-06 - val_loss: 3.9847e-08 - val_mean_squared_error: 3.9847e-08 - 106s/epoch - 2s/step
+Epoch 27/100
+
+Epoch 00027: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3946e-07 - mean_squared_error: 1.3199e-06 - val_loss: 1.0208e-07 - val_mean_squared_error: 1.0208e-07 - 107s/epoch - 2s/step
+Epoch 28/100
+
+Epoch 00028: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.5750e-07 - mean_squared_error: 1.3357e-06 - val_loss: 4.0990e-08 - val_mean_squared_error: 4.0990e-08 - 107s/epoch - 2s/step
+Epoch 29/100
+
+Epoch 00029: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3717e-07 - mean_squared_error: 1.3181e-06 - val_loss: 3.7119e-08 - val_mean_squared_error: 3.7119e-08 - 106s/epoch - 2s/step
+Epoch 30/100
+
+Epoch 00030: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3831e-07 - mean_squared_error: 1.3184e-06 - val_loss: 3.5909e-08 - val_mean_squared_error: 3.5909e-08 - 106s/epoch - 2s/step
+Epoch 31/100
+
+Epoch 00031: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3995e-07 - mean_squared_error: 1.3205e-06 - val_loss: 3.9362e-08 - val_mean_squared_error: 3.9362e-08 - 106s/epoch - 2s/step
+Epoch 32/100
+
+Epoch 00032: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.3446e-07 - mean_squared_error: 1.3155e-06 - val_loss: 3.6379e-08 - val_mean_squared_error: 3.6379e-08 - 107s/epoch - 2s/step
+Epoch 33/100
+
+Epoch 00033: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3847e-07 - mean_squared_error: 1.3188e-06 - val_loss: 4.7982e-08 - val_mean_squared_error: 4.7982e-08 - 106s/epoch - 2s/step
+Epoch 34/100
+
+Epoch 00034: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3736e-07 - mean_squared_error: 1.3190e-06 - val_loss: 3.6883e-08 - val_mean_squared_error: 3.6883e-08 - 106s/epoch - 2s/step
+Epoch 35/100
+
+Epoch 00035: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.4599e-07 - mean_squared_error: 1.3245e-06 - val_loss: 4.0409e-08 - val_mean_squared_error: 4.0409e-08 - 106s/epoch - 2s/step
+Epoch 36/100
+
+Epoch 00036: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3775e-07 - mean_squared_error: 1.3181e-06 - val_loss: 3.5094e-08 - val_mean_squared_error: 3.5094e-08 - 107s/epoch - 2s/step
+Epoch 37/100
+
+Epoch 00037: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.2948e-07 - mean_squared_error: 1.3112e-06 - val_loss: 3.4775e-08 - val_mean_squared_error: 3.4775e-08 - 106s/epoch - 2s/step
+Epoch 38/100
+
+Epoch 00038: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3512e-07 - mean_squared_error: 1.3155e-06 - val_loss: 3.2100e-08 - val_mean_squared_error: 3.2100e-08 - 107s/epoch - 2s/step
+Epoch 39/100
+
+Epoch 00039: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.4233e-07 - mean_squared_error: 1.3213e-06 - val_loss: 3.2610e-08 - val_mean_squared_error: 3.2610e-08 - 106s/epoch - 2s/step
+Epoch 40/100
+
+Epoch 00040: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3212e-07 - mean_squared_error: 1.3134e-06 - val_loss: 4.2624e-08 - val_mean_squared_error: 4.2624e-08 - 106s/epoch - 2s/step
+Epoch 41/100
+
+Epoch 00041: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3353e-07 - mean_squared_error: 1.3144e-06 - val_loss: 3.1751e-08 - val_mean_squared_error: 3.1751e-08 - 107s/epoch - 2s/step
+Epoch 42/100
+
+Epoch 00042: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3355e-07 - mean_squared_error: 1.3146e-06 - val_loss: 3.2577e-08 - val_mean_squared_error: 3.2577e-08 - 107s/epoch - 2s/step
+Epoch 43/100
+
+Epoch 00043: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3260e-07 - mean_squared_error: 1.3143e-06 - val_loss: 3.6831e-08 - val_mean_squared_error: 3.6831e-08 - 106s/epoch - 2s/step
+Epoch 44/100
+
+Epoch 00044: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3030e-07 - mean_squared_error: 1.3121e-06 - val_loss: 3.1171e-08 - val_mean_squared_error: 3.1171e-08 - 107s/epoch - 2s/step
+Epoch 45/100
+
+Epoch 00045: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.2817e-07 - mean_squared_error: 1.3106e-06 - val_loss: 3.2906e-08 - val_mean_squared_error: 3.2906e-08 - 106s/epoch - 2s/step
+Epoch 46/100
+
+Epoch 00046: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.2788e-07 - mean_squared_error: 1.3098e-06 - val_loss: 3.3108e-08 - val_mean_squared_error: 3.3108e-08 - 107s/epoch - 2s/step
+Epoch 47/100
+
+Epoch 00047: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.2763e-07 - mean_squared_error: 1.3093e-06 - val_loss: 3.1064e-08 - val_mean_squared_error: 3.1064e-08 - 106s/epoch - 2s/step
+Epoch 48/100
+
+Epoch 00048: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3052e-07 - mean_squared_error: 1.3121e-06 - val_loss: 3.5239e-08 - val_mean_squared_error: 3.5239e-08 - 106s/epoch - 2s/step
+Epoch 49/100
+
+Epoch 00049: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2964e-07 - mean_squared_error: 1.3121e-06 - val_loss: 3.0106e-08 - val_mean_squared_error: 3.0106e-08 - 106s/epoch - 2s/step
+Epoch 50/100
+
+Epoch 00050: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.2682e-07 - mean_squared_error: 1.3090e-06 - val_loss: 2.9364e-08 - val_mean_squared_error: 2.9364e-08 - 106s/epoch - 2s/step
+Epoch 51/100
+
+Epoch 00051: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3849e-07 - mean_squared_error: 1.3186e-06 - val_loss: 3.3239e-08 - val_mean_squared_error: 3.3239e-08 - 107s/epoch - 2s/step
+Epoch 52/100
+
+Epoch 00052: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2750e-07 - mean_squared_error: 1.3093e-06 - val_loss: 2.8937e-08 - val_mean_squared_error: 2.8937e-08 - 106s/epoch - 2s/step
+Epoch 53/100
+
+Epoch 00053: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 107s - loss: 9.2626e-07 - mean_squared_error: 1.3084e-06 - val_loss: 3.0062e-08 - val_mean_squared_error: 3.0062e-08 - 107s/epoch - 2s/step
+Epoch 54/100
+
+Epoch 00054: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2786e-07 - mean_squared_error: 1.3101e-06 - val_loss: 3.0048e-08 - val_mean_squared_error: 3.0048e-08 - 106s/epoch - 2s/step
+Epoch 55/100
+
+Epoch 00055: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.4082e-07 - mean_squared_error: 1.3195e-06 - val_loss: 3.9085e-08 - val_mean_squared_error: 3.9085e-08 - 107s/epoch - 2s/step
+Epoch 56/100
+
+Epoch 00056: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2757e-07 - mean_squared_error: 1.3098e-06 - val_loss: 2.7693e-08 - val_mean_squared_error: 2.7693e-08 - 106s/epoch - 2s/step
+Epoch 57/100
+
+Epoch 00057: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 106s - loss: 9.2480e-07 - mean_squared_error: 1.3075e-06 - val_loss: 2.9842e-08 - val_mean_squared_error: 2.9842e-08 - 106s/epoch - 2s/step
+Epoch 58/100
+
+Epoch 00058: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3746e-07 - mean_squared_error: 1.3167e-06 - val_loss: 3.2284e-08 - val_mean_squared_error: 3.2284e-08 - 106s/epoch - 2s/step
+Epoch 59/100
+
+Epoch 00059: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3074e-07 - mean_squared_error: 1.3116e-06 - val_loss: 3.3472e-08 - val_mean_squared_error: 3.3472e-08 - 106s/epoch - 2s/step
+Epoch 60/100
+
+Epoch 00060: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.2861e-07 - mean_squared_error: 1.3099e-06 - val_loss: 4.0840e-08 - val_mean_squared_error: 4.0840e-08 - 107s/epoch - 2s/step
+Epoch 61/100
+
+Epoch 00061: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2962e-07 - mean_squared_error: 1.3117e-06 - val_loss: 3.0688e-08 - val_mean_squared_error: 3.0688e-08 - 106s/epoch - 2s/step
+Epoch 62/100
+
+Epoch 00062: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2897e-07 - mean_squared_error: 1.3102e-06 - val_loss: 3.3185e-08 - val_mean_squared_error: 3.3185e-08 - 106s/epoch - 2s/step
+Epoch 63/100
+
+Epoch 00063: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2593e-07 - mean_squared_error: 1.3087e-06 - val_loss: 3.1999e-08 - val_mean_squared_error: 3.1999e-08 - 106s/epoch - 2s/step
+Epoch 64/100
+
+Epoch 00064: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3096e-07 - mean_squared_error: 1.3126e-06 - val_loss: 3.8995e-08 - val_mean_squared_error: 3.8995e-08 - 107s/epoch - 2s/step
+Epoch 65/100
+
+Epoch 00065: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3632e-07 - mean_squared_error: 1.3161e-06 - val_loss: 4.1453e-08 - val_mean_squared_error: 4.1453e-08 - 107s/epoch - 2s/step
+Epoch 66/100
+
+Epoch 00066: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3417e-07 - mean_squared_error: 1.3150e-06 - val_loss: 3.6626e-08 - val_mean_squared_error: 3.6626e-08 - 107s/epoch - 2s/step
+Epoch 67/100
+
+Epoch 00067: mean_squared_error did not improve from 0.00000
+63/63 - 107s - loss: 9.3310e-07 - mean_squared_error: 1.3140e-06 - val_loss: 2.9265e-08 - val_mean_squared_error: 2.9265e-08 - 107s/epoch - 2s/step
+Epoch 68/100
+
+Epoch 00068: mean_squared_error did not improve from 0.00000
+63/63 - 104s - loss: 9.2515e-07 - mean_squared_error: 1.3076e-06 - val_loss: 2.8750e-08 - val_mean_squared_error: 2.8750e-08 - 104s/epoch - 2s/step
+Epoch 69/100
+
+Epoch 00069: mean_squared_error did not improve from 0.00000
+63/63 - 103s - loss: 9.3138e-07 - mean_squared_error: 1.3131e-06 - val_loss: 3.1844e-08 - val_mean_squared_error: 3.1844e-08 - 103s/epoch - 2s/step
+Epoch 70/100
+
+Epoch 00070: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 104s - loss: 9.2494e-07 - mean_squared_error: 1.3068e-06 - val_loss: 2.6619e-08 - val_mean_squared_error: 2.6619e-08 - 104s/epoch - 2s/step
+Epoch 71/100
+
+Epoch 00071: mean_squared_error did not improve from 0.00000
+63/63 - 104s - loss: 9.3795e-07 - mean_squared_error: 1.3175e-06 - val_loss: 4.8161e-08 - val_mean_squared_error: 4.8161e-08 - 104s/epoch - 2s/step
+Epoch 72/100
+
+Epoch 00072: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.4490e-07 - mean_squared_error: 1.3228e-06 - val_loss: 3.4335e-08 - val_mean_squared_error: 3.4335e-08 - 105s/epoch - 2s/step
+Epoch 73/100
+
+Epoch 00073: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2822e-07 - mean_squared_error: 1.3096e-06 - val_loss: 3.7598e-08 - val_mean_squared_error: 3.7598e-08 - 105s/epoch - 2s/step
+Epoch 74/100
+
+Epoch 00074: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2680e-07 - mean_squared_error: 1.3090e-06 - val_loss: 2.9856e-08 - val_mean_squared_error: 2.9856e-08 - 105s/epoch - 2s/step
+Epoch 75/100
+
+Epoch 00075: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2521e-07 - mean_squared_error: 1.3075e-06 - val_loss: 2.7399e-08 - val_mean_squared_error: 2.7399e-08 - 105s/epoch - 2s/step
+Epoch 76/100
+
+Epoch 00076: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2627e-07 - mean_squared_error: 1.3082e-06 - val_loss: 3.4348e-08 - val_mean_squared_error: 3.4348e-08 - 106s/epoch - 2s/step
+Epoch 77/100
+
+Epoch 00077: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.3117e-07 - mean_squared_error: 1.3120e-06 - val_loss: 3.4712e-08 - val_mean_squared_error: 3.4712e-08 - 105s/epoch - 2s/step
+Epoch 78/100
+
+Epoch 00078: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 105s - loss: 9.2383e-07 - mean_squared_error: 1.3063e-06 - val_loss: 2.6537e-08 - val_mean_squared_error: 2.6537e-08 - 105s/epoch - 2s/step
+Epoch 79/100
+
+Epoch 00079: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 104s - loss: 9.2317e-07 - mean_squared_error: 1.3057e-06 - val_loss: 2.5206e-08 - val_mean_squared_error: 2.5206e-08 - 104s/epoch - 2s/step
+Epoch 80/100
+
+Epoch 00080: mean_squared_error did not improve from 0.00000
+63/63 - 104s - loss: 9.2666e-07 - mean_squared_error: 1.3075e-06 - val_loss: 3.8674e-08 - val_mean_squared_error: 3.8674e-08 - 104s/epoch - 2s/step
+Epoch 81/100
+
+Epoch 00081: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2817e-07 - mean_squared_error: 1.3097e-06 - val_loss: 2.8594e-08 - val_mean_squared_error: 2.8594e-08 - 105s/epoch - 2s/step
+Epoch 82/100
+
+Epoch 00082: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.3069e-07 - mean_squared_error: 1.3122e-06 - val_loss: 3.5836e-08 - val_mean_squared_error: 3.5836e-08 - 105s/epoch - 2s/step
+Epoch 83/100
+
+Epoch 00083: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2604e-07 - mean_squared_error: 1.3075e-06 - val_loss: 2.7262e-08 - val_mean_squared_error: 2.7262e-08 - 105s/epoch - 2s/step
+Epoch 84/100
+
+Epoch 00084: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2397e-07 - mean_squared_error: 1.3065e-06 - val_loss: 2.9435e-08 - val_mean_squared_error: 2.9435e-08 - 105s/epoch - 2s/step
+Epoch 85/100
+
+Epoch 00085: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2558e-07 - mean_squared_error: 1.3080e-06 - val_loss: 3.7246e-08 - val_mean_squared_error: 3.7246e-08 - 106s/epoch - 2s/step
+Epoch 86/100
+
+Epoch 00086: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2341e-07 - mean_squared_error: 1.3060e-06 - val_loss: 2.6122e-08 - val_mean_squared_error: 2.6122e-08 - 105s/epoch - 2s/step
+Epoch 87/100
+
+Epoch 00087: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 105s - loss: 9.2248e-07 - mean_squared_error: 1.3052e-06 - val_loss: 2.8269e-08 - val_mean_squared_error: 2.8269e-08 - 105s/epoch - 2s/step
+Epoch 88/100
+
+Epoch 00088: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2462e-07 - mean_squared_error: 1.3071e-06 - val_loss: 2.8216e-08 - val_mean_squared_error: 2.8216e-08 - 105s/epoch - 2s/step
+Epoch 89/100
+
+Epoch 00089: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 105s - loss: 9.2244e-07 - mean_squared_error: 1.3051e-06 - val_loss: 3.2762e-08 - val_mean_squared_error: 3.2762e-08 - 105s/epoch - 2s/step
+Epoch 90/100
+
+Epoch 00090: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2583e-07 - mean_squared_error: 1.3077e-06 - val_loss: 3.3671e-08 - val_mean_squared_error: 3.3671e-08 - 105s/epoch - 2s/step
+Epoch 91/100
+
+Epoch 00091: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2783e-07 - mean_squared_error: 1.3098e-06 - val_loss: 2.6395e-08 - val_mean_squared_error: 2.6395e-08 - 105s/epoch - 2s/step
+Epoch 92/100
+
+Epoch 00092: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle1
+63/63 - 105s - loss: 9.2096e-07 - mean_squared_error: 1.3040e-06 - val_loss: 2.5386e-08 - val_mean_squared_error: 2.5386e-08 - 105s/epoch - 2s/step
+Epoch 93/100
+
+Epoch 00093: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2215e-07 - mean_squared_error: 1.3050e-06 - val_loss: 2.5810e-08 - val_mean_squared_error: 2.5810e-08 - 106s/epoch - 2s/step
+Epoch 94/100
+
+Epoch 00094: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2394e-07 - mean_squared_error: 1.3065e-06 - val_loss: 3.6323e-08 - val_mean_squared_error: 3.6323e-08 - 106s/epoch - 2s/step
+Epoch 95/100
+
+Epoch 00095: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3413e-07 - mean_squared_error: 1.3147e-06 - val_loss: 4.4219e-08 - val_mean_squared_error: 4.4219e-08 - 106s/epoch - 2s/step
+Epoch 96/100
+
+Epoch 00096: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.4327e-07 - mean_squared_error: 1.3182e-06 - val_loss: 4.1615e-08 - val_mean_squared_error: 4.1615e-08 - 105s/epoch - 2s/step
+Epoch 97/100
+
+Epoch 00097: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.3908e-07 - mean_squared_error: 1.3183e-06 - val_loss: 3.4374e-08 - val_mean_squared_error: 3.4374e-08 - 106s/epoch - 2s/step
+Epoch 98/100
+
+Epoch 00098: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2681e-07 - mean_squared_error: 1.3086e-06 - val_loss: 2.6979e-08 - val_mean_squared_error: 2.6979e-08 - 105s/epoch - 2s/step
+Epoch 99/100
+
+Epoch 00099: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2363e-07 - mean_squared_error: 1.3059e-06 - val_loss: 2.6862e-08 - val_mean_squared_error: 2.6862e-08 - 105s/epoch - 2s/step
+Epoch 100/100
+
+Epoch 00100: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2616e-07 - mean_squared_error: 1.3079e-06 - val_loss: 3.1382e-08 - val_mean_squared_error: 3.1382e-08 - 105s/epoch - 2s/step
+Cycle1 elapsed time: 12217.725324
+Starting cycle 2..
+Starting parametric update..
+Epoch 1/15
+
+Epoch 00001: mean_squared_error improved from inf to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle2
+63/63 - 109s - loss: 9.2236e-07 - mean_squared_error: 1.3051e-06 - val_loss: 2.6254e-08 - val_mean_squared_error: 2.6254e-08 - 109s/epoch - 2s/step
+Epoch 2/15
+
+Epoch 00002: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2294e-07 - mean_squared_error: 1.3058e-06 - val_loss: 2.8046e-08 - val_mean_squared_error: 2.8046e-08 - 106s/epoch - 2s/step
+Epoch 3/15
+
+Epoch 00003: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.2582e-07 - mean_squared_error: 1.3084e-06 - val_loss: 3.4880e-08 - val_mean_squared_error: 3.4880e-08 - 106s/epoch - 2s/step
+Epoch 4/15
+
+Epoch 00004: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.2953e-07 - mean_squared_error: 1.3114e-06 - val_loss: 3.3874e-08 - val_mean_squared_error: 3.3874e-08 - 105s/epoch - 2s/step
+Epoch 5/15
+
+Epoch 00005: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.4188e-07 - mean_squared_error: 1.3222e-06 - val_loss: 3.4701e-08 - val_mean_squared_error: 3.4701e-08 - 106s/epoch - 2s/step
+Epoch 6/15
+
+Epoch 00006: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.3632e-07 - mean_squared_error: 1.3172e-06 - val_loss: 4.0545e-08 - val_mean_squared_error: 4.0545e-08 - 105s/epoch - 2s/step
+Epoch 7/15
+
+Epoch 00007: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.3015e-07 - mean_squared_error: 1.3123e-06 - val_loss: 5.7734e-08 - val_mean_squared_error: 5.7734e-08 - 105s/epoch - 2s/step
+Epoch 8/15
+
+Epoch 00008: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.4218e-07 - mean_squared_error: 1.3221e-06 - val_loss: 1.0061e-07 - val_mean_squared_error: 1.0061e-07 - 105s/epoch - 2s/step
+Epoch 9/15
+
+Epoch 00009: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.4383e-07 - mean_squared_error: 1.3252e-06 - val_loss: 4.5673e-08 - val_mean_squared_error: 4.5673e-08 - 105s/epoch - 2s/step
+Epoch 10/15
+
+Epoch 00010: mean_squared_error did not improve from 0.00000
+63/63 - 106s - loss: 9.4086e-07 - mean_squared_error: 1.3214e-06 - val_loss: 3.1295e-08 - val_mean_squared_error: 3.1295e-08 - 106s/epoch - 2s/step
+Epoch 11/15
+
+Epoch 00011: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.5635e-07 - mean_squared_error: 1.3361e-06 - val_loss: 5.0764e-08 - val_mean_squared_error: 5.0764e-08 - 105s/epoch - 2s/step
+Epoch 12/15
+
+Epoch 00012: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.3909e-07 - mean_squared_error: 1.3194e-06 - val_loss: 4.5197e-08 - val_mean_squared_error: 4.5197e-08 - 105s/epoch - 2s/step
+Epoch 13/15
+
+Epoch 00013: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.5713e-07 - mean_squared_error: 1.3363e-06 - val_loss: 4.4824e-08 - val_mean_squared_error: 4.4824e-08 - 105s/epoch - 2s/step
+Epoch 14/15
+
+Epoch 00014: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.3262e-07 - mean_squared_error: 1.3145e-06 - val_loss: 3.7067e-08 - val_mean_squared_error: 3.7067e-08 - 105s/epoch - 2s/step
+Epoch 15/15
+
+Epoch 00015: mean_squared_error did not improve from 0.00000
+63/63 - 105s - loss: 9.5049e-07 - mean_squared_error: 1.3313e-06 - val_loss: 6.5980e-08 - val_mean_squared_error: 6.5980e-08 - 105s/epoch - 2s/step
+Starting non-parametric update..
+Epoch 1/50
+
+Epoch 00001: mean_squared_error did not improve from 0.00000
+63/63 - 111s - loss: 9.2808e-07 - mean_squared_error: 1.3105e-06 - val_loss: 2.2718e-08 - val_mean_squared_error: 2.2718e-08 - 111s/epoch - 2s/step
+Epoch 2/50
+
+Epoch 00002: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle2
+63/63 - 109s - loss: 9.1536e-07 - mean_squared_error: 1.2990e-06 - val_loss: 2.1570e-08 - val_mean_squared_error: 2.1570e-08 - 109s/epoch - 2s/step
+Epoch 3/50
+
+Epoch 00003: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle2
+63/63 - 108s - loss: 9.1474e-07 - mean_squared_error: 1.2985e-06 - val_loss: 2.1843e-08 - val_mean_squared_error: 2.1843e-08 - 108s/epoch - 2s/step
+Epoch 4/50
+
+Epoch 00004: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle2
+63/63 - 108s - loss: 9.1471e-07 - mean_squared_error: 1.2984e-06 - val_loss: 2.1303e-08 - val_mean_squared_error: 2.1303e-08 - 108s/epoch - 2s/step
+Epoch 5/50
+
+Epoch 00005: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle2
+63/63 - 108s - loss: 9.1444e-07 - mean_squared_error: 1.2982e-06 - val_loss: 2.0816e-08 - val_mean_squared_error: 2.0816e-08 - 108s/epoch - 2s/step
+Epoch 6/50
+
+Epoch 00006: mean_squared_error improved from 0.00000 to 0.00000, saving model to /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/model_WFE_size/wf-outputs/chkp/wfe_study_bis/chkp_callback_poly_wfe_study_064_bis_4_cycle2
+63/63 - 108s - loss: 9.1437e-07 - mean_squared_error: 1.2981e-06 - val_loss: 2.1048e-08 - val_mean_squared_error: 2.1048e-08 - 108s/epoch - 2s/step
+Epoch 7/50
+
+Epoch 00007: mean_squared_error did not improve from 0.00000
+63/63 - 109s - loss: 9.1446e-07 - mean_squared_error: 1.2982e-06 - val_loss: 2.2055e-08 - val_mean_squared_error: 2.2055e-08 - 109s/epoch - 2s/step
+Epoch 8/50
+
+Epoch 00008: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1469e-07 - mean_squared_error: 1.2985e-06 - val_loss: 2.1198e-08 - val_mean_squared_error: 2.1198e-08 - 108s/epoch - 2s/step
+Epoch 9/50
+
+Epoch 00009: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1452e-07 - mean_squared_error: 1.2983e-06 - val_loss: 2.1585e-08 - val_mean_squared_error: 2.1585e-08 - 108s/epoch - 2s/step
+Epoch 10/50
+
+Epoch 00010: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1489e-07 - mean_squared_error: 1.2987e-06 - val_loss: 2.1983e-08 - val_mean_squared_error: 2.1983e-08 - 108s/epoch - 2s/step
+Epoch 11/50
+
+Epoch 00011: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1473e-07 - mean_squared_error: 1.2985e-06 - val_loss: 2.0817e-08 - val_mean_squared_error: 2.0817e-08 - 108s/epoch - 2s/step
+Epoch 12/50
+
+Epoch 00012: mean_squared_error did not improve from 0.00000
+63/63 - 109s - loss: 9.1460e-07 - mean_squared_error: 1.2986e-06 - val_loss: 2.1862e-08 - val_mean_squared_error: 2.1862e-08 - 109s/epoch - 2s/step
+Epoch 13/50
+
+Epoch 00013: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1495e-07 - mean_squared_error: 1.2986e-06 - val_loss: 2.1467e-08 - val_mean_squared_error: 2.1467e-08 - 108s/epoch - 2s/step
+Epoch 14/50
+
+Epoch 00014: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1516e-07 - mean_squared_error: 1.2988e-06 - val_loss: 2.1309e-08 - val_mean_squared_error: 2.1309e-08 - 108s/epoch - 2s/step
+Epoch 15/50
+
+Epoch 00015: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1465e-07 - mean_squared_error: 1.2983e-06 - val_loss: 2.1290e-08 - val_mean_squared_error: 2.1290e-08 - 108s/epoch - 2s/step
+Epoch 16/50
+
+Epoch 00016: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1512e-07 - mean_squared_error: 1.2988e-06 - val_loss: 2.2185e-08 - val_mean_squared_error: 2.2185e-08 - 108s/epoch - 2s/step
+Epoch 17/50
+
+Epoch 00017: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1490e-07 - mean_squared_error: 1.2986e-06 - val_loss: 2.1055e-08 - val_mean_squared_error: 2.1055e-08 - 108s/epoch - 2s/step
+Epoch 18/50
+
+Epoch 00018: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1497e-07 - mean_squared_error: 1.2987e-06 - val_loss: 2.0962e-08 - val_mean_squared_error: 2.0962e-08 - 108s/epoch - 2s/step
+Epoch 19/50
+
+Epoch 00019: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1545e-07 - mean_squared_error: 1.2990e-06 - val_loss: 2.2006e-08 - val_mean_squared_error: 2.2006e-08 - 108s/epoch - 2s/step
+Epoch 20/50
+
+Epoch 00020: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1503e-07 - mean_squared_error: 1.2988e-06 - val_loss: 2.0747e-08 - val_mean_squared_error: 2.0747e-08 - 108s/epoch - 2s/step
+Epoch 21/50
+
+Epoch 00021: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1488e-07 - mean_squared_error: 1.2986e-06 - val_loss: 2.0933e-08 - val_mean_squared_error: 2.0933e-08 - 108s/epoch - 2s/step
+Epoch 22/50
+
+Epoch 00022: mean_squared_error did not improve from 0.00000
+63/63 - 109s - loss: 9.1449e-07 - mean_squared_error: 1.2982e-06 - val_loss: 2.0887e-08 - val_mean_squared_error: 2.0887e-08 - 109s/epoch - 2s/step
+Epoch 23/50
+
+Epoch 00023: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1495e-07 - mean_squared_error: 1.2987e-06 - val_loss: 2.2183e-08 - val_mean_squared_error: 2.2183e-08 - 108s/epoch - 2s/step
+Epoch 24/50
+
+Epoch 00024: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1601e-07 - mean_squared_error: 1.2997e-06 - val_loss: 2.2154e-08 - val_mean_squared_error: 2.2154e-08 - 108s/epoch - 2s/step
+Epoch 25/50
+
+Epoch 00025: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1495e-07 - mean_squared_error: 1.2987e-06 - val_loss: 2.2165e-08 - val_mean_squared_error: 2.2165e-08 - 108s/epoch - 2s/step
+Epoch 26/50
+
+Epoch 00026: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1506e-07 - mean_squared_error: 1.2987e-06 - val_loss: 2.2141e-08 - val_mean_squared_error: 2.2141e-08 - 108s/epoch - 2s/step
+Epoch 27/50
+
+Epoch 00027: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1516e-07 - mean_squared_error: 1.2990e-06 - val_loss: 2.3273e-08 - val_mean_squared_error: 2.3273e-08 - 108s/epoch - 2s/step
+Epoch 28/50
+
+Epoch 00028: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1517e-07 - mean_squared_error: 1.2989e-06 - val_loss: 2.2583e-08 - val_mean_squared_error: 2.2583e-08 - 108s/epoch - 2s/step
+Epoch 29/50
+
+Epoch 00029: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1471e-07 - mean_squared_error: 1.2986e-06 - val_loss: 2.2263e-08 - val_mean_squared_error: 2.2263e-08 - 108s/epoch - 2s/step
+Epoch 30/50
+
+Epoch 00030: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1529e-07 - mean_squared_error: 1.2990e-06 - val_loss: 2.1871e-08 - val_mean_squared_error: 2.1871e-08 - 108s/epoch - 2s/step
+Epoch 31/50
+
+Epoch 00031: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1503e-07 - mean_squared_error: 1.2989e-06 - val_loss: 2.2131e-08 - val_mean_squared_error: 2.2131e-08 - 108s/epoch - 2s/step
+Epoch 32/50
+
+Epoch 00032: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1466e-07 - mean_squared_error: 1.2986e-06 - val_loss: 2.2917e-08 - val_mean_squared_error: 2.2917e-08 - 108s/epoch - 2s/step
+Epoch 33/50
+
+Epoch 00033: mean_squared_error did not improve from 0.00000
+63/63 - 109s - loss: 9.1707e-07 - mean_squared_error: 1.3005e-06 - val_loss: 2.6250e-08 - val_mean_squared_error: 2.6250e-08 - 109s/epoch - 2s/step
+Epoch 34/50
+
+Epoch 00034: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1669e-07 - mean_squared_error: 1.3002e-06 - val_loss: 2.1226e-08 - val_mean_squared_error: 2.1226e-08 - 108s/epoch - 2s/step
+Epoch 35/50
+
+Epoch 00035: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1575e-07 - mean_squared_error: 1.2992e-06 - val_loss: 2.4391e-08 - val_mean_squared_error: 2.4391e-08 - 108s/epoch - 2s/step
+Epoch 36/50
+
+Epoch 00036: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1675e-07 - mean_squared_error: 1.3000e-06 - val_loss: 2.4112e-08 - val_mean_squared_error: 2.4112e-08 - 108s/epoch - 2s/step
+Epoch 37/50
+
+Epoch 00037: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1554e-07 - mean_squared_error: 1.2990e-06 - val_loss: 2.1515e-08 - val_mean_squared_error: 2.1515e-08 - 108s/epoch - 2s/step
+Epoch 38/50
+
+Epoch 00038: mean_squared_error did not improve from 0.00000
+63/63 - 109s - loss: 9.1509e-07 - mean_squared_error: 1.2987e-06 - val_loss: 2.2168e-08 - val_mean_squared_error: 2.2168e-08 - 109s/epoch - 2s/step
+Epoch 39/50
+
+Epoch 00039: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1510e-07 - mean_squared_error: 1.2989e-06 - val_loss: 2.2814e-08 - val_mean_squared_error: 2.2814e-08 - 108s/epoch - 2s/step
+Epoch 40/50
+
+Epoch 00040: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1556e-07 - mean_squared_error: 1.2992e-06 - val_loss: 2.1174e-08 - val_mean_squared_error: 2.1174e-08 - 108s/epoch - 2s/step
+Epoch 41/50
+
+Epoch 00041: mean_squared_error did not improve from 0.00000
+63/63 - 109s - loss: 9.1522e-07 - mean_squared_error: 1.2989e-06 - val_loss: 2.2933e-08 - val_mean_squared_error: 2.2933e-08 - 109s/epoch - 2s/step
+Epoch 42/50
+
+Epoch 00042: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1529e-07 - mean_squared_error: 1.2991e-06 - val_loss: 2.1908e-08 - val_mean_squared_error: 2.1908e-08 - 108s/epoch - 2s/step
+Epoch 43/50
+
+Epoch 00043: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1470e-07 - mean_squared_error: 1.2986e-06 - val_loss: 2.2312e-08 - val_mean_squared_error: 2.2312e-08 - 108s/epoch - 2s/step
+Epoch 44/50
+
+Epoch 00044: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1486e-07 - mean_squared_error: 1.2986e-06 - val_loss: 2.2396e-08 - val_mean_squared_error: 2.2396e-08 - 108s/epoch - 2s/step
+Epoch 45/50
+
+Epoch 00045: mean_squared_error did not improve from 0.00000
+63/63 - 109s - loss: 9.1466e-07 - mean_squared_error: 1.2985e-06 - val_loss: 2.2767e-08 - val_mean_squared_error: 2.2767e-08 - 109s/epoch - 2s/step
+Epoch 46/50
+
+Epoch 00046: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1558e-07 - mean_squared_error: 1.2992e-06 - val_loss: 2.3996e-08 - val_mean_squared_error: 2.3996e-08 - 108s/epoch - 2s/step
+Epoch 47/50
+
+Epoch 00047: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1568e-07 - mean_squared_error: 1.2993e-06 - val_loss: 2.3641e-08 - val_mean_squared_error: 2.3641e-08 - 108s/epoch - 2s/step
+Epoch 48/50
+
+Epoch 00048: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1603e-07 - mean_squared_error: 1.2995e-06 - val_loss: 2.2526e-08 - val_mean_squared_error: 2.2526e-08 - 108s/epoch - 2s/step
+Epoch 49/50
+
+Epoch 00049: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1527e-07 - mean_squared_error: 1.2989e-06 - val_loss: 2.4668e-08 - val_mean_squared_error: 2.4668e-08 - 108s/epoch - 2s/step
+Epoch 50/50
+
+Epoch 00050: mean_squared_error did not improve from 0.00000
+63/63 - 108s - loss: 9.1512e-07 - mean_squared_error: 1.2988e-06 - val_loss: 2.2436e-08 - val_mean_squared_error: 2.2436e-08 - 108s/epoch - 2s/step
+Cycle2 elapsed time: 7007.963525
+
+Total elapsed time: 19229.550104
+
+ Good bye..
