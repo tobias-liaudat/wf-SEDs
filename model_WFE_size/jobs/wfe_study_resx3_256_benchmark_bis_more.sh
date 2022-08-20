@@ -13,7 +13,7 @@
 #SBATCH --error=wfe_study_resx3_256_benchmark_bis_%j.err   # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH -A ynx@gpu                   # specify the project
 ##SBATCH --qos=qos_gpu-dev            # using the dev queue, as this is only for profiling
-#SBATCH --array=0-4
+#SBATCH --array=0-9
 
 # nettoyage des modules charges en interctif et herites par defaut
 module purge
@@ -24,11 +24,16 @@ module load tensorflow-gpu/py3/2.7.0
 # echo des commandes lancees
 set -x
 
-opt[0]="--id_name _wfe_study_resx3_256_benchmark_bis_1"
-opt[1]="--id_name _wfe_study_resx3_256_benchmark_bis_2"
-opt[2]="--id_name _wfe_study_resx3_256_benchmark_bis_3"
-opt[3]="--id_name _wfe_study_resx3_256_benchmark_bis_4"
-opt[4]="--id_name _wfe_study_resx3_256_benchmark_bis_5"
+opt[0]="--id_name _wfe_study_resx3_256_benchmark_bis_6"
+opt[1]="--id_name _wfe_study_resx3_256_benchmark_bis_7"
+opt[2]="--id_name _wfe_study_resx3_256_benchmark_bis_8"
+opt[3]="--id_name _wfe_study_resx3_256_benchmark_bis_9"
+opt[4]="--id_name _wfe_study_resx3_256_benchmark_bis_10"
+opt[5]="--id_name _wfe_study_resx3_256_benchmark_bis_11"
+opt[6]="--id_name _wfe_study_resx3_256_benchmark_bis_12"
+opt[7]="--id_name _wfe_study_resx3_256_benchmark_bis_13"
+opt[8]="--id_name _wfe_study_resx3_256_benchmark_bis_14"
+opt[9]="--id_name _wfe_study_resx3_256_benchmark_bis_15"
 
 cd $WORK/repo/wf-psf/long-runs/
 
@@ -66,6 +71,6 @@ srun python -u ./train_eval_plot_script_click.py \
     --log_folder log-files/wfe_study_resx3_bis/ \
     --model_folder chkp/wfe_study_resx3_bis/ \
     --optim_hist_folder optim-hist/wfe_study_resx3_bis/ \
-    --suffix_id_name 1 --suffix_id_name 2 --suffix_id_name 3 --suffix_id_name 4 --suffix_id_name 5 \
-    --star_numbers 1 --star_numbers 2 --star_numbers 3 --star_numbers 4 --star_numbers 5 \
+    --suffix_id_name 6 --suffix_id_name 7 --suffix_id_name 8 --suffix_id_name 9 --suffix_id_name 10 --suffix_id_name 11 --suffix_id_name 12 --suffix_id_name 13 --suffix_id_name 14 --suffix_id_name 15 \
+    --star_numbers 1 --star_numbers 2 --star_numbers 3 --star_numbers 4 --star_numbers 5 --star_numbers 6 --star_numbers 7 --star_numbers 8 --star_numbers 9 --star_numbers 10 \
     ${opt[$SLURM_ARRAY_TASK_ID]} \
