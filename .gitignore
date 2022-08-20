@@ -13,6 +13,12 @@ __pycache__/
 WFE_sampling_test/multires_dataset/4096/train_Euclid_res_2000_TrainStars_id_005_wfeRes_256.npy
 WFE_sampling_test/multires_dataset/4096/train_Euclid_res_2000_TrainStars_id_005_wfeRes_4096.npy
 
+# Ignore large files
+model_WFE_size/figures/model_x3_res_064.npy
+model_WFE_size/figures/model_x3_res_128.npy
+model_WFE_size/figures/model_x3_res_256.npy
+model_WFE_size/figures/model_x3_res_256_benchmark.npy
+
 # Model checkpoints
 chkp*
 
