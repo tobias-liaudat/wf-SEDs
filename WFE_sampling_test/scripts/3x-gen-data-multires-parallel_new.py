@@ -21,7 +21,7 @@ output_folder = '/feynman/work/dap/lcs/tliaudat/repo/wf-SEDs/WFE_sampling_test/m
 
 # Base dataset for PSF field 
 # base_dataset_path = '/home/tliaudat/github/wf-psf/data/coherent_euclid_dataset/'    # Candide
-base_dataset_path = '/feynman/work/dap/lcs/tliaudat/repo/wf-psf/data/coherent_euclid_dataset'    # Feynman
+base_dataset_path = '/feynman/work/dap/lcs/tliaudat/repo/wf-psf/data/coherent_euclid_dataset/'    # Feynman
 
 base_train_dataset_path = base_dataset_path + 'train_Euclid_res_2000_TrainStars_id_001.npy'
 base_test_dataset_path = base_dataset_path + 'test_Euclid_res_id_001.npy'
