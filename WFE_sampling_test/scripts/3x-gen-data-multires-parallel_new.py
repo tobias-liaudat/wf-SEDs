@@ -10,18 +10,21 @@ import time
 # Paths
 
 # SED folder path
-SED_path = '/home/tliaudat/github/wf-psf/data/SEDs/save_SEDs/'                 # Candide
-#SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
-# SED_path = '/feynman/work/dap/lcs/ec270266/wf-psf/data/SEDs/save_SEDs/'     # Feynman
+# SED_path = '/home/tliaudat/github/wf-psf/data/SEDs/save_SEDs/'                 # Candide
+# SED_path = './../../../wf-psf/data/SEDs/save_SEDs/'                        # Local
+SED_path = '/feynman/work/dap/lcs/tliaudat/repo/wf-psf/data/SEDs/save_SEDs/'     # Feynman
 
 # Output saving path (in node05 of candide or $WORK space on feynman)
-output_folder = '/n05data/tliaudat/repo/wf-SEDs/WFE_sampling_test/multires_dataset/4096/'         # Candide
-#output_folder = './../../../output/'                                       # Local
-# output_folder = '/feynman/work/dap/lcs/ec270266/output/10kstars/'          # Feynman
+# output_folder = '/n05data/tliaudat/repo/wf-SEDs/WFE_sampling_test/multires_dataset/4096/'         # Candide
+# output_folder = './../../../output/'                                       # Local
+output_folder = '/feynman/work/dap/lcs/tliaudat/repo/wf-SEDs/WFE_sampling_test/multires_dataset/4096/'          # Feynman
 
 # Base dataset for PSF field 
-base_train_dataset_path = '/home/tliaudat/github/wf-psf/data/coherent_euclid_dataset/train_Euclid_res_2000_TrainStars_id_001.npy'
-base_test_dataset_path = '/home/tliaudat/github/wf-psf/data/coherent_euclid_dataset/test_Euclid_res_id_001.npy'
+# base_dataset_path = '/home/tliaudat/github/wf-psf/data/coherent_euclid_dataset/'    # Candide
+base_dataset_path = '/feynman/work/dap/lcs/tliaudat/repo/wf-psf/data/coherent_euclid_dataset'    # Feynman
+
+base_train_dataset_path = base_dataset_path + 'train_Euclid_res_2000_TrainStars_id_001.npy'
+base_test_dataset_path = base_dataset_path + 'test_Euclid_res_id_001.npy'
 
 
 # Replicate base dataset option
@@ -47,7 +50,7 @@ n_cpus = 24
 
 # Save output prints to logfile
 old_stdout = sys.stdout
-log_file = open(output_folder + 'wfe-study_output.log','w')
+log_file = open(output_folder + 'wfe-study_output_test.log','w')
 sys.stdout = log_file
 print('Starting the log file.')
 
