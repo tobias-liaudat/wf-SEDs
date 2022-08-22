@@ -46,21 +46,21 @@ if replicate_base_data:
 # Number of cpu on the machine (may differ from n_cpus available !!!)
 n_cpus = cpu_count()
 # Number of cpus to use for parallelization
-n_cpus = 24
+n_cpus = 48
 
 # Save output prints to logfile
 old_stdout = sys.stdout
-log_file = open(output_folder + 'wfe-study_output_test.log','w')
+log_file = open(output_folder + 'wfe-study_output.log','w')
 sys.stdout = log_file
 print('Starting the log file.')
 
 # Dataset ID
-dataset_id = 88
+dataset_id = 9
 dataset_id_str = '%03d'%(dataset_id)
 
 # This list must be in order from bigger to smaller
-n_star_list = [4] # [2000]
-n_test_stars = 2 # 400  # 20% of the max test stars
+n_star_list = [2000]
+n_test_stars = 400  # 20% of the max test stars
 # Total stars
 n_stars = n_star_list[0] + n_test_stars
 # Max train stars
@@ -339,8 +339,14 @@ for poly_psf_np, zernike_coef_np, super_psf_np in zip(poly_psf_multires, zernike
 # Load and test generated dataset
 path = output_folder
 
-dataset_1 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_00'+str(dataset_id)+'_wfeRes_'+str(WFE_resolutions[0])+'.npy', allow_pickle=True)[()]
-dataset_2 = np.load(path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_00'+str(dataset_id)+'_wfeRes_'+str(WFE_resolutions[1])+'.npy', allow_pickle=True)[()]
+dataset_1 = np.load(
+    path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_'+dataset_id_str+'_wfeRes_'+str(WFE_resolutions[0])+'.npy',
+    allow_pickle=True
+)[()]
+dataset_2 = np.load(
+    path + 'train_Euclid_res_'+str(n_star_list[0])+'_TrainStars_id_'+dataset_id_str+'_wfeRes_'+str(WFE_resolutions[1])+'.npy',
+    allow_pickle=True
+)[()]
 
 star_to_show = 0
 

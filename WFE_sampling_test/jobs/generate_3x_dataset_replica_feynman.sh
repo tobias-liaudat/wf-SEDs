@@ -1,14 +1,14 @@
 #!/bin/bash
-#SBATCH --job-name="wfe-study-datagen-test"
+#SBATCH --job-name="wfe-study-datagen"
 #SBATCH --mail-user=tobias.liaudat@cea.fr
 #SBATCH --mail-type=ALL
 #SBATCH --partition=htc
 #SBATCH --nodes=1
 #SBATCH --array=1
-#SBATCH --cpus-per-task=24
+#SBATCH --cpus-per-task=48
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
-#SBATCH --output=wf-study-test-%j-%a.log
+#SBATCH --output=wf-study-%j-%a.log
 
 # Activate conda environment
 module load anaconda
