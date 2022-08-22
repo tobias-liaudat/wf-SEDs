@@ -5,9 +5,9 @@
 #SBATCH --partition=htc
 #SBATCH --nodes=1
 #SBATCH --array=1
-#SBATCH --cpus-per-task=24
+#SBATCH --cpus-per-task=16
 #SBATCH --time=48:00:00
-#SBATCH --mem-per-cpu=8G
+#SBATCH --mem-per-cpu=10G
 #SBATCH --output=wf-study-%j-%a.log
 
 # Activate conda environment
