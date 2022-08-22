@@ -46,7 +46,7 @@ if replicate_base_data:
 # Number of cpu on the machine (may differ from n_cpus available !!!)
 n_cpus = cpu_count()
 # Number of cpus to use for parallelization
-n_cpus = 48
+n_cpus = 24
 
 # Save output prints to logfile
 old_stdout = sys.stdout
