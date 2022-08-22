@@ -5,7 +5,7 @@
 #SBATCH --partition=htc
 #SBATCH --nodes=1
 #SBATCH --array=1
-#SBATCH --cpus-per-task=48
+#SBATCH --cpus-per-task=24
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
 #SBATCH --output=wf-study-%j-%a.log
