@@ -12,6 +12,8 @@ __pycache__/
 # Ignore large dataset
 WFE_sampling_test/multires_dataset/4096/train_Euclid_res_2000_TrainStars_id_005_wfeRes_256.npy
 WFE_sampling_test/multires_dataset/4096/train_Euclid_res_2000_TrainStars_id_005_wfeRes_4096.npy
+WFE_sampling_test/multires_dataset/4096/train_Euclid_res_2000_TrainStars_id_009_wfeRes_256.npy
+WFE_sampling_test/multires_dataset/4096/train_Euclid_res_2000_TrainStars_id_009_wfeRes_4096.npy
 
 # Ignore large files
 model_WFE_size/figures/model_x3_res_064.npy
