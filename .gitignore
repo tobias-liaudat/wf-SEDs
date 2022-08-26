@@ -20,6 +20,11 @@ model_WFE_size/figures/model_x3_res_064.npy
 model_WFE_size/figures/model_x3_res_128.npy
 model_WFE_size/figures/model_x3_res_256.npy
 model_WFE_size/figures/model_x3_res_256_benchmark.npy
+model_WFE_size/figures/model_id009_res_064.npy
+model_WFE_size/figures/model_id009_res_128.npy
+model_WFE_size/figures/model_id009_res_256.npy
+model_WFE_size/figures/model_id009_res_256_benchmark.npy
+
 
 # Model checkpoints
 chkp*
