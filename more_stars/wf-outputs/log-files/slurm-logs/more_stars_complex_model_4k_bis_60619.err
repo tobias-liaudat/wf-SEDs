@@ -1,0 +1,32 @@
+Loading tensorflow-gpu/py3/2.7.0
+  Loading requirement: cuda/11.2 nccl/2.9.6-1-cuda cudnn/8.1.1.33-cuda gcc/8.4.1
+    openmpi/4.1.1-cuda sox/14.4.2
++ opt[0]='--id_name _more_stars_complex_model_4k_bis_1'
++ opt[1]='--id_name _more_stars_complex_model_4k_bis_2'
++ opt[2]='--id_name _more_stars_complex_model_4k_bis_3'
++ opt[3]='--id_name _more_stars_complex_model_4k_bis_4'
++ opt[4]='--id_name _more_stars_complex_model_4k_bis_5'
++ cd /gpfswork/rech/ynx/ulx23va/repo/wf-psf/long-runs/
++ srun python -u ./train_eval_plot_script_click.py --model poly --model_eval poly --cycle_def complete --plots_folder plots/more_stars_bis/ --base_id_name _more_stars_complex_model_4k_bis_ --test_dataset_file test_Euclid_res_id_008_wfeRes_128.npy --train_dataset_file train_Euclid_res_4000_TrainStars_id_008_wfeRes_128.npy --pupil_diameter 128 --n_bins_lda 8 --n_epochs_non_param 100 50 --n_epochs_param 15 15 --n_zernikes 15 --gt_n_zernikes 45 --d_max_nonparam 10 --l_rate_non_param 0.1 0.06 --l_rate_param 0.01 0.004 --saved_model_type checkpoint --saved_cycle cycle2 --total_cycles 2 --use_sample_weights True --l2_param 0. --interpolation_type none --eval_batch_size 16 --train_opt True --eval_opt True --plot_opt True --base_path /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/more_stars/wf-outputs/ --dataset_folder /gpfswork/rech/ynx/ulx23va/datasets/wf-SEDs_more_stars/ --metric_base_path /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/more_stars/wf-outputs/metrics/more_stars_bis/ --chkp_save_path /gpfswork/rech/ynx/ulx23va/repo/wf-SEDs/more_stars/wf-outputs/chkp/more_stars_bis/ --log_folder log-files/more_stars_bis/ --model_folder model_save/ --optim_hist_folder optim-hist/more_stars_bis/ --suffix_id_name 1 --suffix_id_name 2 --suffix_id_name 3 --suffix_id_name 4 --suffix_id_name 5 --star_numbers 1 --star_numbers 2 --star_numbers 3 --star_numbers 4 --star_numbers 5 --id_name _more_stars_complex_model_4k_bis_4
+2022-08-15 13:09:37.612879: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-15 13:09:38.763757: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /device:GPU:0 with 30986 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1c:00.0, compute capability: 7.0
+2022-08-15 13:09:38.850358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30986 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1c:00.0, compute capability: 7.0
+2022-08-15 13:09:59.047345: I tensorflow/stream_executor/cuda/cuda_dnn.cc:366] Loaded cuDNN version 8101
+2022-08-15 23:29:40.417440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /device:GPU:0 with 30986 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1c:00.0, compute capability: 7.0
+WARNING:tensorflow:Setting parallel_iterations > 1 has no effect when executing eagerly. Consider calling map_fn with tf.function to execute fn in parallel.
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.min_lr
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.sma_threshold
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.total_steps
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.warmup_proportion
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.weight_decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).tf_np_poly_opd.S_mat
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).tf_np_poly_opd.alpha_mat
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).tf_np_poly_opd.S_mat
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).tf_np_poly_opd.alpha_mat
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.

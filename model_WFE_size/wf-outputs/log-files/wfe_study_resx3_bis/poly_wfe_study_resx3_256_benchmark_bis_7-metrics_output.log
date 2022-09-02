@@ -1,0 +1,53 @@
+Starting the log file.
+Found GPU at: /device:GPU:0
+tf_version: 2.7.0
+Dataset parameters:
+{'d_max': 2, 'max_order': 45, 'x_lims': [0, 1000.0], 'y_lims': [0, 1000.0], 'grid_points': [4, 4], 'n_bins': 20, 'max_wfe_rms': 0.1, 'oversampling_rate': 3.0, 'output_Q': 3.0, 'output_dim': 32, 'LP_filter_length': 2, 'pupil_diameter': 256, 'euclid_obsc': True, 'n_stars': 2000}
+
+***
+Metric evaluation on the test dataset
+***
+
+Absolute RMSE:	 9.5333e-05 	 +/- 2.7686e-05
+Relative RMSE:	 1.2870e+00 % 	 +/- 4.3717e-01 %
+Absolute RMSE:	 1.6019e-01 	 +/- 2.4459e-02
+Relative RMSE:	 2.0337e+02 % 	 +/- 1.7067e+01 %
+
+Pixel star absolute RMSE:	 6.4968e-05 	 +/- 1.8464e-05 
+Pixel star relative RMSE:	 4.4198e+00 % 	 +/- 1.7281e+00 %
+
+sigma(e1) RMSE =		 1.5186e-02 	 +/- 1.2148e-02 
+sigma(e2) RMSE =		 1.0127e-02 	 +/- 9.7809e-03 
+sigma(R2)/<R2> =		 2.5744e-02 	 +/- 1.9677e-02 
+
+Relative sigma(e1) RMSE =	 8.6143e+03 % 	 +/- 8.6023e+03 %
+Relative sigma(e2) RMSE =	 3.7999e+02 % 	 +/- 3.7985e+02 %
+
+Total number of stars: 		400
+Problematic number of stars: 	0
+
+***
+Metric evaluation on the train dataset
+***
+
+Absolute RMSE:	 9.6308e-05 	 +/- 2.8523e-05
+Relative RMSE:	 1.3106e+00 % 	 +/- 4.7905e-01 %
+Absolute RMSE:	 1.6041e-01 	 +/- 2.7572e-02
+Relative RMSE:	 2.0313e+02 % 	 +/- 1.7093e+01 %
+
+Pixel star absolute RMSE:	 6.4954e-05 	 +/- 1.8460e-05 
+Pixel star relative RMSE:	 4.4656e+00 % 	 +/- 1.9019e+00 %
+
+sigma(e1) RMSE =		 1.4747e-02 	 +/- 1.1940e-02 
+sigma(e2) RMSE =		 1.1070e-02 	 +/- 1.0719e-02 
+sigma(R2)/<R2> =		 2.9218e-02 	 +/- 2.0424e-02 
+
+Relative sigma(e1) RMSE =	 5.7407e+04 % 	 +/- 5.7394e+04 %
+Relative sigma(e2) RMSE =	 1.7576e+03 % 	 +/- 1.7575e+03 %
+
+Total number of stars: 		2000
+Problematic number of stars: 	1
+
+Total elapsed time: 2299.010886
+
+ Good bye..
